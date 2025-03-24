@@ -183,7 +183,11 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+<<<<<<< HEAD
   - {fileID: 2100000, guid: 49b6bd1326a61b245bdbdb64cceb1cf4, type: 2}
+=======
+  - {fileID: 2100000, guid: c09fa2a155124634fa8d1d23a75aad7f, type: 2}
+>>>>>>> 0c9b3555e73575cbd861ec0d9ab1e209eb4d2950
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -228,6 +232,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &103700299
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,6 +498,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 259452221}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> 0c9b3555e73575cbd861ec0d9ab1e209eb4d2950
 --- !u!1 &892673100
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,6 +546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 20
   height: 20
+<<<<<<< HEAD
   cellSize: 2
   lineMaterial: {fileID: 2100000, guid: 64f7acb5d27157c4a97b3046dcb4c21a, type: 2}
 --- !u!1 &929205983
@@ -620,6 +628,10 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 929205983}
   m_CullTransparentMesh: 1
+=======
+  cellSize: 1
+  lineMaterial: {fileID: 0}
+>>>>>>> 0c9b3555e73575cbd861ec0d9ab1e209eb4d2950
 --- !u!1 &1053169814
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,7 +789,11 @@ MonoBehaviour:
   validPlacementMaterial: {fileID: 2100000, guid: c09fa2a155124634fa8d1d23a75aad7f, type: 2}
   invalidPlacementMaterial: {fileID: 2100000, guid: 61ce5791cbc1ceb4e9452f50bbaaaa0a, type: 2}
   populationLimit: 0
+<<<<<<< HEAD
   populationValue: {fileID: 1797718496}
+=======
+  populationValue: {fileID: 0}
+>>>>>>> 0c9b3555e73575cbd861ec0d9ab1e209eb4d2950
   taxableBuilding: 0
   maintainanceRequired: 0
 --- !u!4 &1139421594
@@ -795,6 +811,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &1169828115
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,6 +891,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169828115}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> 0c9b3555e73575cbd861ec0d9ab1e209eb4d2950
 --- !u!1 &1359364846
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,8 +923,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingManager: {fileID: 1139421593}
+<<<<<<< HEAD
   moneyText: {fileID: 1691281697}
   incomeText: {fileID: 103700301}
+=======
+  moneyText: {fileID: 0}
+  incomeText: {fileID: 0}
+>>>>>>> 0c9b3555e73575cbd861ec0d9ab1e209eb4d2950
   money: 1000
   taxPerBuilding: 100
   taxCollectionInterval: 30
@@ -925,6 +949,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &1691281695
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,6 +1108,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1797718494}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> 0c9b3555e73575cbd861ec0d9ab1e209eb4d2950
 --- !u!1 &2029744171
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,6 +1207,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+<<<<<<< HEAD
 --- !u!1 &2072785661
 GameObject:
   m_ObjectHideFlags: 0
@@ -1259,6 +1287,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> 0c9b3555e73575cbd861ec0d9ab1e209eb4d2950
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1269,5 +1299,8 @@ SceneRoots:
   - {fileID: 892673102}
   - {fileID: 1139421594}
   - {fileID: 1359364848}
+<<<<<<< HEAD
   - {fileID: 163128733}
   - {fileID: 2072785664}
+=======
+>>>>>>> 0c9b3555e73575cbd861ec0d9ab1e209eb4d2950
