@@ -144,7 +144,7 @@ public class GridManager : MonoBehaviour
             }
             gridDebug += "\n";
         }
-        Debug.Log(gridDebug);
+        //Debug.Log(gridDebug);
     }
 }
 
