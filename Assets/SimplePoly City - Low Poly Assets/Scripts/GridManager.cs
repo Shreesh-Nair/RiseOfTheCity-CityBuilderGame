@@ -14,7 +14,7 @@ public class GridManager : MonoBehaviour
     private void Start()
     {
         GenerateGrid();
-        CreateGridVisualization();
+        //CreateGridVisualization();
         CreateGridCollider();
     }
 

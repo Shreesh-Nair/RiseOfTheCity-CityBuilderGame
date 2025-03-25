@@ -422,6 +422,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1138111181
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1138111183}
+  - component: {fileID: 1138111182}
+  m_Layer: 0
+  m_Name: DayNightCycle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1138111182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138111181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0b682c8373b7294b8299b253ccc9164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sunLight: {fileID: 61831602}
+  dayDuration: 20
+  initialTimeOfDay: 0
+--- !u!4 &1138111183
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138111181}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 111.07373, y: -53.89785, z: 56.17108}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1174226799
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,9 +824,9 @@ MonoBehaviour:
   - {fileID: 8789870613390250131, guid: db25966dea359426691f69d2fbe2ee14, type: 3}
   - {fileID: 7784631138136188648, guid: 138c23dba62294bff8a77e5a17caeb3c, type: 3}
   - {fileID: 2179065384006413618, guid: be889b7cdbf704d7583f89cecda9a2f3, type: 3}
-  - {fileID: 6712830776957490762, guid: 1f4ddc48a06a343c9aaa65959bdb64dd, type: 3}
+  - {fileID: 7398254906683457650, guid: 0466df1074c2b634b8b9fb6777678b44, type: 3}
   - {fileID: 8991812575423156820, guid: 190e034740a2745bcaf9d0322736aebc, type: 3}
-  - {fileID: 2203143736200133788, guid: 95664cfa7fe4b431986fc1a75b422d03, type: 3}
+  - {fileID: 100000, guid: 22106dc63dce41746ad234a91af2d657, type: 3}
   gridManager: {fileID: 906283211}
   gridLayer:
     serializedVersion: 2
@@ -841,7 +888,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
@@ -854,7 +901,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1859891665}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -908,7 +955,7 @@ Transform:
   m_GameObject: {fileID: 1859891665}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: -0.1, z: 20}
+  m_LocalPosition: {x: 20, y: -0.001, z: 20}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1030,3 +1077,4 @@ SceneRoots:
   - {fileID: 906283212}
   - {fileID: 2079081619}
   - {fileID: 157188900}
+  - {fileID: 1138111183}
