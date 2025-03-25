@@ -454,6 +454,10 @@ MonoBehaviour:
   sunLight: {fileID: 61831602}
   dayDuration: 20
   initialTimeOfDay: 0
+  dayAmbientLight: {r: 1, g: 1, b: 1, a: 1}
+  nightAmbientLight: {r: 0, g: 0, b: 0, a: 1}
+  maxSunIntensity: 1
+  minSunIntensity: 0.1
 --- !u!4 &1138111183
 Transform:
   m_ObjectHideFlags: 0
