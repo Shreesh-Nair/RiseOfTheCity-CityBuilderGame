@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: da25f2dd84260a04eab0744fdedf7d64
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 234785
+  packageName: Toon City Pack
+  packageVersion: 1.0
+  assetPath: Assets/Loading Games/Toon City Pack/Demo/Scripts/TrafficLights.cs
+  uploadId: 536772

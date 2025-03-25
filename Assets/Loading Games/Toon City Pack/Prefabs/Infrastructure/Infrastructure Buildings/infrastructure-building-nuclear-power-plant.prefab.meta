@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: abb81e11b72744a38bb2804e31a48b74
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 234785
+  packageName: Toon City Pack
+  packageVersion: 1.0
+  assetPath: Assets/Loading Games/Toon City Pack/Prefabs/Infrastructure/Infrastructure
+    Buildings/infrastructure-building-nuclear-power-plant.prefab
+  uploadId: 536772

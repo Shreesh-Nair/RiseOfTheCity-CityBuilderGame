@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d0fddae4b0ed949da941b30647e4c545
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 234785
+  packageName: Toon City Pack
+  packageVersion: 1.0
+  assetPath: Assets/Loading Games/Toon City Pack/Materials/Infrastructure/Infrastructure
+    Buildings/clock-tower-window_mat.mat
+  uploadId: 536772

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a08499fa22dd349eda67b2c4e0e1056d
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 234785
+  packageName: Toon City Pack
+  packageVersion: 1.0
+  assetPath: Assets/Loading Games/Toon City Pack/Prefabs/Infrastructure/Infrastructure
+    Buildings/infrastructure-building-park.prefab
+  uploadId: 536772

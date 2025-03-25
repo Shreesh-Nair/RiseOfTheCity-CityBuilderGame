@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f2d32b149c68a4ea7b425484425c1e1e
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 234785
+  packageName: Toon City Pack
+  packageVersion: 1.0
+  assetPath: Assets/Loading Games/Toon City Pack/Prefabs/Infrastructure/Infrastructure
+    Buildings/infrastructure-building-ms-parking-lot.prefab
+  uploadId: 536772

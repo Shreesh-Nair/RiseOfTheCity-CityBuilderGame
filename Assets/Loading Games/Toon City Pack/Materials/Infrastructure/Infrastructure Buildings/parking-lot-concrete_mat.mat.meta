@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 2d126164d4da04fc19db9699a8bdf8d1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 234785
+  packageName: Toon City Pack
+  packageVersion: 1.0
+  assetPath: Assets/Loading Games/Toon City Pack/Materials/Infrastructure/Infrastructure
+    Buildings/parking-lot-concrete_mat.mat
+  uploadId: 536772

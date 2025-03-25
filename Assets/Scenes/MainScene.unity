@@ -774,12 +774,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefabs:
   - {fileID: 100000, guid: 8b3eca4c34b9e1148a3c4d42a48dd5b8, type: 3}
-  - {fileID: 100000, guid: 121f662ea65e2cf40a50c66470757a9e, type: 3}
-  - {fileID: 100000, guid: 65abb0f1b521f834bae80ea4c9d93734, type: 3}
-  - {fileID: 100000, guid: 3667b1c4d7f532647b9156782c0c80f0, type: 3}
-  - {fileID: 100000, guid: 4c14ffc6a7f79e942885227ac141590c, type: 3}
-  - {fileID: 100000, guid: 0c7bcaa85c9494849bc7a0a18b7f3324, type: 3}
-  - {fileID: 100000, guid: e1d9101af5d96d94ca99efe2de0bac21, type: 3}
+  - {fileID: 8789870613390250131, guid: db25966dea359426691f69d2fbe2ee14, type: 3}
+  - {fileID: 7784631138136188648, guid: 138c23dba62294bff8a77e5a17caeb3c, type: 3}
+  - {fileID: 2179065384006413618, guid: be889b7cdbf704d7583f89cecda9a2f3, type: 3}
+  - {fileID: 6712830776957490762, guid: 1f4ddc48a06a343c9aaa65959bdb64dd, type: 3}
+  - {fileID: 8991812575423156820, guid: 190e034740a2745bcaf9d0322736aebc, type: 3}
+  - {fileID: 2203143736200133788, guid: 95664cfa7fe4b431986fc1a75b422d03, type: 3}
   gridManager: {fileID: 906283211}
   gridLayer:
     serializedVersion: 2
@@ -908,7 +908,7 @@ Transform:
   m_GameObject: {fileID: 1859891665}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 0, z: 10}
+  m_LocalPosition: {x: 20, y: -0.1, z: 20}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 1
   m_Children: []

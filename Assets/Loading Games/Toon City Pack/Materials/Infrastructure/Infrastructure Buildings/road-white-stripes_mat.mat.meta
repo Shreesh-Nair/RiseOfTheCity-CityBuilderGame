@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c8fd812d346c74b8f9086fc02cccc4f8
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 234785
+  packageName: Toon City Pack
+  packageVersion: 1.0
+  assetPath: Assets/Loading Games/Toon City Pack/Materials/Infrastructure/Infrastructure
+    Buildings/road-white-stripes_mat.mat
+  uploadId: 536772

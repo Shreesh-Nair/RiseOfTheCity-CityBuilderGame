@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: eaa1b8590ce2b41678c4be4085f66bd7
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 234785
+  packageName: Toon City Pack
+  packageVersion: 1.0
+  assetPath: Assets/Loading Games/Toon City Pack/Materials/Infrastructure/Infrastructure
+    Buildings/stadium-soccerfield-texture_mat.mat
+  uploadId: 536772

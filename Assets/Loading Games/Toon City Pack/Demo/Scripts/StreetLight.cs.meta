@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 2693ba098cfc6ce4fbc45d872fdba4e4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 234785
+  packageName: Toon City Pack
+  packageVersion: 1.0
+  assetPath: Assets/Loading Games/Toon City Pack/Demo/Scripts/StreetLight.cs
+  uploadId: 536772
