@@ -19,8 +19,17 @@ public class BuildingManager : MonoBehaviour
     private float currentRotation = 0f; // Current rotation of the building (in y-axis)
     public int taxableBuilding = 0;
     public int maintainanceRequired = 0;
+    public BuildingDatabase.BuildingData[] buildingData;
     void Start()
     {
+        buildingData=new BuildingDatabase.BuildingData[]{
+            BuildingDatabase.Instance.GetResidentialCommercialBuilding("Small_House_1")
+        };
+        Debug.Log(buildingData[0].tileSize);
+        if (buildingData[0].prefab){
+            buildingPrefabs[0]=buildingData[0].prefab;
+        }
+        
         // Initialize GridManager reference if not set in inspector
         if (gridManager == null)
             gridManager = FindFirstObjectByType<GridManager>();
