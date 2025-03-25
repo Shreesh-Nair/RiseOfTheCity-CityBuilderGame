@@ -32,6 +32,7 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
+        ResetPositionAndRotation();
         // Mouse look
         if (Input.GetMouseButton(1)) // Right mouse button held down
         {
@@ -87,5 +88,14 @@ public class CameraController : MonoBehaviour
         clampedPosition.y = Mathf.Clamp(clampedPosition.y, yBounds.x, yBounds.y);
         clampedPosition.z = Mathf.Clamp(clampedPosition.z, zBounds.x, zBounds.y);
         transform.position = clampedPosition;
+    }
+
+    void ResetPositionAndRotation()
+    {
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            transform.position = new Vector3(10f, 20f, 10f);
+            transform.rotation = Quaternion.Euler(90f, 0f, 0f);
+        }
     }
 }
