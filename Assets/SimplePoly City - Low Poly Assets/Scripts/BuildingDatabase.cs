@@ -131,9 +131,7 @@ public class BuildingDatabase : MonoBehaviour
 
     private void PopulateIndustrialBuildings()
     {
-        // Example of manually adding industrial buildings
         
-        // Example: Factory
         BuildingData factory = new BuildingData
         {
             assetName = "Factory_1",
