@@ -353,11 +353,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: 365c21aded2c175428510d6dc052d306, type: 3}
+    m_FontSize: 18
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -457,7 +457,7 @@ MonoBehaviour:
   dayAmbientLight: {r: 1, g: 1, b: 1, a: 1}
   nightAmbientLight: {r: 0, g: 0, b: 0, a: 1}
   maxSunIntensity: 1
-  minSunIntensity: 0.1
+  minSunIntensity: 0
 --- !u!4 &1138111183
 Transform:
   m_ObjectHideFlags: 0
@@ -694,7 +694,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 365c21aded2c175428510d6dc052d306, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -706,7 +706,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0 In 10 sec
+  m_Text: 0 in 10 sec
 --- !u!222 &1383067495
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -773,7 +773,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 365c21aded2c175428510d6dc052d306, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -831,6 +831,7 @@ MonoBehaviour:
   - {fileID: 7398254906683457650, guid: 0466df1074c2b634b8b9fb6777678b44, type: 3}
   - {fileID: 8040212986889192682, guid: 3fb6dbeb8430a834390b50b7b9aea40e, type: 3}
   - {fileID: 100000, guid: 22106dc63dce41746ad234a91af2d657, type: 3}
+  - {fileID: 4229588341591865684, guid: 8b2f25ee8ed50ab4196fc5fcd7fa853f, type: 3}
   gridManager: {fileID: 906283211}
   gridLayer:
     serializedVersion: 2
