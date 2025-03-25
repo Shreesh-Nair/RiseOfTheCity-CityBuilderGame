@@ -91,7 +91,7 @@ public class BuildingDatabase : MonoBehaviour
             tileSize = 1,
             buildingType = BuildingType.Housing,
             regionType = RegionType.ResidentialCommercial,
-            prefab = Resources.Load<GameObject>("Buildings/Building Sky_big_color01"),
+            prefab = Resources.Load<GameObject>("Buildings/Building Sky_big_color01_final"),
             constructionCost = 100,
             maintenanceCost = 5,
             populationCapacity = 5,
