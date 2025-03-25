@@ -44,7 +44,7 @@ public class BuildingManager : MonoBehaviour
         HandleBuildingSelection();
         HandleRotation(); // Add rotation handling
         HandleBuildingPlacement();
-        //HandleBuildingRemoval(); // Add building removal handling
+        HandleBuildingRemoval();
     }
 
     void HandleBuildingSelection()
@@ -84,9 +84,59 @@ public class BuildingManager : MonoBehaviour
             // Apply rotation to preview object
             previewObject.transform.rotation = Quaternion.Euler(0f, currentRotation, 0f);
 
-            Debug.Log("Rotated building to: " + currentRotation + " degrees");
+            //Debug.Log("Rotated building to: " + currentRotation + " degrees");
         }
     }
+
+    void HandleBuildingRemoval()
+    {
+        if (currentBuildingPrefab == null && Input.GetKeyDown(KeyCode.Q))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+            {
+                // Approximate coordinates to nearest grid cell
+                Vector3 approximatedHitPoint = new Vector3(
+                    Mathf.Round(hit.point.x / gridManager.cellSize) * gridManager.cellSize,
+                    0, // Keep at ground level
+                    Mathf.Round(hit.point.z / gridManager.cellSize) * gridManager.cellSize
+                );
+
+                // Iterate through all game objects in the scene
+                GameObject[] allObjects = FindObjectsOfType<GameObject>();
+                foreach (GameObject obj in allObjects)
+                {
+                    // Check if the object's position matches the approximated hit point
+                    if (Vector3.Distance(obj.transform.position, approximatedHitPoint) < 0.1f)
+                    {
+                        // Check if the object is tagged as "Building"
+                        if (obj.CompareTag("Building"))
+                        {
+                            // Get the node position
+                            Node node = gridManager.GetNodeFromWorldPosition(obj.transform.position);
+                            if (node != null)
+                            {
+                                // Mark the node as unoccupied
+                                gridManager.SetNodeOccupied(node.worldPosition, false);
+
+                                // Remove the building
+                                Destroy(obj);
+
+                                Debug.Log("Building removed at approximated coordinates: " + approximatedHitPoint);
+
+                                // Debug grid occupancy
+                                gridManager.DebugPrintGridOccupancy();
+                            }
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 
 
     void SelectBuilding(int index)
@@ -136,13 +186,13 @@ public class BuildingManager : MonoBehaviour
         // Check if gridManager is null before trying to use it
         if (gridManager == null)
         {
-            Debug.LogError("GridManager reference is null! Trying to find it...");
+            //Debug.LogError("GridManager reference is null! Trying to find it...");
             gridManager = FindFirstObjectByType<GridManager>();
 
             // If still null, exit early to prevent further errors
             if (gridManager == null)
             {
-                Debug.LogError("Could not find GridManager in the scene!");
+                //Debug.LogError("Could not find GridManager in the scene!");
                 return;
             }
         }
@@ -152,12 +202,12 @@ public class BuildingManager : MonoBehaviour
 
         // Debug ray
         Debug.DrawRay(ray.origin, ray.direction * 100, Color.red);
-        Debug.Log("Grid Layer: " + LayerMask.LayerToName(gridLayer));
+        //Debug.Log("Grid Layer: " + LayerMask.LayerToName(gridLayer));
 
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, gridLayer))
         {
             // Debug hit
-            Debug.Log("Hit at position: " + hit.point);
+            //Debug.Log("Hit at position: " + hit.point);
 
             // Get the corresponding node from GridManager
             Node node = gridManager.GetNodeFromWorldPosition(hit.point);
@@ -192,6 +242,7 @@ public class BuildingManager : MonoBehaviour
                 if (Input.GetMouseButtonDown(0) && canPlace)
                 {
                     PlaceBuilding(lastValidPosition);
+                    Debug.Log("Found node at: " + node.worldPosition + ", Empty: " + node.isEmpty);
                 }
             }
             else
@@ -253,25 +304,6 @@ public class BuildingManager : MonoBehaviour
         // Create the actual building
         GameObject placedBuilding = Instantiate(currentBuildingPrefab, position, Quaternion.Euler(0f, currentRotation, 0f));
 
-        // Update stats based on building type
-        if (selectedBuildingIndex == 1)
-        {
-            populationLimit += 5;
-        }
-        else if (selectedBuildingIndex == 2)
-        {
-            populationLimit += 7;
-        }
-
-        if (selectedBuildingIndex != 5 && selectedBuildingIndex != 4 && selectedBuildingIndex != 6)
-        {
-            taxableBuilding += 1;
-        }
-        else
-        {
-            Debug.Log("Maintenance Required");
-            maintainanceRequired += 1;
-        }
 
         // Update UI text if it exists
         if (populationValue != null)
@@ -280,7 +312,7 @@ public class BuildingManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("populationValue Text component is null!");
+            //Debug.LogWarning("populationValue Text component is null!");
         }
 
         // Restore original materials for the placed building
