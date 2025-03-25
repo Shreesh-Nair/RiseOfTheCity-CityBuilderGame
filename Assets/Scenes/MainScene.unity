@@ -405,7 +405,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 20
   height: 20
-  cellSize: 1
+  cellSize: 2
   lineMaterial: {fileID: 0}
 --- !u!4 &906283212
 Transform:
@@ -774,6 +774,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefabs:
   - {fileID: 100000, guid: 8b3eca4c34b9e1148a3c4d42a48dd5b8, type: 3}
+  - {fileID: 8273424752105082923, guid: c1d3259b1b00f2745934a591a64234a2, type: 3}
+  - {fileID: 8537673697885705002, guid: dca6cf054ebcb5349a8333d108c74279, type: 3}
+  - {fileID: 1295220564887911823, guid: 8bf27f8a5975e1f4e9160e979cfcb02b, type: 3}
+  - {fileID: 4722627683411591535, guid: 580e175accc4f644e8c5daa4090d0293, type: 3}
+  - {fileID: 363025940278517486, guid: eb1a3f979ef5c8743a26ef5a30ec6511, type: 3}
+  - {fileID: 3520681445263854137, guid: e478292f536a7134e8e48cb62cf2be07, type: 3}
   gridManager: {fileID: 906283211}
   gridLayer:
     serializedVersion: 2
