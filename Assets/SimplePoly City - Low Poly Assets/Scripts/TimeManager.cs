@@ -14,12 +14,30 @@ public class TimeManager : MonoBehaviour
     [Range(0f, 360f)]
     public float initialTimeOfDay = 0f;
 
+    [Header("Lighting Settings")]
+    [Tooltip("Ambient light color during the day.")]
+    public Color dayAmbientLight = Color.white;
+
+    [Tooltip("Ambient light color during the night.")]
+    public Color nightAmbientLight = Color.black;
+
+    [Tooltip("Maximum intensity of the sun during the day.")]
+    [Range(0f, 2f)]
+    public float maxSunIntensity = 1f;
+
+    [Tooltip("Minimum intensity of the sun during the night.")]
+    [Range(0f, 2f)]
+    public float minSunIntensity = 0.1f;
+
     private float timeOfDay;
 
     void Start()
     {
         // Initialize the time of day
         timeOfDay = initialTimeOfDay;
+
+        // Set the initial ambient light
+        RenderSettings.ambientLight = Color.Lerp(nightAmbientLight, dayAmbientLight, Mathf.Cos(timeOfDay * Mathf.Deg2Rad));
     }
 
     void Update()
@@ -38,8 +56,12 @@ public class TimeManager : MonoBehaviour
                 timeOfDay = 0f;
             }
 
-            // Adjust light intensity based on the time of day
-            sunLight.intensity = Mathf.Clamp01(Mathf.Cos(timeOfDay * Mathf.Deg2Rad));
+            // Adjust the sun's intensity based on the time of day
+            float sunIntensityFactor = Mathf.Clamp01(Mathf.Cos(timeOfDay * Mathf.Deg2Rad));
+            sunLight.intensity = Mathf.Lerp(minSunIntensity, maxSunIntensity, sunIntensityFactor);
+
+            // Adjust the ambient light color based on the time of day
+            RenderSettings.ambientLight = Color.Lerp(nightAmbientLight, dayAmbientLight, sunIntensityFactor);
         }
     }
 }

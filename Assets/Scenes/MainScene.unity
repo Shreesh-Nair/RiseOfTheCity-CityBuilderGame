@@ -454,6 +454,10 @@ MonoBehaviour:
   sunLight: {fileID: 61831602}
   dayDuration: 20
   initialTimeOfDay: 0
+  dayAmbientLight: {r: 1, g: 1, b: 1, a: 1}
+  nightAmbientLight: {r: 0, g: 0, b: 0, a: 1}
+  maxSunIntensity: 1
+  minSunIntensity: 0.1
 --- !u!4 &1138111183
 Transform:
   m_ObjectHideFlags: 0
@@ -821,11 +825,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingPrefabs:
   - {fileID: 100000, guid: 8b3eca4c34b9e1148a3c4d42a48dd5b8, type: 3}
-  - {fileID: 8789870613390250131, guid: db25966dea359426691f69d2fbe2ee14, type: 3}
-  - {fileID: 7784631138136188648, guid: 138c23dba62294bff8a77e5a17caeb3c, type: 3}
-  - {fileID: 2179065384006413618, guid: be889b7cdbf704d7583f89cecda9a2f3, type: 3}
+  - {fileID: 100000, guid: 2dbee28eacba7dd42845e0153c4da642, type: 3}
+  - {fileID: 100000, guid: 63243ce2fd6113e4384abc2d949cb799, type: 3}
+  - {fileID: 100000, guid: c3e95e72d6dba334594c3c5c37fcf18a, type: 3}
   - {fileID: 7398254906683457650, guid: 0466df1074c2b634b8b9fb6777678b44, type: 3}
-  - {fileID: 8991812575423156820, guid: 190e034740a2745bcaf9d0322736aebc, type: 3}
+  - {fileID: 100000, guid: 1d53359c70324d14c989d7058b50ec6b, type: 3}
   - {fileID: 100000, guid: 22106dc63dce41746ad234a91af2d657, type: 3}
   gridManager: {fileID: 906283211}
   gridLayer:
