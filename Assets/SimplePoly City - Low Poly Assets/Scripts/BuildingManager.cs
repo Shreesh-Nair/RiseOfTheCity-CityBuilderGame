@@ -17,9 +17,14 @@ public class BuildingManager : MonoBehaviour
     private bool canPlace = false; // Tracks whether placement is allowed
     private int selectedBuildingIndex = -1; // Currently selected building index
     private float currentRotation = 0f; // Current rotation of the building (in y-axis)
-    public int taxableBuilding = 0;
-    public int maintainanceRequired = 0;
+    // public int taxableBuilding = 0;
+    // public int maintainanceRequired = 0;
     public BuildingDatabase.BuildingData[] buildingData;
+    public int taxFactor=0;
+    public int maintainanceFactor=0;
+    public int rawMaterialFactor=0;
+    public int foodMaterailFactor=0;
+    public int pollutionFactor=0;
     void Start()
     {
         buildingData=new BuildingDatabase.BuildingData[]{

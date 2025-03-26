@@ -50,34 +50,34 @@ public class TaxManager : MonoBehaviour
         }
         
         // Optionally update a UI countdown timer
-        if (incomeText != null)
-        {
-            int timeLeft = Mathf.CeilToInt(taxCollectionInterval - timer);
-            int income = buildingManager.taxableBuilding * taxPerBuilding;
-            int spending=buildingManager.maintainanceRequired*maintainanceCost;
-            incomeText.text = $"{income-spending} in {timeLeft}s";
+        // if (incomeText != null)
+        // {
+        //     int timeLeft = Mathf.CeilToInt(taxCollectionInterval - timer);
+        //     int income = buildingManager.taxableBuilding * taxPerBuilding;
+        //     int spending=buildingManager.maintainanceRequired*maintainanceCost;
+        //     incomeText.text = $"{income-spending} in {timeLeft}s";
 
-        }
+        // }
     
     }
     
     void CollectTaxes()
     {
         // Calculate tax based on number of taxable buildings
-        int taxAmount = buildingManager.taxableBuilding * taxPerBuilding;
+        // int taxAmount = buildingManager.taxableBuilding * taxPerBuilding;
         
-        // Add to money
-        money += taxAmount;
+        // // Add to money
+        // money += taxAmount;
         
         // Update UI
         UpdateMoneyDisplay();
         
         // Show visual feedback
-        if (taxAmount > 0)
-        {
-            //Debug.Log($"Collected {taxAmount} in taxes from {buildingManager.taxableBuilding} buildings.");
-            //PlayTaxCollectionEffect();
-        }
+        // if (taxAmount > 0)
+        // {
+        //     //Debug.Log($"Collected {taxAmount} in taxes from {buildingManager.taxableBuilding} buildings.");
+        //     //PlayTaxCollectionEffect();
+        // }
     }
     
     void UpdateMoneyDisplay()
@@ -120,10 +120,10 @@ public class TaxManager : MonoBehaviour
     // }
     
     // Public method to get current income rate (for UI or other systems)
-    public int GetIncomeRate()
-    {
-        return buildingManager.taxableBuilding * taxPerBuilding;
-    }
+    // public int GetIncomeRate()
+    // {
+    //     //return buildingManager.taxableBuilding * taxPerBuilding;
+    // }
     
     // Optional: Manual tax collection for testing or player-triggered collection
     public void ManualTaxCollection()
