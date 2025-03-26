@@ -94,7 +94,7 @@ public class BuildingDatabase : MonoBehaviour
             prefab = Resources.Load<GameObject>("Buildings/Building Sky_big_color01_final"),
             constructionCost = 100,
             maintenanceCost = 5,
-            populationCapacity = 5,
+            populationCapacity = 20,
             moraleFactor = 2,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 1,

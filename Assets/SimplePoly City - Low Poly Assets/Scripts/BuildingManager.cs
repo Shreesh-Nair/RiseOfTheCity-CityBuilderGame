@@ -17,8 +17,8 @@ public class BuildingManager : MonoBehaviour
     private bool canPlace = false; // Tracks whether placement is allowed
     private int selectedBuildingIndex = -1; // Currently selected building index
     private float currentRotation = 0f; // Current rotation of the building (in y-axis)
-    // public int taxableBuilding = 0;
-    // public int maintainanceRequired = 0;
+    public int totalCommercialProduction=0;
+    
     public BuildingDatabase.BuildingData[] buildingData;
     public int taxFactor=0;
     public int maintainanceFactor=0;
@@ -132,6 +132,18 @@ public class BuildingManager : MonoBehaviour
                             Node node = gridManager.GetNodeFromWorldPosition(obj.transform.position);
                             if (node != null)
                             {
+                                string destroyerPrefab=obj.name;
+                                destroyerPrefab=destroyerPrefab.Replace("(Clone)","");
+                                for (int i=0;i<buildingPrefabs.Length;i++){
+                                    Debug.Log(buildingPrefabs[i].name+"  ---   "+destroyerPrefab);
+                                    if (buildingPrefabs[i].name==destroyerPrefab){
+                                        Debug.Log("Found");
+                                        populationLimit-=buildingData[i].populationCapacity;
+                                        populationValue.text=populationLimit.ToString();
+                                        break;
+                                    }
+                                }
+                                Debug.Log(destroyerPrefab);
                                 // Mark the node as unoccupied
                                 gridManager.SetNodeOccupied(node.worldPosition, false);
 
@@ -255,6 +267,7 @@ public class BuildingManager : MonoBehaviour
                 // Place building on mouse click
                 if (Input.GetMouseButtonDown(0) && canPlace)
                 {
+                    
                     PlaceBuilding(lastValidPosition);
                     Debug.Log("Found node at: " + node.worldPosition + ", Empty: " + node.isEmpty);
                 }
@@ -318,16 +331,16 @@ public class BuildingManager : MonoBehaviour
         // Create the actual building
         GameObject placedBuilding = Instantiate(currentBuildingPrefab, position, Quaternion.Euler(0f, currentRotation, 0f));
 
-
+        string prefabName = currentBuildingPrefab.name;
+        for (int i=0;i<buildingPrefabs.Length;i++){
+            if (buildingPrefabs[i].name==prefabName){
+              populationLimit+=buildingData[i].populationCapacity; 
+              populationValue.text=populationLimit.ToString();     
+                
+            }
+        }
         // Update UI text if it exists
-        if (populationValue != null)
-        {
-            populationValue.text = populationLimit.ToString();
-        }
-        else
-        {
-            //Debug.LogWarning("populationValue Text component is null!");
-        }
+        
 
         // Restore original materials for the placed building
         Renderer[] buildingRenderers = placedBuilding.GetComponentsInChildren<Renderer>();

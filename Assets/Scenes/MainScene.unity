@@ -549,10 +549,10 @@ MonoBehaviour:
   buildingManager: {fileID: 1749320828}
   moneyText: {fileID: 802503045}
   incomeText: {fileID: 1383067494}
-  money: 1000
-  taxPerBuilding: 100
+  budget: 1000
   taxCollectionInterval: 30
-  maintainanceCost: 5
+  population: 0
+  totalMaintainanceCost: 0
 --- !u!4 &1174226801
 Transform:
   m_ObjectHideFlags: 0
@@ -868,14 +868,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingPrefabs:
-  - {fileID: 100000, guid: 22106dc63dce41746ad234a91af2d657, type: 3}
-  - {fileID: 1186178551501854603, guid: 24ceca1e929c3304fbe56dff65423983, type: 3}
-  - {fileID: 2071111241476382376, guid: 652d1936abacb984cb2bd52a44f0c473, type: 3}
-  - {fileID: 2555960521702260707, guid: 85e9d0fa824922f43b119d7f8684c1f8, type: 3}
-  - {fileID: 7398254906683457650, guid: 0466df1074c2b634b8b9fb6777678b44, type: 3}
-  - {fileID: 8040212986889192682, guid: 3fb6dbeb8430a834390b50b7b9aea40e, type: 3}
-  - {fileID: 100000, guid: 22106dc63dce41746ad234a91af2d657, type: 3}
-  - {fileID: 4229588341591865684, guid: 8b2f25ee8ed50ab4196fc5fcd7fa853f, type: 3}
+  - {fileID: 0}
   gridManager: {fileID: 906283211}
   gridLayer:
     serializedVersion: 2
@@ -884,9 +877,13 @@ MonoBehaviour:
   invalidPlacementMaterial: {fileID: 2100000, guid: 61ce5791cbc1ceb4e9452f50bbaaaa0a, type: 2}
   populationLimit: 0
   populationValue: {fileID: 1586869224}
-  taxableBuilding: 0
-  maintainanceRequired: 0
+  totalCommercialProduction: 0
   buildingData: []
+  taxFactor: 0
+  maintainanceFactor: 0
+  rawMaterialFactor: 0
+  foodMaterailFactor: 0
+  pollutionFactor: 0
 --- !u!4 &1749320829
 Transform:
   m_ObjectHideFlags: 0
