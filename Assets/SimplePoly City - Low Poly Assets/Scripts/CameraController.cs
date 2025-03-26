@@ -9,9 +9,9 @@ public class CameraController : MonoBehaviour
     public float mouseSensitivity = 2f;
     
     // Movement boundaries
-    public Vector2 xBounds = new Vector2(-30f, 30f);
+    public Vector2 xBounds = new Vector2(-300f, 300f);
     public Vector2 yBounds = new Vector2(1f, 30f);
-    public Vector2 zBounds = new Vector2(-30f, 30f);
+    public Vector2 zBounds = new Vector2(-300f, 300f);
     
     // Rotation limits (in degrees)
     public float minXRotation = -80f;
