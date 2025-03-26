@@ -9,10 +9,9 @@ public class CameraController : MonoBehaviour
     public float mouseSensitivity = 2f;
     
     // Movement boundaries
-    public Vector2 xBounds = new Vector2(-300f, 300f);
+    public Vector2 xBounds = new Vector2(0f, 200f);
     public Vector2 yBounds = new Vector2(1f, 30f);
-    public Vector2 zBounds = new Vector2(-300f, 300f);
-    
+    public Vector2 zBounds = new Vector2(0f, 200f);
     // Rotation limits (in degrees)
     public float minXRotation = -80f;
     public float maxXRotation = 80f;
@@ -94,7 +93,7 @@ public class CameraController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.G))
         {
-            transform.position = new Vector3(10f, 20f, 10f);
+            transform.position = new Vector3(100f, 20f, 100f);
             transform.rotation = Quaternion.Euler(90f, 0f, 0f);
         }
     }
