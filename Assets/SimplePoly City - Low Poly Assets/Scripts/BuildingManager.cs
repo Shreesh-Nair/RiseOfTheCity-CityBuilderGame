@@ -67,11 +67,11 @@ public class BuildingManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1) && buildingPrefabs.Length > 0) SelectBuilding(0);
         if (Input.GetKeyDown(KeyCode.Alpha2) && buildingPrefabs.Length > 1) SelectBuilding(1);
         if (Input.GetKeyDown(KeyCode.Alpha3) && buildingPrefabs.Length > 2) SelectBuilding(2);
-        if (Input.GetKeyDown(KeyCode.Alpha4) && buildingPrefabs.Length > 2) SelectBuilding(3);
-        if (Input.GetKeyDown(KeyCode.Alpha5) && buildingPrefabs.Length > 2) SelectBuilding(4);
-        if (Input.GetKeyDown(KeyCode.Alpha6) && buildingPrefabs.Length > 2) SelectBuilding(5);
-        if (Input.GetKeyDown(KeyCode.Alpha7) && buildingPrefabs.Length > 2) SelectBuilding(6);
-        if (Input.GetKeyDown(KeyCode.Alpha8) && buildingPrefabs.Length > 2) SelectBuilding(7);
+        if (Input.GetKeyDown(KeyCode.Alpha4) && buildingPrefabs.Length > 3) SelectBuilding(3);
+        if (Input.GetKeyDown(KeyCode.Alpha5) && buildingPrefabs.Length > 4) SelectBuilding(4);
+        if (Input.GetKeyDown(KeyCode.Alpha6) && buildingPrefabs.Length > 5) SelectBuilding(5);
+        if (Input.GetKeyDown(KeyCode.Alpha7) && buildingPrefabs.Length > 6) SelectBuilding(6);
+        if (Input.GetKeyDown(KeyCode.Alpha8) && buildingPrefabs.Length > 7) SelectBuilding(7);
         // Cancel building mode
         if (Input.GetKeyDown(KeyCode.Escape))
         {
