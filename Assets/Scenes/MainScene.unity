@@ -2677,8 +2677,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 588435245}
   m_HandleRect: {fileID: 588435244}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.4884295
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6039,7 +6039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Content: {fileID: 0}
+  m_Content: {fileID: 830343321}
   m_Horizontal: 0
   m_Vertical: 1
   m_MovementType: 1
