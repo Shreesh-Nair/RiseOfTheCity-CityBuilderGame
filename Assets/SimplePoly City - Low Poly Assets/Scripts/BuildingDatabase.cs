@@ -104,6 +104,28 @@ public class BuildingDatabase : MonoBehaviour
             commercialProduction = 0
         };
         residentialCommercialBuildings.Add(smallHouse.assetName, smallHouse);
+
+        //School
+        BuildingData school = new BuildingData
+        {
+            assetName = "School",
+            tileSize = 1,
+            buildingType = BuildingType.Housing,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/School_final"),
+            constructionCost = 100,
+            maintenanceCost = 5,
+            populationCapacity = 20,
+            moraleFactor = 2,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 1,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 2,
+            pollutionFactor = 1,
+            commercialProduction = 0
+        };
+        residentialCommercialBuildings.Add(school.assetName, school);
+        
         
         // Example 2: Bakery
         BuildingData bakery = new BuildingData

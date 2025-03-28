@@ -25,24 +25,23 @@ public class BuildingManager : MonoBehaviour
     public int rawMaterialFactor=0;
     public int foodMaterailFactor=0;
     public int pollutionFactor=0;
+    public HandleBuildingSelection buildingSelectionHandler;
     void Start()
     {
-        buildingData=new BuildingDatabase.BuildingData[]{
-            BuildingDatabase.Instance.GetResidentialCommercialBuilding("Small_House_1"),
-            BuildingDatabase.Instance.GetAgriculturalBuilding("Farm_1"),
-            BuildingDatabase.Instance.GetAgriculturalBuilding("Farm_2"),
-            BuildingDatabase.Instance.GetAgriculturalBuilding("Farm_3"),
-            BuildingDatabase.Instance.GetAgriculturalBuilding("Farm_House")
-        };
-        //Debug.Log(buildingData[0].tileSize);
-        if (buildingData[0].prefab && buildingData[1].prefab){
-            buildingPrefabs[0]=buildingData[0].prefab;
-            buildingPrefabs[1]=buildingData[1].prefab;
-            buildingPrefabs[2]=buildingData[2].prefab;
-            buildingPrefabs[3]=buildingData[3].prefab;
-            buildingPrefabs[4]=buildingData[4].prefab;
+        if (buildingSelectionHandler == null)
+        {
+            buildingSelectionHandler = FindFirstObjectByType<HandleBuildingSelection>();
         }
-        
+        if (buildingSelectionHandler != null)
+        {
+            buildingData = buildingSelectionHandler.buildingData;
+        }
+        buildingPrefabs[0]=buildingData[0].prefab;
+        buildingPrefabs[1]=buildingData[1].prefab;
+        buildingPrefabs[2]=buildingData[2].prefab;
+        buildingPrefabs[3]=buildingData[3].prefab;
+        buildingPrefabs[4]=buildingData[4].prefab;
+        buildingPrefabs[5]=buildingData[5].prefab;
         // Initialize GridManager reference if not set in inspector
         if (gridManager == null)
             gridManager = FindFirstObjectByType<GridManager>();

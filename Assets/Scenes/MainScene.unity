@@ -966,6 +966,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   gridManager: {fileID: 906283211}
   gridLayer:
     serializedVersion: 2
@@ -981,6 +983,7 @@ MonoBehaviour:
   rawMaterialFactor: 0
   foodMaterailFactor: 0
   pollutionFactor: 0
+  buildingSelectionHandler: {fileID: 0}
 --- !u!4 &1749320829
 Transform:
   m_ObjectHideFlags: 0
