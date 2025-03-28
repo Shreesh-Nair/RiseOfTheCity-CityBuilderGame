@@ -104,6 +104,28 @@ public class BuildingDatabase : MonoBehaviour
             commercialProduction = 0
         };
         residentialCommercialBuildings.Add(smallHouse.assetName, smallHouse);
+
+        //School
+        BuildingData school = new BuildingData
+        {
+            assetName = "School",
+            tileSize = 1,
+            buildingType = BuildingType.Housing,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/School_final"),
+            constructionCost = 100,
+            maintenanceCost = 5,
+            populationCapacity = 20,
+            moraleFactor = 2,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 1,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 2,
+            pollutionFactor = 1,
+            commercialProduction = 0
+        };
+        residentialCommercialBuildings.Add(school.assetName, school);
+        
         
         // Example 2: Bakery
         BuildingData bakery = new BuildingData
@@ -160,13 +182,13 @@ public class BuildingDatabase : MonoBehaviour
         // Example of manually adding agricultural buildings
         
         // Example: Farm
-        BuildingData farm = new BuildingData
+        BuildingData farm1 = new BuildingData
         {
             assetName = "Farm_1",
             tileSize = 4,
             buildingType = BuildingType.Agricultural,
             regionType = RegionType.Agricultural,
-            prefab = Resources.Load<GameObject>("Buildings/Farm_1"),
+            prefab = Resources.Load<GameObject>("Farm/Natures_Grass Tile Small 1"),
             constructionCost = 300,
             maintenanceCost = 20,
             populationCapacity = 0,
@@ -178,7 +200,64 @@ public class BuildingDatabase : MonoBehaviour
             pollutionFactor = 1,
             commercialProduction = 0
         };
-        agriculturalBuildings.Add(farm.assetName, farm);
+        agriculturalBuildings.Add(farm1.assetName, farm1);
+        BuildingData farm2 = new BuildingData
+        {
+            assetName = "Farm_2",
+            tileSize = 4,
+            buildingType = BuildingType.Agricultural,
+            regionType = RegionType.Agricultural,
+            prefab = Resources.Load<GameObject>("Farm/Farm_Crop_Sunflower_Step_03 1"),
+            constructionCost = 300,
+            maintenanceCost = 20,
+            populationCapacity = 0,
+            moraleFactor = 1,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 1,
+            foodMatrialProduction = 10,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 1,
+            commercialProduction = 0
+        };
+        agriculturalBuildings.Add(farm2.assetName, farm2);
+        BuildingData farm3 = new BuildingData
+        {
+            assetName = "Farm_3",
+            tileSize = 4,
+            buildingType = BuildingType.Agricultural,
+            regionType = RegionType.Agricultural,
+            prefab = Resources.Load<GameObject>("Farm/Farm_Crop_Corn_Step_01 1"),
+            constructionCost = 300,
+            maintenanceCost = 20,
+            populationCapacity = 0,
+            moraleFactor = 1,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 1,
+            foodMatrialProduction = 10,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 1,
+            commercialProduction = 0
+        };
+        agriculturalBuildings.Add(farm3.assetName, farm3);
+        BuildingData farmHouse = new BuildingData
+        {
+            assetName = "Farm_House",
+            tileSize = 4,
+            buildingType = BuildingType.Agricultural,
+            regionType = RegionType.Agricultural,
+            prefab = Resources.Load<GameObject>("Farm/Farm_House_Barn_01"),
+            constructionCost = 300,
+            maintenanceCost = 20,
+            populationCapacity = 0,
+            moraleFactor = 1,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 1,
+            foodMatrialProduction = 10,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 1,
+            commercialProduction = 0
+        };
+        agriculturalBuildings.Add(farmHouse.assetName, farmHouse);
         
         // Add more agricultural buildings here...
     }

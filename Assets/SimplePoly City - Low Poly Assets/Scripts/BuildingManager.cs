@@ -25,16 +25,23 @@ public class BuildingManager : MonoBehaviour
     public int rawMaterialFactor=0;
     public int foodMaterailFactor=0;
     public int pollutionFactor=0;
+    public HandleBuildingSelection buildingSelectionHandler;
     void Start()
     {
-        buildingData=new BuildingDatabase.BuildingData[]{
-            BuildingDatabase.Instance.GetResidentialCommercialBuilding("Small_House_1")
-        };
-        Debug.Log(buildingData[0].tileSize);
-        if (buildingData[0].prefab){
-            buildingPrefabs[0]=buildingData[0].prefab;
+        if (buildingSelectionHandler == null)
+        {
+            buildingSelectionHandler = FindFirstObjectByType<HandleBuildingSelection>();
         }
-        
+        if (buildingSelectionHandler != null)
+        {
+            buildingData = buildingSelectionHandler.buildingData;
+        }
+        buildingPrefabs[0]=buildingData[0].prefab;
+        buildingPrefabs[1]=buildingData[1].prefab;
+        buildingPrefabs[2]=buildingData[2].prefab;
+        buildingPrefabs[3]=buildingData[3].prefab;
+        buildingPrefabs[4]=buildingData[4].prefab;
+        buildingPrefabs[5]=buildingData[5].prefab;
         // Initialize GridManager reference if not set in inspector
         if (gridManager == null)
             gridManager = FindFirstObjectByType<GridManager>();
@@ -67,11 +74,11 @@ public class BuildingManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1) && buildingPrefabs.Length > 0) SelectBuilding(0);
         if (Input.GetKeyDown(KeyCode.Alpha2) && buildingPrefabs.Length > 1) SelectBuilding(1);
         if (Input.GetKeyDown(KeyCode.Alpha3) && buildingPrefabs.Length > 2) SelectBuilding(2);
-        if (Input.GetKeyDown(KeyCode.Alpha4) && buildingPrefabs.Length > 2) SelectBuilding(3);
-        if (Input.GetKeyDown(KeyCode.Alpha5) && buildingPrefabs.Length > 2) SelectBuilding(4);
-        if (Input.GetKeyDown(KeyCode.Alpha6) && buildingPrefabs.Length > 2) SelectBuilding(5);
-        if (Input.GetKeyDown(KeyCode.Alpha7) && buildingPrefabs.Length > 2) SelectBuilding(6);
-        if (Input.GetKeyDown(KeyCode.Alpha8) && buildingPrefabs.Length > 2) SelectBuilding(7);
+        if (Input.GetKeyDown(KeyCode.Alpha4) && buildingPrefabs.Length > 3) SelectBuilding(3);
+        if (Input.GetKeyDown(KeyCode.Alpha5) && buildingPrefabs.Length > 4) SelectBuilding(4);
+        if (Input.GetKeyDown(KeyCode.Alpha6) && buildingPrefabs.Length > 5) SelectBuilding(5);
+        if (Input.GetKeyDown(KeyCode.Alpha7) && buildingPrefabs.Length > 6) SelectBuilding(6);
+        if (Input.GetKeyDown(KeyCode.Alpha8) && buildingPrefabs.Length > 7) SelectBuilding(7);
         // Cancel building mode
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -209,7 +216,7 @@ public class BuildingManager : MonoBehaviour
     {
         if (currentBuildingPrefab == null || previewObject == null) return;
 
-        // Check if gridManager is null before trying to use it
+        
         if (gridManager == null)
         {
             //Debug.LogError("GridManager reference is null! Trying to find it...");
