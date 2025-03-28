@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5681698300538528531}
   m_Layer: 0
   m_Name: Building_Drug Store_final
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,6 +101,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Roof Solar Panel (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 455ee4a2f2f87694e836d027a9b0f7d7, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 455ee4a2f2f87694e836d027a9b0f7d7, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.25
@@ -175,6 +179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Props_Roof prop air
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c370610c8ec86bd48acec590939d6604, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c370610c8ec86bd48acec590939d6604, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.2500001
@@ -248,6 +256,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 455ee4a2f2f87694e836d027a9b0f7d7, type: 3}
       propertyPath: m_Name
       value: Props_Roof Solar Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 455ee4a2f2f87694e836d027a9b0f7d7, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 455ee4a2f2f87694e836d027a9b0f7d7, type: 3}
       propertyPath: m_LocalScale.x
