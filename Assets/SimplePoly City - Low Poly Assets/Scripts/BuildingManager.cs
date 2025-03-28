@@ -216,7 +216,7 @@ public class BuildingManager : MonoBehaviour
     {
         if (currentBuildingPrefab == null || previewObject == null) return;
 
-        // Check if gridManager is null before trying to use it
+        
         if (gridManager == null)
         {
             //Debug.LogError("GridManager reference is null! Trying to find it...");
