@@ -379,7 +379,7 @@ GameObject:
   - component: {fileID: 7026861772020447613}
   - component: {fileID: 3432371666891007818}
   m_Layer: 0
-  m_Name: Building_Super Market 1
+  m_Name: Building_Super Market_final
   m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

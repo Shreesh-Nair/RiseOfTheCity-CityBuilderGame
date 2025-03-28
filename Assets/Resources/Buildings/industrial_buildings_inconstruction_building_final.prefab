@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7047235387850425173}
   - component: {fileID: 5055352664392726431}
   m_Layer: 0
-  m_Name: industrial-buildings-inconstruction-building
+  m_Name: industrial_buildings_inconstruction_building_final
   m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

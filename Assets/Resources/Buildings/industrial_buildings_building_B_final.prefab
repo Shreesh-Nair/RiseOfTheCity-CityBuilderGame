@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5107409192643201848}
   m_Layer: 0
-  m_Name: industrial_buildings_building_B
-  m_TagString: Untagged
+  m_Name: industrial_buildings_building_B_final
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
