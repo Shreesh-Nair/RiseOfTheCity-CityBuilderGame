@@ -47,7 +47,8 @@ public class BuildingDatabase : MonoBehaviour
         public int foodMatrialProduction; 
         public int foodMaterialConsumption;
         public int pollutionFactor;
-        public int commercialProduction;      
+        public int commercialProduction;
+        public int safety=0;      
     }
 
     // Dictionaries for each region
@@ -84,26 +85,835 @@ public class BuildingDatabase : MonoBehaviour
     {
         // Example of manually adding residential/commercial buildings
         
-        // Example 1: Small House
-        BuildingData smallHouse = new BuildingData
+        // Example 1: skyscraper
+        BuildingData skyscraper1 = new BuildingData
         {
-            assetName = "Small_House_1",
+            assetName = "Skyscraper1",
             tileSize = 1,
             buildingType = BuildingType.Housing,
             regionType = RegionType.ResidentialCommercial,
             prefab = Resources.Load<GameObject>("Buildings/Building Sky_big_color01_final"),
-            constructionCost = 100,
-            maintenanceCost = 5,
-            populationCapacity = 20,
-            moraleFactor = 2,
+            constructionCost = 250,
+            maintenanceCost = 2,
+            populationCapacity = 25,
+            moraleFactor = 0,
             rawMatrialProduction = 0,
-            rawMaterialConsumption = 1,
+            rawMaterialConsumption = 50,
             foodMatrialProduction = 0,
-            foodMaterialConsumption = 2,
-            pollutionFactor = 1,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 3,
+            commercialProduction = 0,
+            safety = 0
+        };
+        residentialCommercialBuildings.Add(skyscraper1.assetName, skyscraper1);
+
+        //skyscraper 2
+        BuildingData skyscraper2 = new BuildingData
+        {
+            assetName = "Skyscraper2",
+            tileSize = 1,
+            buildingType = BuildingType.Housing,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building Sky_big_color02_final"),
+            constructionCost = 250,
+            maintenanceCost = 2,
+            populationCapacity = 25,
+            moraleFactor = 0,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 50,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 3,
+            commercialProduction = 0,
+            safety = 0
+        };
+        residentialCommercialBuildings.Add(skyscraper2.assetName, skyscraper2);
+
+        //skyscraper 3
+        BuildingData skyscraper3 = new BuildingData
+        {
+            assetName = "Skyscraper3",
+            tileSize = 1,
+            buildingType = BuildingType.Housing,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building Sky_big_color03_final"),
+            constructionCost = 250,
+            maintenanceCost = 2,
+            populationCapacity = 25,
+            moraleFactor = 0,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 50,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 3,
+            commercialProduction = 0,
+            safety = 0
+        };
+        residentialCommercialBuildings.Add(skyscraper3.assetName, skyscraper3);
+
+        //skyscraper small 1
+        BuildingData skyscraperSmall1 = new BuildingData
+        {
+            assetName = "SkyscraperSmall1",
+            tileSize = 1,
+            buildingType = BuildingType.Housing,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building Sky_small_color01_final"),
+            constructionCost = 150,
+            maintenanceCost = 1,
+            populationCapacity = 15,
+            moraleFactor = 0,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 27,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 2,
+            commercialProduction = 0,
+            safety = 0
+        };
+        residentialCommercialBuildings.Add(skyscraperSmall1.assetName, skyscraperSmall1);
+
+        //skyscraper small 2
+        BuildingData skyscraperSmall2 = new BuildingData
+        {
+            assetName = "SkyscraperSmall2",
+            tileSize = 1,
+            buildingType = BuildingType.Housing,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building Sky_small_color02_final"),
+            constructionCost = 150,
+            maintenanceCost = 1,
+            populationCapacity = 15,
+            moraleFactor = 0,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 27,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 2,
+            commercialProduction = 0,
+            safety = 0
+        };
+        residentialCommercialBuildings.Add(skyscraperSmall2.assetName, skyscraperSmall2);
+
+        //skyscraper small 3
+        BuildingData skyscraperSmall3 = new BuildingData
+        {
+            assetName = "SkyscraperSmall3",
+            tileSize = 1,
+            buildingType = BuildingType.Housing,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building Sky_small_color03_final"),
+            constructionCost = 150,
+            maintenanceCost = 1,
+            populationCapacity = 15,
+            moraleFactor = 0,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 27,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 2,
+            commercialProduction = 0,
+            safety = 0
+        };
+        residentialCommercialBuildings.Add(skyscraperSmall3.assetName, skyscraperSmall3);
+
+
+        //bakery
+        BuildingData bakery = new BuildingData
+        {
+            assetName = "bakery",
+            tileSize = 1,
+            buildingType = BuildingType.Commercial,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building_Bakery_final"),
+            constructionCost = 70,
+            maintenanceCost = 0,
+            populationCapacity = 0,
+            moraleFactor = 10,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 40,
+            pollutionFactor = 2,
+            commercialProduction = 20,
+            safety = 0
+        };
+        residentialCommercialBuildings.Add(bakery.assetName, bakery);
+
+        //bar
+        BuildingData bar = new BuildingData
+        {
+            assetName = "bar",
+            tileSize = 1,
+            buildingType = BuildingType.Commercial,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building_Bar_final"),
+            constructionCost = 100,
+            maintenanceCost = 0,
+            populationCapacity = 0,
+            moraleFactor = 30,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 30,
+            pollutionFactor = 2,
+            commercialProduction = 50,
+            safety = 0
+        };
+        residentialCommercialBuildings.Add(bar.assetName, bar);
+
+        //bookshop
+        BuildingData bookshop = new BuildingData
+        {
+            assetName = "bookshop",
+            tileSize = 1,
+            buildingType = BuildingType.Commercial,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building_Books Shop_final"),
+            constructionCost = 60,
+            maintenanceCost = 5,
+            populationCapacity = 0,
+            moraleFactor = 20,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 0,
+            commercialProduction = 10
+        };
+        residentialCommercialBuildings.Add(bookshop.assetName, bookshop);
+
+        //chickenshop
+        BuildingData chickenshop = new BuildingData
+        {
+            assetName = "chickenshop",
+            tileSize = 1,
+            buildingType = BuildingType.Commercial,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building_Chicken Shop_final"),
+            constructionCost = 70,
+            maintenanceCost = 0,
+            populationCapacity = 0,
+            moraleFactor = 25,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 30,
+            pollutionFactor = 0,
+            commercialProduction = 25
+        };
+        residentialCommercialBuildings.Add(chickenshop.assetName, chickenshop);
+
+        //clothshop
+        BuildingData clothshop = new BuildingData
+        {
+            assetName = "clothshop",
+            tileSize = 1,
+            buildingType = BuildingType.Commercial,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building_Books Shop_final"),
+            constructionCost = 65,
+            maintenanceCost = 5,
+            populationCapacity = 0,
+            moraleFactor = 23,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 0,
+            commercialProduction = 20
+        };
+        residentialCommercialBuildings.Add(clothshop.assetName, clothshop);
+
+        //coffeeshop
+        BuildingData coffeeshop = new BuildingData
+        {
+            assetName = "coffeeshop",
+            tileSize = 1,
+            buildingType = BuildingType.Commercial,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building_Coffee Shop_with_chairs_final"),
+            constructionCost = 65,
+            maintenanceCost = 0,
+            populationCapacity = 0,
+            moraleFactor = 27,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 35,
+            pollutionFactor = 0,
+            commercialProduction = 20
+        };
+        residentialCommercialBuildings.Add(coffeeshop.assetName, coffeeshop);
+    
+        //drugstore
+        BuildingData drugstore = new BuildingData
+        {
+            assetName = "drugstore",
+            tileSize = 1,
+            buildingType = BuildingType.Commercial,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building_Drug Store_final"),
+            constructionCost = 55,
+            maintenanceCost = 10,
+            populationCapacity = 0,
+            moraleFactor = 20,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 0,
+            commercialProduction = 20
+        };
+        residentialCommercialBuildings.Add(drugstore.assetName, drugstore);
+
+        //fastfood
+        BuildingData fastfood = new BuildingData
+        {
+            assetName = "fastfood",
+            tileSize = 1,
+            buildingType = BuildingType.Commercial,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building_Fast_Food_final"),
+            constructionCost = 70,
+            maintenanceCost = 0,
+            populationCapacity = 0,
+            moraleFactor = 25,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 30,
+            pollutionFactor = 0,
+            commercialProduction = 25
+        };
+        residentialCommercialBuildings.Add(fastfood.assetName, fastfood);
+
+        //fruitshop
+        BuildingData fruitshop = new BuildingData
+        {
+            assetName = "fruitshop",
+            tileSize = 1,
+            buildingType = BuildingType.Commercial,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building_Fruits _Shop_final"),
+            constructionCost = 75,
+            maintenanceCost = 7,
+            populationCapacity = 0,
+            moraleFactor = 23,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 0,
+            commercialProduction = 25
+        };
+        residentialCommercialBuildings.Add(fruitshop.assetName, fruitshop);
+
+        //gasstation
+        BuildingData gasstation = new BuildingData
+        {
+            assetName = "gasstation",
+            tileSize = 2,
+            buildingType = BuildingType.Commercial,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building_Gas_Station_final"),
+            constructionCost = 100,
+            maintenanceCost = 15,
+            populationCapacity = 0,
+            moraleFactor = 25,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 0,
+            commercialProduction = 40
+        };
+        residentialCommercialBuildings.Add(gasstation.assetName, gasstation);
+
+        //smallhouse1
+        BuildingData smallhouse1 = new BuildingData
+        {
+            assetName = "smallhouse1",
+            tileSize = 1,
+            buildingType = BuildingType.Housing,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building_House_01_color01_final"),
+            constructionCost = 50,
+            maintenanceCost = 0,
+            populationCapacity = 4,
+            moraleFactor = 0,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 0,
             commercialProduction = 0
         };
-        residentialCommercialBuildings.Add(smallHouse.assetName, smallHouse);
+        residentialCommercialBuildings.Add(smallhouse1.assetName, smallhouse1);
+
+        //smallhouse2
+        BuildingData smallhouse2 = new BuildingData
+        {
+            assetName = "smallhouse2",
+            tileSize = 1,
+            buildingType = BuildingType.Housing,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building_House_01_color02_final"),
+            constructionCost = 50,
+            maintenanceCost = 0,
+            populationCapacity = 4,
+            moraleFactor = 0,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 0,
+            commercialProduction = 0
+        };
+        residentialCommercialBuildings.Add(smallhouse2.assetName, smallhouse2);
+
+        //smallhouse3
+        BuildingData smallhouse3 = new BuildingData
+        {
+            assetName = "smallhouse3",
+            tileSize = 1,
+            buildingType = BuildingType.Housing,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building_House_01_color03_final"),
+            constructionCost = 50,
+            maintenanceCost = 0,
+            populationCapacity = 4,
+            moraleFactor = 0,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 0,
+            commercialProduction = 0
+        };
+        residentialCommercialBuildings.Add(smallhouse3.assetName, smallhouse3);
+
+        //midhouse1
+        BuildingData midhouse1 = new BuildingData
+        {
+            assetName = "midhouse1",
+            tileSize = 1,
+            buildingType = BuildingType.Housing,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building_House_02_color01_final"),
+            constructionCost = 60,
+            maintenanceCost = 0,
+            populationCapacity = 6,
+            moraleFactor = 0,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 0,
+            commercialProduction = 0
+        };
+        residentialCommercialBuildings.Add(midhouse1.assetName, midhouse1);
+
+        //midhouse2
+        BuildingData midhouse2 = new BuildingData
+        {
+            assetName = "midhouse2",
+            tileSize = 1,
+            buildingType = BuildingType.Housing,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building_House_02_color02_final"),
+            constructionCost = 60,
+            maintenanceCost = 0,
+            populationCapacity = 6,
+            moraleFactor = 0,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 0,
+            commercialProduction = 0
+        };
+        residentialCommercialBuildings.Add(midhouse2.assetName, midhouse2);
+
+        //midhouse3
+        BuildingData midhouse3 = new BuildingData
+        {
+            assetName = "midhouse3",
+            tileSize = 1,
+            buildingType = BuildingType.Housing,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building_House_02_color03_final"),
+            constructionCost = 60,
+            maintenanceCost = 0,
+            populationCapacity = 6,
+            moraleFactor = 0,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 0,
+            commercialProduction = 0
+        };
+        residentialCommercialBuildings.Add(midhouse3.assetName, midhouse3);
+
+        //premhouse1
+        BuildingData premhouse1 = new BuildingData
+        {
+            assetName = "premhouse1",
+            tileSize = 1,
+            buildingType = BuildingType.Housing,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building_House_03_color01_final"),
+            constructionCost = 80,
+            maintenanceCost = 0,
+            populationCapacity = 10,
+            moraleFactor = 0,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 0,
+            commercialProduction = 0
+        };
+        residentialCommercialBuildings.Add(premhouse1.assetName, premhouse1);
+
+        //premhouse2
+        BuildingData premhouse2 = new BuildingData
+        {
+            assetName = "premhouse2",
+            tileSize = 1,
+            buildingType = BuildingType.Housing,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building_House_03_color02_final"),
+            constructionCost = 80,
+            maintenanceCost = 0,
+            populationCapacity = 10,
+            moraleFactor = 0,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 0,
+            commercialProduction = 0
+        };
+        residentialCommercialBuildings.Add(premhouse2.assetName, premhouse2);
+
+        //premhouse3
+        BuildingData premhouse3 = new BuildingData
+        {
+            assetName = "premhouse3",
+            tileSize = 1,
+            buildingType = BuildingType.Housing,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building_House_03_color03_final"),
+            constructionCost = 80,
+            maintenanceCost = 0,
+            populationCapacity = 10,
+            moraleFactor = 0,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 0,
+            commercialProduction = 0
+        };
+        residentialCommercialBuildings.Add(premhouse3.assetName, premhouse3);
+
+        //bungalow1
+        BuildingData bungalow1 = new BuildingData
+        {
+            assetName = "bungalow1",
+            tileSize = 2,
+            buildingType = BuildingType.Housing,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building_House_04_color01_final"),
+            constructionCost = 100,
+            maintenanceCost = 0,
+            populationCapacity = 12,
+            moraleFactor = 0,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 0,
+            commercialProduction = 0
+        };
+        residentialCommercialBuildings.Add(bungalow1.assetName, bungalow1);
+
+        //bungalow2
+        BuildingData bungalow2 = new BuildingData
+        {
+            assetName = "bungalow2",
+            tileSize = 2,
+            buildingType = BuildingType.Housing,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building_House_04_color02_final"),
+            constructionCost = 100,
+            maintenanceCost = 0,
+            populationCapacity = 12,
+            moraleFactor = 0,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 0,
+            commercialProduction = 0
+        };
+        residentialCommercialBuildings.Add(bungalow2.assetName, bungalow2);
+
+        //bungalow3
+        BuildingData bungalow3 = new BuildingData
+        {
+            assetName = "bungalow3",
+            tileSize = 2,
+            buildingType = BuildingType.Housing,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building_House_04_color03_final"),
+            constructionCost = 100,
+            maintenanceCost = 0,
+            populationCapacity = 12,
+            moraleFactor = 0,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 0,
+            commercialProduction = 0
+        };
+        residentialCommercialBuildings.Add(bungalow3.assetName, bungalow3);
+
+        //musicshop
+        BuildingData musicshop = new BuildingData
+        {
+            assetName = "musicshop",
+            tileSize = 1,
+            buildingType = BuildingType.Housing,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building_Music_Store_final"),
+            constructionCost = 60,
+            maintenanceCost = 5,
+            populationCapacity = 0,
+            moraleFactor = 20,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 0,
+            commercialProduction = 10
+        };
+        residentialCommercialBuildings.Add(musicshop.assetName, musicshop);
+
+        //pizza
+        BuildingData pizza = new BuildingData
+        {
+            assetName = "pizza",
+            tileSize = 1,
+            buildingType = BuildingType.Commercial,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building_Pizza_final"),
+            constructionCost = 80,
+            maintenanceCost = 0,
+            populationCapacity = 0,
+            moraleFactor = 25,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 30,
+            pollutionFactor = 0,
+            commercialProduction = 30
+        };
+        residentialCommercialBuildings.Add(pizza.assetName, pizza);
+
+        //apartment1
+        BuildingData apartment1 = new BuildingData
+        {
+            assetName = "apartment1",
+            tileSize = 1,
+            buildingType = BuildingType.Housing,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building_Residential_color01_final"),
+            constructionCost = 200,
+            maintenanceCost = 1,
+            populationCapacity = 20,
+            moraleFactor = 0,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 35,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 2,
+            commercialProduction = 0
+        };
+        residentialCommercialBuildings.Add(apartment1.assetName, apartment1);
+
+        //apartment2
+        BuildingData apartment2 = new BuildingData
+        {
+            assetName = "apartment2",
+            tileSize = 1,
+            buildingType = BuildingType.Housing,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building_Residential_color02_final"),
+            constructionCost = 200,
+            maintenanceCost = 1,
+            populationCapacity = 20,
+            moraleFactor = 0,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 35,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 2,
+            commercialProduction = 0
+        };
+        residentialCommercialBuildings.Add(apartment2.assetName, apartment2);
+
+        //apartment3
+        BuildingData apartment3 = new BuildingData
+        {
+            assetName = "apartment3",
+            tileSize = 1,
+            buildingType = BuildingType.Housing,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building_Residential_color03_final"),
+            constructionCost = 200,
+            maintenanceCost = 1,
+            populationCapacity = 20,
+            moraleFactor = 0,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 35,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 2,
+            commercialProduction = 0
+        };
+        residentialCommercialBuildings.Add(apartment3.assetName, apartment3);
+
+        //restraunt
+        BuildingData restraunt = new BuildingData
+        {
+            assetName = "restraunt",
+            tileSize = 1,
+            buildingType = BuildingType.Commercial,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building_Restaurant_final"),
+            constructionCost = 70,
+            maintenanceCost = 0,
+            populationCapacity = 0,
+            moraleFactor = 25,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 30,
+            pollutionFactor = 0,
+            commercialProduction = 25
+        };
+        residentialCommercialBuildings.Add(restraunt.assetName, restraunt);
+
+        //shoeshop
+        BuildingData shoeshop = new BuildingData
+        {
+            assetName = "shoeshop",
+            tileSize = 1,
+            buildingType = BuildingType.Commercial,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building_Shoes_Shop_final"),
+            constructionCost = 65,
+            maintenanceCost = 5,
+            populationCapacity = 0,
+            moraleFactor = 23,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 0,
+            commercialProduction = 20
+        };
+        residentialCommercialBuildings.Add(shoeshop.assetName, shoeshop);
+
+        //stadium
+        BuildingData stadium = new BuildingData
+        {
+            assetName = "stadium",
+            tileSize = 5,
+            buildingType = BuildingType.Recreation,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Building_Stadium_final"),
+            constructionCost = 200,
+            maintenanceCost = 15,
+            populationCapacity = 0,
+            moraleFactor = 50,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 20,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 30,
+            pollutionFactor = 0,
+            commercialProduction = 100
+        };
+        residentialCommercialBuildings.Add(stadium.assetName, stadium);
+
+        //cinema
+        BuildingData cinema = new BuildingData
+        {
+            assetName = "cinema",
+            tileSize = 2,
+            buildingType = BuildingType.Recreation,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/commercial_building_cinema_final"),
+            constructionCost = 130,
+            maintenanceCost = 10,
+            populationCapacity = 0,
+            moraleFactor = 40,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 15,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 20,
+            pollutionFactor = 0,
+            commercialProduction = 70
+        };
+        residentialCommercialBuildings.Add(cinema.assetName, cinema);
+
+        //firestation
+        BuildingData firestation = new BuildingData
+        {
+            assetName = "firestation",
+            tileSize = 2,
+            buildingType = BuildingType.Government,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Fire_Station_final"),
+            constructionCost = 100,
+            maintenanceCost = 12,
+            populationCapacity = 0,
+            moraleFactor = 35,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 10,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 0,
+            commercialProduction = 0,
+            safety = 10
+        };
+        residentialCommercialBuildings.Add(firestation.assetName, firestation);
+
+        //bank
+        BuildingData bank = new BuildingData
+        {
+            assetName = "bank",
+            tileSize = 2,
+            buildingType = BuildingType.Government,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/government_building_bank_final"),
+            constructionCost = 100,
+            maintenanceCost = 12,
+            populationCapacity = 0,
+            moraleFactor = 35,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 10,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 0,
+            commercialProduction = 0,
+            safety = 10
+        };
+        residentialCommercialBuildings.Add(bank.assetName, bank);
 
         //School
         BuildingData school = new BuildingData
@@ -126,27 +936,27 @@ public class BuildingDatabase : MonoBehaviour
         };
         residentialCommercialBuildings.Add(school.assetName, school);
         
-        
-        // Example 2: Bakery
-        BuildingData bakery = new BuildingData
+        //giftshop
+        BuildingData giftshop = new BuildingData
         {
-            assetName = "Bakery",
-            tileSize = 2,
-            buildingType = BuildingType.Commercial,
+            assetName = "giftshop",
+            tileSize = 1,
+            buildingType = BuildingType.Housing,
             regionType = RegionType.ResidentialCommercial,
-            prefab = Resources.Load<GameObject>("Buildings/Bakery"),
-            constructionCost = 250,
-            maintenanceCost = 15,
+            prefab = Resources.Load<GameObject>("Buildings/Building_Gift_Shop_final"),
+            constructionCost = 65,
+            maintenanceCost = 0,
             populationCapacity = 0,
-            moraleFactor = 3,
+            moraleFactor = 27,
             rawMatrialProduction = 0,
-            rawMaterialConsumption = 2,
-            foodMatrialProduction = 5,
-            foodMaterialConsumption = 0,
-            pollutionFactor = 2,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 35,
+            pollutionFactor = 0,
             commercialProduction = 20
         };
-        residentialCommercialBuildings.Add(bakery.assetName, bakery);
+        residentialCommercialBuildings.Add(giftshop.assetName, giftshop);
+        
         
         // Add more residential/commercial buildings here...
     }

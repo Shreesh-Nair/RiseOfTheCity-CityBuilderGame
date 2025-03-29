@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2735990901560681679}
   m_Layer: 0
   m_Name: government-building-city-hall_final
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

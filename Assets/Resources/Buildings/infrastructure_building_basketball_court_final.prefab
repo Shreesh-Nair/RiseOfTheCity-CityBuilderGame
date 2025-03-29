@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8263328868512314477}
   m_Layer: 0
   m_Name: infrastructure_building_basketball_court_final
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -7,12 +7,12 @@ public class HandleBuildingSelection : MonoBehaviour
     void Start()
     {
         buildingData=new BuildingDatabase.BuildingData[]{
-            BuildingDatabase.Instance.GetResidentialCommercialBuilding("Small_House_1"),
-            BuildingDatabase.Instance.GetAgriculturalBuilding("Farm_1"),
-            BuildingDatabase.Instance.GetAgriculturalBuilding("Farm_2"),
-            BuildingDatabase.Instance.GetAgriculturalBuilding("Farm_3"),
-            BuildingDatabase.Instance.GetAgriculturalBuilding("Farm_House"),
-            BuildingDatabase.Instance.GetResidentialCommercialBuilding("School"),
+            BuildingDatabase.Instance.GetResidentialCommercialBuilding("Skyscraper1"),
+            BuildingDatabase.Instance.GetResidentialCommercialBuilding("firestation"),
+            BuildingDatabase.Instance.GetResidentialCommercialBuilding("bank"),
+            BuildingDatabase.Instance.GetResidentialCommercialBuilding("apartment2"),
+            BuildingDatabase.Instance.GetResidentialCommercialBuilding("cinema"),
+            BuildingDatabase.Instance.GetResidentialCommercialBuilding("stadium"),
         };
     }
 
