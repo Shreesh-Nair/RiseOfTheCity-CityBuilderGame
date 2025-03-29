@@ -6789,6 +6789,7 @@ MonoBehaviour:
   foodMaterailFactor: 0
   pollutionFactor: 0
   buildingSelectionHandler: {fileID: 0}
+  totalBuildings: 0
 --- !u!4 &1749320829
 Transform:
   m_ObjectHideFlags: 0

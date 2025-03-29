@@ -11,7 +11,8 @@ public class BuildingManager : MonoBehaviour
     public Material invalidPlacementMaterial; // Material when placement is invalid (red)
     public int populationLimit = 0;
     public Text populationValue;
-    private GameObject currentBuildingPrefab; // Currently selected building
+    private GameObject currentBuildingPrefab;
+    private BuildingDatabase.BuildingData currentAsset; // Currently selected building
     private GameObject previewObject; // Preview version of the building before placement
     private Vector3 lastValidPosition; // Stores last valid placement position
     private bool canPlace = false; // Tracks whether placement is allowed
@@ -26,6 +27,7 @@ public class BuildingManager : MonoBehaviour
     public int foodMaterailFactor=0;
     public int pollutionFactor=0;
     public HandleBuildingSelection buildingSelectionHandler;
+    public int totalBuildings=0;
     void Start()
     {
         if (buildingSelectionHandler == null)
@@ -177,6 +179,7 @@ public class BuildingManager : MonoBehaviour
         // Update selection
         selectedBuildingIndex = index;
         currentBuildingPrefab = buildingPrefabs[index];
+        currentAsset = buildingData[index];
 
         // Reset rotation when selecting a new building
         currentRotation = 0f;

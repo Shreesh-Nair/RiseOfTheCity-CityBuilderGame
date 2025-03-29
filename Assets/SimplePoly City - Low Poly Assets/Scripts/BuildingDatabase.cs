@@ -915,14 +915,58 @@ public class BuildingDatabase : MonoBehaviour
         };
         residentialCommercialBuildings.Add(bank.assetName, bank);
 
+        //cityhall
+        BuildingData cityhall = new BuildingData
+        {
+            assetName = "cityhall",
+            tileSize = 2,
+            buildingType = BuildingType.Government,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/government-building-city-hall_final"),
+            constructionCost = 100,
+            maintenanceCost = 12,
+            populationCapacity = 0,
+            moraleFactor = 35,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 10,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 0,
+            commercialProduction = 0,
+            safety = 10
+        };
+        residentialCommercialBuildings.Add(cityhall.assetName, cityhall);
+
+        //hospital
+        BuildingData hospital = new BuildingData
+        {
+            assetName = "hospital",
+            tileSize = 2,
+            buildingType = BuildingType.Commercial,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/hospitalFinal"),
+            constructionCost = 100,
+            maintenanceCost = 12,
+            populationCapacity = 0,
+            moraleFactor = 35,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 10,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 0,
+            commercialProduction = 0,
+            safety = 10
+        };
+        residentialCommercialBuildings.Add(hospital.assetName, hospital);
+
         //School
         BuildingData school = new BuildingData
         {
             assetName = "School",
-            tileSize = 1,
+            tileSize = 4,
             buildingType = BuildingType.Housing,
             regionType = RegionType.ResidentialCommercial,
-            prefab = Resources.Load<GameObject>("Buildings/School_final"),
+            prefab = Resources.Load<GameObject>("Buildings/SchoolCenter_final"),
             constructionCost = 100,
             maintenanceCost = 5,
             populationCapacity = 20,
@@ -956,6 +1000,135 @@ public class BuildingDatabase : MonoBehaviour
             commercialProduction = 20
         };
         residentialCommercialBuildings.Add(giftshop.assetName, giftshop);
+
+        //basketball
+        BuildingData basketball = new BuildingData
+        {
+            assetName = "basketball",
+            tileSize = 2,
+            buildingType = BuildingType.Recreation,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/basketballCourt_final"),
+            constructionCost = 65,
+            maintenanceCost = 0,
+            populationCapacity = 0,
+            moraleFactor = 27,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 35,
+            pollutionFactor = 0,
+            commercialProduction = 20
+        };
+        residentialCommercialBuildings.Add(basketball.assetName, basketball);
+
+        //park
+        BuildingData park = new BuildingData
+        {
+            assetName = "park",
+            tileSize = 2,
+            buildingType = BuildingType.Decoration,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/infrastructure_building_park_final"),
+            constructionCost = 65,
+            maintenanceCost = 0,
+            populationCapacity = 0,
+            moraleFactor = 27,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 35,
+            pollutionFactor = 0,
+            commercialProduction = 20
+        };
+        residentialCommercialBuildings.Add(park.assetName, park);
+
+        //plaza
+        BuildingData plaza = new BuildingData
+        {
+            assetName = "plaza",
+            tileSize = 2,
+            buildingType = BuildingType.Decoration,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/infrastructure_building_plaza_final"),
+            constructionCost = 65,
+            maintenanceCost = 0,
+            populationCapacity = 0,
+            moraleFactor = 27,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 35,
+            pollutionFactor = 0,
+            commercialProduction = 20
+        };
+        residentialCommercialBuildings.Add(plaza.assetName, plaza);
+
+        //market
+        BuildingData market = new BuildingData
+        {
+            assetName = "market",
+            tileSize = 2,
+            buildingType = BuildingType.Commercial,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Market_center_final"),
+            constructionCost = 65,
+            maintenanceCost = 0,
+            populationCapacity = 0,
+            moraleFactor = 27,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 35,
+            pollutionFactor = 0,
+            commercialProduction = 20
+        };
+        residentialCommercialBuildings.Add(market.assetName, market);
+
+        //policestation
+        BuildingData policestation = new BuildingData
+        {
+            assetName = "policestation",
+            tileSize = 2,
+            buildingType = BuildingType.Government,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/Police_Station_final"),
+            constructionCost = 100,
+            maintenanceCost = 12,
+            populationCapacity = 0,
+            moraleFactor = 35,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 10,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 0,
+            pollutionFactor = 0,
+            commercialProduction = 0,
+            safety = 10
+        };
+        residentialCommercialBuildings.Add(policestation.assetName, policestation);
+
+        //supermarket
+        BuildingData supermarket = new BuildingData
+        {
+            assetName = "supermarket",
+            tileSize = 2,
+            buildingType = BuildingType.Commercial,
+            regionType = RegionType.ResidentialCommercial,
+            prefab = Resources.Load<GameObject>("Buildings/SuperMarket_final"),
+            constructionCost = 65,
+            maintenanceCost = 0,
+            populationCapacity = 0,
+            moraleFactor = 27,
+            rawMatrialProduction = 0,
+            rawMaterialConsumption = 0,
+            foodMatrialProduction = 0,
+            foodMaterialConsumption = 35,
+            pollutionFactor = 0,
+            commercialProduction = 20
+        };
+        residentialCommercialBuildings.Add(supermarket.assetName, supermarket);
+
+        
         
         
         // Add more residential/commercial buildings here...
@@ -966,7 +1139,7 @@ public class BuildingDatabase : MonoBehaviour
         
         BuildingData factory = new BuildingData
         {
-            assetName = "Factory_1",
+            assetName = "Factory1",
             tileSize = 3,
             buildingType = BuildingType.Factory,
             regionType = RegionType.Industrial,
