@@ -6,8 +6,8 @@ public class GridManager : MonoBehaviour
     public int height = 10;
     public float cellSize = 1f;
     public Material lineMaterial; // Assign this in the inspector
-    
-    private Node[,] grid;
+
+    public Node[,] grid;
     private GameObject gridVisualization;
     private GameObject gridCollider;
 
@@ -21,7 +21,7 @@ public class GridManager : MonoBehaviour
     void GenerateGrid()
     {
         grid = new Node[width, height];
-        
+
         // Create all nodes with proper world positions
         for (int x = 0; x < width; x++)
         {
@@ -32,22 +32,22 @@ public class GridManager : MonoBehaviour
             }
         }
     }
-    
+
     void CreateGridVisualization()
     {
         // Clean up any existing visualization
         if (gridVisualization != null)
             Destroy(gridVisualization);
-            
+
         gridVisualization = new GameObject("Grid Visualization");
         gridVisualization.transform.parent = this.transform;
-        
+
         // Create line renderer to show the grid
         for (int x = 0; x <= width; x++)
         {
             GameObject line = new GameObject($"Vertical Line {x}");
             line.transform.parent = gridVisualization.transform;
-            
+
             LineRenderer lr = line.AddComponent<LineRenderer>();
             lr.material = lineMaterial;
             lr.startWidth = 0.05f;
@@ -56,12 +56,12 @@ public class GridManager : MonoBehaviour
             lr.SetPosition(0, new Vector3(x * cellSize, 0, 0));
             lr.SetPosition(1, new Vector3(x * cellSize, 0, height * cellSize));
         }
-        
+
         for (int y = 0; y <= height; y++)
         {
             GameObject line = new GameObject($"Horizontal Line {y}");
             line.transform.parent = gridVisualization.transform;
-            
+
             LineRenderer lr = line.AddComponent<LineRenderer>();
             lr.material = lineMaterial;
             lr.startWidth = 0.05f;
@@ -71,23 +71,23 @@ public class GridManager : MonoBehaviour
             lr.SetPosition(1, new Vector3(width * cellSize, 0, y * cellSize));
         }
     }
-    
+
     void CreateGridCollider()
     {
         // Clean up any existing collider
         if (gridCollider != null)
             Destroy(gridCollider);
-            
+
         gridCollider = new GameObject("Grid Collider");
         gridCollider.transform.parent = this.transform;
-        
+
         // Position at the center of the grid
         gridCollider.transform.position = new Vector3(width * cellSize / 2, 0, height * cellSize / 2);
-        
+
         // Add a box collider sized to cover the entire grid
         BoxCollider collider = gridCollider.AddComponent<BoxCollider>();
         collider.size = new Vector3(width * cellSize, 0.1f, height * cellSize);
-        
+
         // Set layer to Grid (create this layer in Unity)
         gridCollider.layer = LayerMask.NameToLayer("Grid");
     }
@@ -101,25 +101,37 @@ public class GridManager : MonoBehaviour
         // Check if coordinates are within grid bounds
         if (x >= 0 && x < width && y >= 0 && y < height)
             return grid[x, y];
-        
+
         return null;
     }
-    
+
     public bool IsPositionValid(Vector3 worldPosition)
     {
         Node node = GetNodeFromWorldPosition(worldPosition);
         return node != null && node.isEmpty;
     }
-    
-    public void SetNodeOccupied(Vector3 worldPosition, bool occupied)
+
+    public void SetNodeOccupied(Vector3 worldPosition, bool occupied, int tileSize = 1)
     {
-        Node node = GetNodeFromWorldPosition(worldPosition);
-        if (node != null)
+        // Convert world position to grid coordinates
+        int centerX = Mathf.FloorToInt(worldPosition.x / cellSize);
+        int centerY = Mathf.FloorToInt(worldPosition.z / cellSize);
+
+        // Mark all nodes within the building's footprint as occupied/unoccupied
+        for (int x = centerX - (tileSize - 1); x <= centerX + (tileSize - 1); x++)
         {
-            node.isEmpty = !occupied;
+            for (int y = centerY - (tileSize - 1); y <= centerY + (tileSize - 1); y++)
+            {
+                // Check if coordinates are within grid bounds
+                if (x >= 0 && x < width && y >= 0 && y < height)
+                {
+                    grid[x, y].isEmpty = !occupied;
+                }
+            }
         }
     }
-    
+
+
     // Optional: Method to clear all occupied nodes (reset grid)
     public void ClearGrid()
     {
@@ -131,7 +143,7 @@ public class GridManager : MonoBehaviour
             }
         }
     }
-    
+
     // Optional: Debug method to visualize which cells are occupied
     public void DebugPrintGridOccupancy()
     {

@@ -168,18 +168,7 @@ public class BuildingManager : MonoBehaviour
 
                                 // Mark all tiles as unoccupied based on the building's size
                                 Vector3 buildingPosition = obj.transform.position;
-                                for (int x = -tileSize + 1; x < tileSize; x++)
-                                {
-                                    for (int z = -tileSize + 1; z < tileSize; z++)
-                                    {
-                                        Vector3 tilePosition = new Vector3(
-                                            buildingPosition.x + (x * gridManager.cellSize),
-                                            0.01f,
-                                            buildingPosition.z + (z * gridManager.cellSize)
-                                        );
-                                        gridManager.SetNodeOccupied(tilePosition, false);
-                                    }
-                                }
+                                gridManager.SetNodeOccupied(buildingPosition, false, tileSize);
 
                                 // Remove the building
                                 Destroy(obj);
@@ -269,25 +258,31 @@ public class BuildingManager : MonoBehaviour
 
                 // Check if all required tiles are empty
                 canPlace = true;
-                for (int x = -tileSize + 1; x < tileSize; x++)
-                {
-                    for (int z = -tileSize + 1; z < tileSize; z++)
-                    {
-                        Vector3 tilePosition = new Vector3(
-                            snappedPosition.x + (x * gridManager.cellSize),
-                            0.01f,
-                            snappedPosition.z + (z * gridManager.cellSize)
-                        );
 
-                        Node tileNode = gridManager.GetNodeFromWorldPosition(tilePosition);
-                        if (tileNode == null || !tileNode.isEmpty)
+                // Convert to grid coordinates
+                int centerX = Mathf.FloorToInt(snappedPosition.x / gridManager.cellSize);
+                int centerY = Mathf.FloorToInt(snappedPosition.z / gridManager.cellSize);
+
+                // Check all grid cells that would be occupied by this building
+                for (int x = centerX - (tileSize - 1); x <= centerX + (tileSize - 1); x++)
+                {
+                    for (int y = centerY - (tileSize - 1); y <= centerY + (tileSize - 1); y++)
+                    {
+                        // Check if coordinates are within grid bounds
+                        if (x < 0 || x >= gridManager.width || y < 0 || y >= gridManager.height)
                         {
                             canPlace = false;
                             break;
                         }
 
-
+                        // Check if the node is empty
+                        if (!gridManager.grid[x, y].isEmpty)
+                        {
+                            canPlace = false;
+                            break;
+                        }
                     }
+
                     if (!canPlace) break;
                 }
 
@@ -407,20 +402,8 @@ public class BuildingManager : MonoBehaviour
         }
 
         // Mark all tiles as occupied based on the building's size
-        for (int x = -tileSize + 1; x < tileSize; x++)
-        {
-            for (int z = -tileSize + 1; z < tileSize; z++)
-            {
-                Vector3 tilePosition = new Vector3(
-                    position.x + (x * gridManager.cellSize),
-                    0.01f,
-                    position.z + (z * gridManager.cellSize)
-                );
-                gridManager.SetNodeOccupied(tilePosition, true);
-                Debug.Log("Occupied tile at: " + tilePosition);
-            }
-        }
-        
+        gridManager.SetNodeOccupied(position, true, tileSize);
+
         // Debug grid occupancy
         gridManager.DebugPrintGridOccupancy();
     }

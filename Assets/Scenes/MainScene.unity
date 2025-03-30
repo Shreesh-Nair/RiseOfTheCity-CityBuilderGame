@@ -3048,8 +3048,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de8e81ded700ac745b4eafc14b58b35e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 10
-  height: 10
+  width: 100
+  height: 100
   cellSize: 1.2
   lineMaterial: {fileID: 0}
 --- !u!4 &906283212
