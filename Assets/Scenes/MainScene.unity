@@ -7751,6 +7751,60 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9a051521041e7740934ace9a7474818, type: 3}
+--- !u!1 &2126395056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2126395058}
+  - component: {fileID: 2126395057}
+  m_Layer: 0
+  m_Name: RoadManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2126395057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126395056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 142e50e400fc7564c9e8139adc6f1f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  straightRoadPrefab: {fileID: 4830312154454427057, guid: 63c6b9b9dfcc2a14087dbee118235841, type: 3}
+  lTurnRoadPrefab: {fileID: 4228590070216529394, guid: 7e45f130daab2bd4ab0cb072820fc747, type: 3}
+  tJunctionRoadPrefab: {fileID: 8040212986889192682, guid: c1408041b0f9a1b49ac3e5088a0bb5dd, type: 3}
+  intersectionRoadPrefab: {fileID: 7272915667435872002, guid: 3c7706b9547096346a367a19b3714778, type: 3}
+  gridManager: {fileID: 906283211}
+  gridLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  validPlacementMaterial: {fileID: 2100000, guid: c09fa2a155124634fa8d1d23a75aad7f, type: 2}
+  invalidPlacementMaterial: {fileID: 2100000, guid: 61ce5791cbc1ceb4e9452f50bbaaaa0a, type: 2}
+--- !u!4 &2126395058
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126395056}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 37.021835, y: 45.259533, z: 105.96427}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &865562872139151556
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8065,3 +8119,4 @@ SceneRoots:
   - {fileID: 1478276514}
   - {fileID: 1605124206}
   - {fileID: 238923948}
+  - {fileID: 2126395058}

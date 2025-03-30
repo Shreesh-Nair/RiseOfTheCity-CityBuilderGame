@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 603129926256671145}
   m_Layer: 0
   m_Name: Road Lane_03_final
-  m_TagString: Building
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

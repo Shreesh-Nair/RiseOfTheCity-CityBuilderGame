@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2693431794008635689}
   m_Layer: 0
   m_Name: Road Lane_with_street_light
-  m_TagString: Building
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
