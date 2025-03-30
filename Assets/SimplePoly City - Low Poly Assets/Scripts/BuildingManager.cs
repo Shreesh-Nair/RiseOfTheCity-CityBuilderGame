@@ -18,16 +18,16 @@ public class BuildingManager : MonoBehaviour
     private bool canPlace = false; // Tracks whether placement is allowed
     private int selectedBuildingIndex = -1; // Currently selected building index
     private float currentRotation = 0f; // Current rotation of the building (in y-axis)
-    public int totalCommercialProduction=0;
-    
+    public int totalCommercialProduction = 0;
+
     public BuildingDatabase.BuildingData[] buildingData;
-    public int taxFactor=0;
-    public int maintainanceFactor=0;
-    public int rawMaterialFactor=0;
-    public int foodMaterailFactor=0;
-    public int pollutionFactor=0;
+    public int taxFactor = 0;
+    public int maintainanceFactor = 0;
+    public int rawMaterialFactor = 0;
+    public int foodMaterailFactor = 0;
+    public int pollutionFactor = 0;
     public HandleBuildingSelection buildingSelectionHandler;
-    public int totalBuildings=0;
+    public int totalBuildings = 0;
     void Start()
     {
         if (buildingSelectionHandler == null)
@@ -38,12 +38,12 @@ public class BuildingManager : MonoBehaviour
         {
             buildingData = buildingSelectionHandler.buildingData;
         }
-        buildingPrefabs[0]=buildingData[0].prefab;
-        buildingPrefabs[1]=buildingData[1].prefab;
-        buildingPrefabs[2]=buildingData[2].prefab;
-        buildingPrefabs[3]=buildingData[3].prefab;
-        buildingPrefabs[4]=buildingData[4].prefab;
-        buildingPrefabs[5]=buildingData[5].prefab;
+        buildingPrefabs[0] = buildingData[0].prefab;
+        buildingPrefabs[1] = buildingData[1].prefab;
+        buildingPrefabs[2] = buildingData[2].prefab;
+        buildingPrefabs[3] = buildingData[3].prefab;
+        buildingPrefabs[4] = buildingData[4].prefab;
+        buildingPrefabs[5] = buildingData[5].prefab;
         // Initialize GridManager reference if not set in inspector
         if (gridManager == null)
             gridManager = FindFirstObjectByType<GridManager>();
@@ -139,20 +139,37 @@ public class BuildingManager : MonoBehaviour
                         {
                             // Get the node position
                             Node node = gridManager.GetNodeFromWorldPosition(obj.transform.position);
+                            
                             if (node != null)
                             {
-                                string destroyerPrefab=obj.name;
-                                destroyerPrefab=destroyerPrefab.Replace("(Clone)","");
-                                for (int i=0;i<buildingPrefabs.Length;i++){
-                                    Debug.Log(buildingPrefabs[i].name+"  ---   "+destroyerPrefab);
-                                    if (buildingPrefabs[i].name==destroyerPrefab){
-                                        Debug.Log("Found");
-                                        populationLimit-=buildingData[i].populationCapacity;
-                                        populationValue.text=populationLimit.ToString();
+                                string destroyerPrefab = obj.name;
+                                int tileSize = 0;
+                                destroyerPrefab = destroyerPrefab.Replace("(Clone)", "");
+                                for (int i = 0; i < buildingData.Length; i++)
+                                {
+                                    string prefabName = buildingData[i].prefab.name;
+                                    if (destroyerPrefab == prefabName)
+                                    {
+                                        Debug.Log(prefabName+"  ---   " + destroyerPrefab);
+                                        tileSize = buildingData[i].tileSize;
+                                        Debug.Log("Found tile size: " + tileSize);
+                                        break;
+                                    }
+
+                                }
+                                
+                                for (int i = 0; i < buildingPrefabs.Length; i++)
+                                {
+                                    //Debug.Log(buildingPrefabs[i].name + "  ---   " + destroyerPrefab);
+                                    if (buildingPrefabs[i].name == destroyerPrefab)
+                                    {
+                                        //Debug.Log("Found");
+                                        populationLimit -= buildingData[i].populationCapacity;
+                                        populationValue.text = populationLimit.ToString();
                                         break;
                                     }
                                 }
-                                Debug.Log(destroyerPrefab);
+                                //Debug.Log(destroyerPrefab);
                                 // Mark the node as unoccupied
                                 gridManager.SetNodeOccupied(node.worldPosition, false);
 
@@ -219,7 +236,7 @@ public class BuildingManager : MonoBehaviour
     {
         if (currentBuildingPrefab == null || previewObject == null) return;
 
-        
+
         if (gridManager == null)
         {
             //Debug.LogError("GridManager reference is null! Trying to find it...");
@@ -277,7 +294,7 @@ public class BuildingManager : MonoBehaviour
                 // Place building on mouse click
                 if (Input.GetMouseButtonDown(0) && canPlace)
                 {
-                    
+
                     PlaceBuilding(lastValidPosition);
                     Debug.Log("Found node at: " + node.worldPosition + ", Empty: " + node.isEmpty);
                 }
@@ -342,15 +359,17 @@ public class BuildingManager : MonoBehaviour
         GameObject placedBuilding = Instantiate(currentBuildingPrefab, position, Quaternion.Euler(0f, currentRotation, 0f));
 
         string prefabName = currentBuildingPrefab.name;
-        for (int i=0;i<buildingPrefabs.Length;i++){
-            if (buildingPrefabs[i].name==prefabName){
-              populationLimit+=buildingData[i].populationCapacity; 
-              populationValue.text=populationLimit.ToString();     
-                
+        for (int i = 0; i < buildingPrefabs.Length; i++)
+        {
+            if (buildingPrefabs[i].name == prefabName)
+            {
+                populationLimit += buildingData[i].populationCapacity;
+                populationValue.text = populationLimit.ToString();
+
             }
         }
         // Update UI text if it exists
-        
+
 
         // Restore original materials for the placed building
         Renderer[] buildingRenderers = placedBuilding.GetComponentsInChildren<Renderer>();
@@ -367,4 +386,5 @@ public class BuildingManager : MonoBehaviour
         // Debug grid occupancy
         gridManager.DebugPrintGridOccupancy();
     }
+
 }
