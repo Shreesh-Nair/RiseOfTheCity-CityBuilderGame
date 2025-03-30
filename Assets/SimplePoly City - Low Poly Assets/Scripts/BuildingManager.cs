@@ -117,7 +117,6 @@ public class BuildingManager : MonoBehaviour
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-
             if (Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
                 // Approximate coordinates to nearest grid cell
@@ -139,43 +138,51 @@ public class BuildingManager : MonoBehaviour
                         {
                             // Get the node position
                             Node node = gridManager.GetNodeFromWorldPosition(obj.transform.position);
-                            
                             if (node != null)
                             {
                                 string destroyerPrefab = obj.name;
                                 int tileSize = 0;
                                 destroyerPrefab = destroyerPrefab.Replace("(Clone)", "");
+
                                 for (int i = 0; i < buildingData.Length; i++)
                                 {
                                     string prefabName = buildingData[i].prefab.name;
                                     if (destroyerPrefab == prefabName)
                                     {
-                                        Debug.Log(prefabName+"  ---   " + destroyerPrefab);
+                                        Debug.Log(prefabName + " --- " + destroyerPrefab);
                                         tileSize = buildingData[i].tileSize;
                                         Debug.Log("Found tile size: " + tileSize);
                                         break;
                                     }
-
                                 }
-                                
+
                                 for (int i = 0; i < buildingPrefabs.Length; i++)
                                 {
-                                    //Debug.Log(buildingPrefabs[i].name + "  ---   " + destroyerPrefab);
                                     if (buildingPrefabs[i].name == destroyerPrefab)
                                     {
-                                        //Debug.Log("Found");
                                         populationLimit -= buildingData[i].populationCapacity;
                                         populationValue.text = populationLimit.ToString();
                                         break;
                                     }
                                 }
-                                //Debug.Log(destroyerPrefab);
-                                // Mark the node as unoccupied
-                                gridManager.SetNodeOccupied(node.worldPosition, false);
+
+                                // Mark all tiles as unoccupied based on the building's size
+                                Vector3 buildingPosition = obj.transform.position;
+                                for (int x = -tileSize + 1; x < tileSize; x++)
+                                {
+                                    for (int z = -tileSize + 1; z < tileSize; z++)
+                                    {
+                                        Vector3 tilePosition = new Vector3(
+                                            buildingPosition.x + (x * gridManager.cellSize),
+                                            0.01f,
+                                            buildingPosition.z + (z * gridManager.cellSize)
+                                        );
+                                        gridManager.SetNodeOccupied(tilePosition, false);
+                                    }
+                                }
 
                                 // Remove the building
                                 Destroy(obj);
-
                                 Debug.Log("Building removed at approximated coordinates: " + approximatedHitPoint);
 
                                 // Debug grid occupancy
@@ -188,6 +195,7 @@ public class BuildingManager : MonoBehaviour
             }
         }
     }
+
 
 
 
@@ -235,50 +243,53 @@ public class BuildingManager : MonoBehaviour
     void HandleBuildingPlacement()
     {
         if (currentBuildingPrefab == null || previewObject == null) return;
-
-
         if (gridManager == null)
         {
-            //Debug.LogError("GridManager reference is null! Trying to find it...");
             gridManager = FindFirstObjectByType<GridManager>();
-
-            // If still null, exit early to prevent further errors
-            if (gridManager == null)
-            {
-                //Debug.LogError("Could not find GridManager in the scene!");
-                return;
-            }
+            if (gridManager == null) return;
         }
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-
-        // Debug ray
         Debug.DrawRay(ray.origin, ray.direction * 100, Color.red);
-        //Debug.Log("Grid Layer: " + LayerMask.LayerToName(gridLayer));
 
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, gridLayer))
         {
-            // Debug hit
-            //Debug.Log("Hit at position: " + hit.point);
-
-            // Get the corresponding node from GridManager
             Node node = gridManager.GetNodeFromWorldPosition(hit.point);
-
             if (node != null)
             {
-                // Debug node info
-                //Debug.Log("Found node at: " + node.worldPosition + ", Empty: " + node.isEmpty);
-
-                // Snap to grid cell
                 Vector3 snappedPosition = new Vector3(
                     node.worldPosition.x,
-                    0, // Keep at ground level
+                    0.01f,
                     node.worldPosition.z
                 );
 
-                // Check if the node is empty
-                canPlace = node.isEmpty;
+                // Get the tile size from the current asset
+                int tileSize = currentAsset.tileSize;
+
+                // Check if all required tiles are empty
+                canPlace = true;
+                for (int x = -tileSize + 1; x < tileSize; x++)
+                {
+                    for (int z = -tileSize + 1; z < tileSize; z++)
+                    {
+                        Vector3 tilePosition = new Vector3(
+                            snappedPosition.x + (x * gridManager.cellSize),
+                            0.01f,
+                            snappedPosition.z + (z * gridManager.cellSize)
+                        );
+
+                        Node tileNode = gridManager.GetNodeFromWorldPosition(tilePosition);
+                        if (tileNode == null || !tileNode.isEmpty)
+                        {
+                            canPlace = false;
+                            break;
+                        }
+
+
+                    }
+                    if (!canPlace) break;
+                }
 
                 // Update preview position
                 previewObject.transform.position = snappedPosition;
@@ -294,17 +305,13 @@ public class BuildingManager : MonoBehaviour
                 // Place building on mouse click
                 if (Input.GetMouseButtonDown(0) && canPlace)
                 {
-
                     PlaceBuilding(lastValidPosition);
-                    Debug.Log("Found node at: " + node.worldPosition + ", Empty: " + node.isEmpty);
                 }
             }
             else
             {
                 // If hit but no valid node, show as invalid placement
                 canPlace = false;
-
-                // Update preview material to invalid
                 Renderer[] renderers = previewObject.GetComponentsInChildren<Renderer>();
                 foreach (Renderer renderer in renderers)
                 {
@@ -317,20 +324,39 @@ public class BuildingManager : MonoBehaviour
             // If no raycast hit, use a ground plane approach
             Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
             float distance;
-
             if (groundPlane.Raycast(ray, out distance))
             {
                 Vector3 worldPosition = ray.GetPoint(distance);
-
                 // Snap to grid
                 float x = Mathf.Floor(worldPosition.x / gridManager.cellSize) * gridManager.cellSize;
                 float z = Mathf.Floor(worldPosition.z / gridManager.cellSize) * gridManager.cellSize;
-
                 Vector3 snappedPosition = new Vector3(x, 0, z);
 
-                // Check if position is valid in grid bounds
-                Node node = gridManager.GetNodeFromWorldPosition(snappedPosition);
-                canPlace = (node != null && node.isEmpty);
+                // Get the tile size from the current asset
+                int tileSize = currentAsset.tileSize;
+
+                // Check if all required tiles are empty
+                canPlace = true;
+                for (int i = -tileSize + 1; i < tileSize; i++)
+                {
+                    for (int j = -tileSize + 1; j < tileSize; j++)
+                    {
+                        Vector3 tilePosition = new Vector3(
+                            snappedPosition.x + (i * gridManager.cellSize),
+                            0.01f,
+                            snappedPosition.z + (j * gridManager.cellSize)
+                        );
+
+                        Node tileNode = gridManager.GetNodeFromWorldPosition(tilePosition);
+
+                        if (tileNode == null || !tileNode.isEmpty)
+                        {
+                            canPlace = false;
+                            break;
+                        }
+                    }
+                    if (!canPlace) break;
+                }
 
                 // Update preview
                 previewObject.transform.position = snappedPosition;
@@ -352,9 +378,12 @@ public class BuildingManager : MonoBehaviour
         }
     }
 
+
     // Extracted building placement logic to avoid duplicated code
     private void PlaceBuilding(Vector3 position)
     {
+        int tileSize = currentAsset.tileSize;
+
         // Create the actual building
         GameObject placedBuilding = Instantiate(currentBuildingPrefab, position, Quaternion.Euler(0f, currentRotation, 0f));
 
@@ -365,11 +394,8 @@ public class BuildingManager : MonoBehaviour
             {
                 populationLimit += buildingData[i].populationCapacity;
                 populationValue.text = populationLimit.ToString();
-
             }
         }
-        // Update UI text if it exists
-
 
         // Restore original materials for the placed building
         Renderer[] buildingRenderers = placedBuilding.GetComponentsInChildren<Renderer>();
@@ -380,11 +406,24 @@ public class BuildingManager : MonoBehaviour
             buildingRenderers[i].material = prefabRenderer.sharedMaterial;
         }
 
-        // Mark the node as occupied
-        gridManager.SetNodeOccupied(position, true);
-
+        // Mark all tiles as occupied based on the building's size
+        for (int x = -tileSize + 1; x < tileSize; x++)
+        {
+            for (int z = -tileSize + 1; z < tileSize; z++)
+            {
+                Vector3 tilePosition = new Vector3(
+                    position.x + (x * gridManager.cellSize),
+                    0.01f,
+                    position.z + (z * gridManager.cellSize)
+                );
+                gridManager.SetNodeOccupied(tilePosition, true);
+                Debug.Log("Occupied tile at: " + tilePosition);
+            }
+        }
+        
         // Debug grid occupancy
         gridManager.DebugPrintGridOccupancy();
     }
+
 
 }
