@@ -54,6 +54,7 @@ public class RoadManager : MonoBehaviour
         HandleRoadSelection();
         HandleRotation();
         HandleRoadPlacement();
+        HandleRoadRemoval();
     }
     
     void HandleRoadSelection()
@@ -78,7 +79,15 @@ public class RoadManager : MonoBehaviour
         currentRoadPrefab = roadPrefab;
         
         // Reset rotation when selecting a new road
-        currentRotation = 0f;
+        // Fix for straight road initial orientation
+        if (roadPrefab == straightRoadPrefab)
+        {
+            currentRotation = 90f; // Start with a 90-degree rotation for straight roads
+        }
+        else
+        {
+            currentRotation = 0f;
+        }
         
         // Clear old preview
         ClearPreview();
@@ -87,6 +96,9 @@ public class RoadManager : MonoBehaviour
         if (currentRoadPrefab != null)
         {
             previewObject = Instantiate(currentRoadPrefab);
+            
+            // Apply initial rotation
+            previewObject.transform.rotation = Quaternion.Euler(0f, currentRotation, 0f);
             
             // Disable any components that might interfere with preview
             Collider[] colliders = previewObject.GetComponentsInChildren<Collider>();
@@ -140,7 +152,10 @@ public class RoadManager : MonoBehaviour
         
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, gridLayer))
         {
-            Node node = gridManager.GetNodeFromWorldPosition(hit.point);
+            // Fix for placement issue - directly use hit point for node lookup
+            Vector3 hitPosition = hit.point;
+            Node node = gridManager.GetNodeFromWorldPosition(hitPosition);
+            
             if (node != null)
             {
                 // Use the exact world position from the node to ensure proper alignment
@@ -150,7 +165,7 @@ public class RoadManager : MonoBehaviour
                     node.worldPosition.z
                 );
                 
-                // Check if the node is empty
+                // Check if the node is empty - fix for placement issue
                 canPlace = node.isEmpty;
                 
                 // Update preview position
@@ -179,10 +194,15 @@ public class RoadManager : MonoBehaviour
             if (groundPlane.Raycast(ray, out distance))
             {
                 Vector3 worldPosition = ray.GetPoint(distance);
-                // Snap to grid
-                float x = Mathf.Floor(worldPosition.x / gridManager.cellSize) * gridManager.cellSize;
-                float z = Mathf.Floor(worldPosition.z / gridManager.cellSize) * gridManager.cellSize;
-                Vector3 snappedPosition = new Vector3(x, 0.01f, z);
+                
+                // Snap to grid - Fix for placement issue
+                int x = Mathf.FloorToInt(worldPosition.x / gridManager.cellSize);
+                int z = Mathf.FloorToInt(worldPosition.z / gridManager.cellSize);
+                Vector3 snappedPosition = new Vector3(
+                    x * gridManager.cellSize,
+                    0.01f,
+                    z * gridManager.cellSize
+                );
                 
                 // Get the node at this position
                 Node node = gridManager.GetNodeFromWorldPosition(snappedPosition);
@@ -255,6 +275,92 @@ public class RoadManager : MonoBehaviour
         
         // Debug grid occupancy
         gridManager.DebugPrintGridOccupancy();
+    }
+    
+    // New method for handling road removal
+    void HandleRoadRemoval()
+    {
+        if (currentRoadPrefab == null && Input.GetKeyDown(KeyCode.Q))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+            {
+                // Approximate coordinates to nearest grid cell
+                Vector3 approximatedHitPoint = new Vector3(
+                    Mathf.Round(hit.point.x / gridManager.cellSize) * gridManager.cellSize,
+                    0.01f, // Keep at ground level
+                    Mathf.Round(hit.point.z / gridManager.cellSize) * gridManager.cellSize
+                );
+                
+                // Check if there's a road at this position
+                Vector2Int gridPos = new Vector2Int(
+                    Mathf.RoundToInt(approximatedHitPoint.x / gridManager.cellSize),
+                    Mathf.RoundToInt(approximatedHitPoint.z / gridManager.cellSize)
+                );
+                
+                if (roadGrid.ContainsKey(gridPos))
+                {
+                    GameObject roadToRemove = roadGrid[gridPos];
+                    
+                    // Remove from tracking collections
+                    placedRoads.Remove(roadToRemove);
+                    roadGrid.Remove(gridPos);
+                    
+                    // Remove from road nodes
+                    roadNodes.RemoveAll(node => Vector3.Distance(node, approximatedHitPoint) < 0.1f);
+                    
+                    // Mark grid as unoccupied
+                    gridManager.SetNodeOccupied(approximatedHitPoint, false, 1);
+                    
+                    // Destroy the road object
+                    Destroy(roadToRemove);
+                    
+                    Debug.Log("Road removed at: " + approximatedHitPoint);
+                    
+                    // Debug grid occupancy
+                    gridManager.DebugPrintGridOccupancy();
+                }
+                else
+                {
+                    // Alternative approach - check all road objects
+                    foreach (GameObject road in placedRoads.ToArray())
+                    {
+                        if (road != null && Vector3.Distance(road.transform.position, approximatedHitPoint) < 0.1f)
+                        {
+                            // Remove from tracking collections
+                            placedRoads.Remove(road);
+                            
+                            // Find and remove from grid dictionary
+                            foreach (var kvp in new Dictionary<Vector2Int, GameObject>(roadGrid))
+                            {
+                                if (kvp.Value == road)
+                                {
+                                    roadGrid.Remove(kvp.Key);
+                                    break;
+                                }
+                            }
+                            
+                            // Remove from road nodes
+                            roadNodes.RemoveAll(node => Vector3.Distance(node, road.transform.position) < 0.1f);
+                            
+                            // Mark grid as unoccupied
+                            gridManager.SetNodeOccupied(road.transform.position, false, 1);
+                            
+                            // Destroy the road object
+                            Destroy(road);
+                            
+                            Debug.Log("Road removed at: " + road.transform.position);
+                            
+                            // Debug grid occupancy
+                            gridManager.DebugPrintGridOccupancy();
+                            break;
+                        }
+                    }
+                }
+            }
+        }
     }
     
     // Methods for traffic simulation
