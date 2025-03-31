@@ -69,11 +69,12 @@ public class RoadManager : MonoBehaviour
     void SelectRoad(GameObject roadPrefab)
     {
         currentRoadPrefab = roadPrefab;
-        currentRotation = 0f;
+        currentRotation = (roadPrefab == straightRoadPrefab) ? 90f : 0f; // Set initial rotation for straight road
         ClearPreview();
         if (currentRoadPrefab != null)
         {
             previewObject = Instantiate(currentRoadPrefab);
+            previewObject.transform.rotation = Quaternion.Euler(0f, currentRotation, 0f);
             Collider[] colliders = previewObject.GetComponentsInChildren<Collider>();
             foreach (Collider col in colliders)
             {
