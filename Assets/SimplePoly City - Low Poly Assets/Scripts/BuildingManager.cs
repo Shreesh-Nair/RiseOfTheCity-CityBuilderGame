@@ -21,10 +21,7 @@ public class BuildingManager : MonoBehaviour
     public int totalCommercialProduction = 0;
 
     public BuildingDatabase.BuildingData[] buildingData;
-    public int taxFactor = 0;
     public int maintainanceFactor = 0;
-    public int rawMaterialFactor = 0;
-    public int foodMaterailFactor = 0;
     public int pollutionFactor = 0;
     public HandleBuildingSelection buildingSelectionHandler;
     public int totalBuildings = 0;
@@ -161,7 +158,11 @@ public class BuildingManager : MonoBehaviour
                                     if (buildingPrefabs[i].name == destroyerPrefab)
                                     {
                                         populationLimit -= buildingData[i].populationCapacity;
+                                        pollutionFactor -= buildingData[i].pollutionFactor;
+                                        maintainanceFactor -= buildingData[i].maintenanceCost;
+                                        totalCommercialProduction -= buildingData[i].commercialProduction;
                                         populationValue.text = populationLimit.ToString();
+                                        totalBuildings--;
                                         break;
                                     }
                                 }
@@ -388,6 +389,9 @@ public class BuildingManager : MonoBehaviour
             if (buildingPrefabs[i].name == prefabName)
             {
                 populationLimit += buildingData[i].populationCapacity;
+                pollutionFactor += buildingData[i].pollutionFactor;
+                maintainanceFactor += buildingData[i].maintenanceCost;
+                totalCommercialProduction += buildingData[i].commercialProduction;
                 populationValue.text = populationLimit.ToString();
             }
         }
@@ -406,6 +410,7 @@ public class BuildingManager : MonoBehaviour
 
         // Debug grid occupancy
         gridManager.DebugPrintGridOccupancy();
+        totalBuildings++;
     }
 
 

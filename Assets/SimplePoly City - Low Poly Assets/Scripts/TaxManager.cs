@@ -14,6 +14,7 @@ public class TaxManager : MonoBehaviour
     // Tax variables
     public int  budget = 1000;
     public float taxCollectionInterval = 30f;
+    public int gdp;
     public int population;
     public int totalMaintainanceCost = 0;
     
@@ -40,7 +41,7 @@ public class TaxManager : MonoBehaviour
     {
         // Count down to next tax collection
         timer += Time.deltaTime;
-        
+        gdp=buildingManager.totalCommercialProduction;
         // When time is up, collect taxes
         if (timer >= taxCollectionInterval)
         {
@@ -67,7 +68,11 @@ public class TaxManager : MonoBehaviour
     }
     
     void UpdateMoneyDisplay()
-    {
+    {   
+        if (incomeText != null)
+        {
+            incomeText.text = $"{gdp}";
+        }
         if (moneyText != null)
         {
             moneyText.text = $"{budget}";

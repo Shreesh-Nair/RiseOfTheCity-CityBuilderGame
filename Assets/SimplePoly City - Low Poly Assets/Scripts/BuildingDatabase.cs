@@ -1116,7 +1116,7 @@ public class BuildingDatabase : MonoBehaviour
             regionType = RegionType.ResidentialCommercial,
             prefab = Resources.Load<GameObject>("Buildings/SuperMarket_final"),
             constructionCost = 65,
-            maintenanceCost = 0,
+            maintenanceCost = 1,
             populationCapacity = 0,
             moraleFactor = 27,
             rawMatrialProduction = 0,
