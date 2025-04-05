@@ -3688,6 +3688,7 @@ MonoBehaviour:
   incomeText: {fileID: 1383067494}
   budget: 1000
   taxCollectionInterval: 30
+  gdp: 0
   population: 0
   totalMaintainanceCost: 0
 --- !u!4 &1174226801
@@ -6773,6 +6774,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
   gridManager: {fileID: 906283211}
   gridLayer:
     serializedVersion: 2
@@ -6783,10 +6785,7 @@ MonoBehaviour:
   populationValue: {fileID: 1586869224}
   totalCommercialProduction: 0
   buildingData: []
-  taxFactor: 0
   maintainanceFactor: 0
-  rawMaterialFactor: 0
-  foodMaterailFactor: 0
   pollutionFactor: 0
   buildingSelectionHandler: {fileID: 0}
   totalBuildings: 0
@@ -7344,6 +7343,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9a051521041e7740934ace9a7474818, type: 3}
+--- !u!1 &2021692124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2021692126}
+  - component: {fileID: 2021692125}
+  m_Layer: 0
+  m_Name: TrafficSimulator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2021692125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021692124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9d204a2ccd06e344ae742c09e468834, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roadManager: {fileID: 2126395057}
+  vehiclePrefabs:
+  - {fileID: 100000, guid: 81835658bbd378143a0f525b8552f557, type: 3}
+  - {fileID: 100000, guid: 81c050d9e127fdd45af1f6b8da476b2b, type: 3}
+  - {fileID: 100000, guid: 288b117258616aa4f928ba6f91dc47c3, type: 3}
+  - {fileID: 100000, guid: 05aec82adc02f16409639716322b1673, type: 3}
+  spawnInterval: 10
+  minVehicleSpeed: 4
+  maxVehicleSpeed: 4
+  vehiclesPerRoadRatio: 0.2
+  absoluteMaxVehicles: 50
+  safeDistance: 0.7
+  detectionDistance: 1
+  laneOffset: 0.3
+  steeringSpeed: 7
+  minStraightPathTime: 5
+  showDebugRays: 1
+--- !u!4 &2021692126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021692124}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.132627, y: -7.997802, z: 4.95563}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2030139572
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8120,3 +8180,4 @@ SceneRoots:
   - {fileID: 1605124206}
   - {fileID: 238923948}
   - {fileID: 2126395058}
+  - {fileID: 2021692126}

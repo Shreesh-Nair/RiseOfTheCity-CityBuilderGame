@@ -41,6 +41,7 @@ public class BuildingManager : MonoBehaviour
         buildingPrefabs[3] = buildingData[3].prefab;
         buildingPrefabs[4] = buildingData[4].prefab;
         buildingPrefabs[5] = buildingData[5].prefab;
+        buildingPrefabs[6] = buildingData[6].prefab;
         // Initialize GridManager reference if not set in inspector
         if (gridManager == null)
             gridManager = FindFirstObjectByType<GridManager>();
