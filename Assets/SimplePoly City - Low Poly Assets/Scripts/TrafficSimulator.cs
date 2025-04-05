@@ -39,7 +39,6 @@ public class TrafficSimulator : MonoBehaviour
     private Dictionary<Vector3, float> nodeLastUsedTime = new Dictionary<Vector3, float>();
     private int maxVehiclesOnRoad = 10;
     
-    // Class to track vehicle data
     private class VehicleController
     {
         public GameObject vehicle;
@@ -66,16 +65,12 @@ public class TrafficSimulator : MonoBehaviour
     {
         if (roadManager == null)
             roadManager = FindObjectOfType<RoadManager>();
-
         StartSimulation();
     }
 
     void Update()
     {
-        // Update vehicle limit based on road count
         UpdateVehicleLimit();
-        
-        // Update all active vehicles
         for (int i = activeVehicles.Count - 1; i >= 0; i--)
         {
             VehicleController vehicle = activeVehicles[i];
@@ -88,17 +83,12 @@ public class TrafficSimulator : MonoBehaviour
     
     void UpdateVehicleLimit()
     {
-        // Get the current road count
         List<Vector3> roadNodes = roadManager.GetRoadNodes();
         int roadCount = roadNodes.Count;
-        
-        // Calculate max vehicles based on road count
         maxVehiclesOnRoad = Mathf.Min(
             Mathf.RoundToInt(roadCount * vehiclesPerRoadRatio), 
             absoluteMaxVehicles
         );
-        
-        // Ensure at least 1 vehicle can spawn if there are roads
         if (roadCount > 0 && maxVehiclesOnRoad < 1)
             maxVehiclesOnRoad = 1;
     }
@@ -116,14 +106,11 @@ public class TrafficSimulator : MonoBehaviour
     {
         isSimulationRunning = false;
         StopAllCoroutines();
-
-        // Clean up any remaining vehicles
         foreach (VehicleController controller in activeVehicles)
         {
             if (controller != null && controller.vehicle != null)
                 Destroy(controller.vehicle);
         }
-
         activeVehicles.Clear();
         nodeLastUsedTime.Clear();
     }
@@ -132,10 +119,7 @@ public class TrafficSimulator : MonoBehaviour
     {
         while (isSimulationRunning)
         {
-            // Wait for the spawn interval with some randomization
             yield return new WaitForSeconds(spawnInterval * Random.Range(0.8f, 1.2f));
-
-            // Only spawn if we're under the vehicle limit
             if (activeVehicles.Count < maxVehiclesOnRoad)
             {
                 SpawnVehicle();
@@ -146,19 +130,14 @@ public class TrafficSimulator : MonoBehaviour
     private void SpawnVehicle()
     {
         List<Vector3> roadNodes = roadManager.GetRoadNodes();
+        if (roadNodes.Count < 2) return;
 
-        // Make sure we have at least two road nodes
-        if (roadNodes.Count < 2)
-            return;
-
-        // Find valid start nodes (ones that have connected roads)
         List<Vector3> startNodes = new List<Vector3>();
         foreach (Vector3 node in roadNodes)
         {
             List<Vector3> connections = roadManager.GetConnectedRoads(node);
             if (connections.Count > 0)
             {
-                // Check if this node was recently used for spawning
                 if (!nodeLastUsedTime.ContainsKey(node) ||
                     Time.time - nodeLastUsedTime[node] > spawnInterval * 2)
                 {
@@ -167,40 +146,31 @@ public class TrafficSimulator : MonoBehaviour
             }
         }
 
-        if (startNodes.Count == 0)
-            return;
+        if (startNodes.Count == 0) return;
 
-        // Pick a random start node
         Vector3 startNode = startNodes[Random.Range(0, startNodes.Count)];
         nodeLastUsedTime[startNode] = Time.time;
 
-        // Get a random vehicle prefab
         GameObject vehiclePrefab = vehiclePrefabs[Random.Range(0, vehiclePrefabs.Length)];
 
-        // Determine initial direction by looking at connected roads
         List<Vector3> initialConnections = roadManager.GetConnectedRoads(startNode);
-        if (initialConnections.Count == 0)
-            return;
+        if (initialConnections.Count == 0) return;
 
         Vector3 nextNode = initialConnections[Random.Range(0, initialConnections.Count)];
         Vector3 direction = (nextNode - startNode).normalized;
 
-        // Apply lane offset (left side driving)
         Vector3 spawnPosition = startNode + new Vector3(0, 0.1f, 0);
         Vector3 rightVector = Vector3.Cross(Vector3.up, direction);
         spawnPosition += rightVector * laneOffset;
 
-        // Spawn the vehicle
         GameObject vehicle = Instantiate(vehiclePrefab, spawnPosition, Quaternion.LookRotation(direction));
         
-        // Create controller and add to active vehicles
         VehicleController controller = new VehicleController(vehicle, startNode);
         controller.targetNode = nextNode;
         controller.speed = Random.Range(minVehicleSpeed, maxVehicleSpeed);
         controller.targetRotation = Quaternion.LookRotation(direction);
         activeVehicles.Add(controller);
 
-        // Start vehicle movement coroutine
         StartCoroutine(MoveVehicle(controller));
     }
 
@@ -212,41 +182,31 @@ public class TrafficSimulator : MonoBehaviour
 
         while (!reachedEnd && controller.vehicle != null && isSimulationRunning)
         {
-            // Get current position and calculate direction to target
             Vector3 currentPosition = controller.vehicle.transform.position;
             Vector3 direction = (controller.targetNode - currentPosition).normalized;
             
-            // Apply lane offset for left-side driving
             Vector3 rightVector = Vector3.Cross(Vector3.up, direction);
             Vector3 targetPosition = controller.targetNode + rightVector * laneOffset;
             
-            // Calculate distance to target
             float distanceToTarget = Vector3.Distance(currentPosition, targetPosition);
             
-            // Check for obstacles ahead
             bool obstacleDetected = false;
             float currentSpeed = controller.speed;
             
-            // Cast rays forward to detect other vehicles
             if (Physics.SphereCast(currentPosition, 0.5f, controller.vehicle.transform.forward, 
                 out RaycastHit hit, detectionDistance))
             {
-                // Check if we hit another vehicle
                 VehicleController hitVehicle = GetVehicleAtPosition(hit.transform.position);
                 if (hitVehicle != null)
                 {
                     obstacleDetected = true;
-                    
-                    // Adjust speed based on distance
                     float distanceToVehicle = hit.distance;
                     if (distanceToVehicle < safeDistance)
                     {
-                        // Slow down significantly if too close
                         currentSpeed = Mathf.Min(currentSpeed * 0.5f, hitVehicle.speed * 0.8f);
                     }
                     else
                     {
-                        // Match speed with vehicle ahead
                         currentSpeed = Mathf.Min(currentSpeed, hitVehicle.speed);
                     }
                 }
@@ -258,11 +218,10 @@ public class TrafficSimulator : MonoBehaviour
                     obstacleDetected ? Color.red : Color.green);
             }
             
-            // Check if we're stuck
             if (Vector3.Distance(currentPosition, lastPosition) < 0.01f)
             {
                 stuckCounter++;
-                if (stuckCounter > 100) // If stuck for too many frames
+                if (stuckCounter > 100)
                 {
                     reachedEnd = true;
                     break;
@@ -274,89 +233,69 @@ public class TrafficSimulator : MonoBehaviour
                 lastPosition = currentPosition;
             }
             
-            // If we're close to the target node, prepare to change direction
             if (distanceToTarget < 0.5f)
             {
-                // We've reached the current target node
                 controller.previousNode = controller.currentNode;
                 controller.currentNode = controller.targetNode;
                 controller.visitedNodes.Add(controller.currentNode);
                 
-                // Get connected roads from current position
                 List<Vector3> nextConnections = roadManager.GetConnectedRoads(controller.currentNode);
-                
-                // Remove the node we just came from
                 nextConnections.RemoveAll(node => Vector3.Distance(node, controller.previousNode) < 0.1f);
                 
-                // If no more connected roads, we've reached the end
                 if (nextConnections.Count == 0)
                 {
                     reachedEnd = true;
                     break;
                 }
                 
-                // Filter out nodes we've visited recently to avoid immediate loops
                 if (controller.visitedNodes.Count > 3)
                 {
                     List<Vector3> recentNodes = controller.visitedNodes.GetRange(
                         controller.visitedNodes.Count - 3, 3);
                     
-                    // If we have more than one option, try to avoid recent nodes
                     if (nextConnections.Count > 1)
                     {
                         List<Vector3> filteredConnections = new List<Vector3>();
                         foreach (Vector3 node in nextConnections)
                         {
-                            bool isRecent = false;
-                            foreach (Vector3 recentNode in recentNodes)
-                            {
-                                if (Vector3.Distance(node, recentNode) < 0.1f)
-                                {
-                                    isRecent = true;
-                                    break;
-                                }
-                            }
-                            if (!isRecent)
+                            if (!recentNodes.Contains(node))
                                 filteredConnections.Add(node);
                         }
                         
-                        // If we have filtered connections, use those instead
                         if (filteredConnections.Count > 0)
                             nextConnections = filteredConnections;
                     }
                 }
                 
-                // Prefer to keep going straight if possible and if we haven't been on this path too long
-                Vector3 forwardDirection = (controller.currentNode - controller.previousNode).normalized;
-                Vector3 bestNextNode = nextConnections[0];
-                float bestDirectionDot = -1f;
-                
-                foreach (Vector3 nextNode in nextConnections)
+                // Modified path selection logic to allow more turns
+                float turnChance = controller.pathFollowTime < minStraightPathTime ? 0.5f : 0.7f;
+                Vector3 bestNextNode;
+
+                if (Random.value < turnChance && nextConnections.Count > 1)
                 {
-                    Vector3 nextDirection = (nextNode - controller.currentNode).normalized;
-                    float directionDot = Vector3.Dot(forwardDirection, nextDirection);
+                    // Choose a random direction that isn't the way we came
+                    bestNextNode = nextConnections[Random.Range(0, nextConnections.Count)];
+                }
+                else
+                {
+                    // Original logic - prefer continuing straight
+                    Vector3 forwardDirection = (controller.currentNode - controller.previousNode).normalized;
+                    bestNextNode = nextConnections[0];
+                    float bestDirectionDot = -1f;
                     
-                    // If we've been going straight for a while, we might want to turn
-                    if (controller.pathFollowTime < minStraightPathTime)
+                    foreach (Vector3 nextNode in nextConnections)
                     {
-                        // Prefer continuing straight
+                        Vector3 nextDirection = (nextNode - controller.currentNode).normalized;
+                        float directionDot = Vector3.Dot(forwardDirection, nextDirection);
+                        
                         if (directionDot > bestDirectionDot)
                         {
                             bestDirectionDot = directionDot;
                             bestNextNode = nextNode;
                         }
                     }
-                    else
-                    {
-                        // After following straight for a while, allow more random turns
-                        if (Random.value > 0.3f && directionDot > bestDirectionDot)
-                        {
-                            bestDirectionDot = directionDot;
-                            bestNextNode = nextNode;
-                        }
-                    }
                 }
-                
+
                 // Verify the next node is actually a road
                 if (!roadManager.IsRoadAt(bestNextNode))
                 {
@@ -364,36 +303,30 @@ public class TrafficSimulator : MonoBehaviour
                     break;
                 }
                 
-                // If we're making a significant turn, reset the path follow time
                 Vector3 newDirection = (bestNextNode - controller.currentNode).normalized;
-                if (Vector3.Dot(forwardDirection, newDirection) < 0.7f)
+                if (Vector3.Dot((controller.currentNode - controller.previousNode).normalized, newDirection) < 0.7f)
                 {
                     controller.pathFollowTime = 0f;
                 }
                 
-                // Set the new target
                 controller.targetNode = bestNextNode;
             }
             
-            // Calculate movement
             direction = (targetPosition - currentPosition).normalized;
             controller.targetRotation = Quaternion.LookRotation(direction);
             
-            // Smoothly rotate towards the target direction
             controller.vehicle.transform.rotation = Quaternion.Slerp(
                 controller.vehicle.transform.rotation,
                 controller.targetRotation,
                 Time.deltaTime * steeringSpeed
             );
             
-            // Move forward at current speed
             float moveDistance = currentSpeed * Time.deltaTime;
             controller.vehicle.transform.position += controller.vehicle.transform.forward * moveDistance;
             
             yield return null;
         }
 
-        // Despawn the vehicle
         if (controller.vehicle != null)
         {
             activeVehicles.Remove(controller);
@@ -401,7 +334,6 @@ public class TrafficSimulator : MonoBehaviour
         }
     }
     
-    // Helper method to find a vehicle at a given position
     private VehicleController GetVehicleAtPosition(Vector3 position)
     {
         foreach (VehicleController controller in activeVehicles)
