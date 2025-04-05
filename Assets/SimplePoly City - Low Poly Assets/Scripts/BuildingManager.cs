@@ -234,9 +234,10 @@ public class BuildingManager : MonoBehaviour
     void HandleBuildingPlacement()
     {
         if (currentBuildingPrefab == null || previewObject == null) return;
+
         if (gridManager == null)
         {
-            gridManager = FindFirstObjectByType<GridManager>();
+            gridManager = FindObjectOfType<GridManager>();
             if (gridManager == null) return;
         }
 
@@ -261,9 +262,9 @@ public class BuildingManager : MonoBehaviour
                 // Check if all required tiles are empty
                 canPlace = true;
 
-                // Convert to grid coordinates
-                int centerX = Mathf.FloorToInt(snappedPosition.x / gridManager.cellSize);
-                int centerY = Mathf.FloorToInt(snappedPosition.z / gridManager.cellSize);
+                // Convert to grid coordinates - use RoundToInt instead of FloorToInt for consistency
+                int centerX = Mathf.RoundToInt(snappedPosition.x / gridManager.cellSize);
+                int centerY = Mathf.RoundToInt(snappedPosition.z / gridManager.cellSize);
 
                 // Check all grid cells that would be occupied by this building
                 for (int x = centerX - (tileSize - 1); x <= centerX + (tileSize - 1); x++)
@@ -284,7 +285,6 @@ public class BuildingManager : MonoBehaviour
                             break;
                         }
                     }
-
                     if (!canPlace) break;
                 }
 
@@ -324,29 +324,36 @@ public class BuildingManager : MonoBehaviour
             if (groundPlane.Raycast(ray, out distance))
             {
                 Vector3 worldPosition = ray.GetPoint(distance);
-                // Snap to grid
-                float x = Mathf.Floor(worldPosition.x / gridManager.cellSize) * gridManager.cellSize;
-                float z = Mathf.Floor(worldPosition.z / gridManager.cellSize) * gridManager.cellSize;
-                Vector3 snappedPosition = new Vector3(x, 0, z);
+
+                // Snap to grid - use Round instead of Floor for consistency
+                float x = Mathf.Round(worldPosition.x / gridManager.cellSize) * gridManager.cellSize;
+                float z = Mathf.Round(worldPosition.z / gridManager.cellSize) * gridManager.cellSize;
+                Vector3 snappedPosition = new Vector3(x, 0.01f, z);
 
                 // Get the tile size from the current asset
                 int tileSize = currentAsset.tileSize;
 
                 // Check if all required tiles are empty
                 canPlace = true;
-                for (int i = -tileSize + 1; i < tileSize; i++)
+
+                // Convert to grid coordinates
+                int centerX = Mathf.RoundToInt(snappedPosition.x / gridManager.cellSize);
+                int centerY = Mathf.RoundToInt(snappedPosition.z / gridManager.cellSize);
+
+                // Check all grid cells that would be occupied by this building
+                for (int x1 = centerX - (tileSize - 1); x <= centerX + (tileSize - 1); x++)
                 {
-                    for (int j = -tileSize + 1; j < tileSize; j++)
+                    for (int y = centerY - (tileSize - 1); y <= centerY + (tileSize - 1); y++)
                     {
-                        Vector3 tilePosition = new Vector3(
-                            snappedPosition.x + (i * gridManager.cellSize),
-                            0.01f,
-                            snappedPosition.z + (j * gridManager.cellSize)
-                        );
+                        // Check if coordinates are within grid bounds
+                        if (x1 < 0 || x1 >= gridManager.width || y < 0 || y >= gridManager.height)
+                        {
+                            canPlace = false;
+                            break;
+                        }
 
-                        Node tileNode = gridManager.GetNodeFromWorldPosition(tilePosition);
-
-                        if (tileNode == null || !tileNode.isEmpty)
+                        // Check if the node is empty
+                        if (!gridManager.grid[x1, y].isEmpty)
                         {
                             canPlace = false;
                             break;
@@ -374,6 +381,7 @@ public class BuildingManager : MonoBehaviour
             }
         }
     }
+
 
 
     // Extracted building placement logic to avoid duplicated code

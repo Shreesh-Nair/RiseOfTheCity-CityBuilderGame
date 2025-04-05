@@ -147,11 +147,15 @@ public class RoadManager : MonoBehaviour
     }
 
     Vector3 SnapToGrid(Vector3 worldPosition)
-    {
-        float x = Mathf.Round(worldPosition.x / gridManager.cellSize) * gridManager.cellSize;
-        float z = Mathf.Round(worldPosition.z / gridManager.cellSize) * gridManager.cellSize;
-        return new Vector3(x, 0.01f, z);
-    }
+{
+    int x = Mathf.RoundToInt(worldPosition.x / gridManager.cellSize);
+    int z = Mathf.RoundToInt(worldPosition.z / gridManager.cellSize);
+    return new Vector3(
+        x * gridManager.cellSize,
+        0.01f,
+        z * gridManager.cellSize
+    );
+}
 
     void UpdatePreview(Vector3 position)
     {

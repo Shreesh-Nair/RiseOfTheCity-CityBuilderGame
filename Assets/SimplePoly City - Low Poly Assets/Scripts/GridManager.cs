@@ -14,7 +14,7 @@ public class GridManager : MonoBehaviour
     private void Start()
     {
         GenerateGrid();
-        //CreateGridVisualization();
+        CreateGridVisualization();
         CreateGridCollider();
     }
 
@@ -92,18 +92,17 @@ public class GridManager : MonoBehaviour
         gridCollider.layer = LayerMask.NameToLayer("Grid");
     }
 
-    public Node GetNodeFromWorldPosition(Vector3 position)
-    {
-        // Convert world position to grid coordinates
-        int x = Mathf.FloorToInt(position.x / cellSize);
-        int y = Mathf.FloorToInt(position.z / cellSize);
+    // Update GetNodeFromWorldPosition to use RoundToInt for more consistent results
+public Node GetNodeFromWorldPosition(Vector3 position)
+{
+    int x = Mathf.RoundToInt(position.x / cellSize);
+    int y = Mathf.RoundToInt(position.z / cellSize);
+    
+    if (x >= 0 && x < width && y >= 0 && y < height)
+        return grid[x, y];
+    return null;
+}
 
-        // Check if coordinates are within grid bounds
-        if (x >= 0 && x < width && y >= 0 && y < height)
-            return grid[x, y];
-
-        return null;
-    }
 
     public bool IsPositionValid(Vector3 worldPosition)
     {
