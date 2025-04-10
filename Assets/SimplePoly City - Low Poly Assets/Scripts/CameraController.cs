@@ -23,7 +23,7 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         // Lock and hide cursor
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
         // Store initial rotation
         rotationX = transform.eulerAngles.y;
         rotationY = transform.eulerAngles.x;
@@ -52,11 +52,11 @@ public class CameraController : MonoBehaviour
         }
 
         // Toggle cursor lock with Escape key
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ?
-                CursorLockMode.None : CursorLockMode.Locked;
-        }
+        // if (Input.GetKeyDown(KeyCode.Escape))
+        // {
+        //     Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ?
+        //         CursorLockMode.None : CursorLockMode.Locked;
+        // }
 
         // Movement
         Vector3 moveDirection = Vector3.zero;
