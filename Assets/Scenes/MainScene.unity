@@ -6787,7 +6787,7 @@ MonoBehaviour:
   buildingData: []
   maintainanceFactor: 0
   pollutionFactor: 0
-  buildingSelectionHandler: {fileID: 0}
+  buildingSelectionHandler: {fileID: 1605124205}
   totalBuildings: 0
 --- !u!4 &1749320829
 Transform:

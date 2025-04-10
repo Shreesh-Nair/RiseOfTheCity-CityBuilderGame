@@ -9,7 +9,7 @@ public class HandleBuildingSelection : MonoBehaviour
         buildingData=new BuildingDatabase.BuildingData[]{
             BuildingDatabase.Instance.GetResidentialCommercialBuilding("Skyscraper1"),
             BuildingDatabase.Instance.GetResidentialCommercialBuilding("supermarket"),
-            BuildingDatabase.Instance.GetResidentialCommercialBuilding("SkyscraperSmall3"),
+            BuildingDatabase.Instance.GetResidentialCommercialBuilding("gasstation"),
             BuildingDatabase.Instance.GetResidentialCommercialBuilding("park"),
             BuildingDatabase.Instance.GetResidentialCommercialBuilding("bakery"),
             BuildingDatabase.Instance.GetResidentialCommercialBuilding("fruitshop"),

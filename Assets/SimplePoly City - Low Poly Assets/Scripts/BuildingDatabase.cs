@@ -41,14 +41,14 @@ public class BuildingDatabase : MonoBehaviour
         public int constructionCost;
         public int maintenanceCost;
         public int populationCapacity;
-        public int moraleFactor;
-        public int rawMatrialProduction; 
+        public int moraleFactor;  
+        public int rawMatrialProduction; // for factories only
         public int rawMaterialConsumption;
-        public int foodMatrialProduction; 
-        public int foodMaterialConsumption;
+        public int foodMatrialProduction;  // for farms 
+        public int foodMaterialConsumption;  
         public int pollutionFactor;
         public int commercialProduction;
-        public int safety=0;      
+        public int safety=0;    // for police stations, fire stations and other buildings for safety  
     }
 
     // Dictionaries for each region
