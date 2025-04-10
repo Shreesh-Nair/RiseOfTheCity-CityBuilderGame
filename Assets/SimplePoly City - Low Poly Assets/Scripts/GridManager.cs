@@ -14,7 +14,7 @@ public class GridManager : MonoBehaviour
     private void Start()
     {
         GenerateGrid();
-        CreateGridVisualization();
+        //CreateGridVisualization();
         CreateGridCollider();
     }
 
@@ -93,15 +93,15 @@ public class GridManager : MonoBehaviour
     }
 
     // Update GetNodeFromWorldPosition to use RoundToInt for more consistent results
-public Node GetNodeFromWorldPosition(Vector3 position)
-{
-    int x = Mathf.RoundToInt(position.x / cellSize);
-    int y = Mathf.RoundToInt(position.z / cellSize);
-    
-    if (x >= 0 && x < width && y >= 0 && y < height)
-        return grid[x, y];
-    return null;
-}
+    public Node GetNodeFromWorldPosition(Vector3 position)
+    {
+        int x = Mathf.RoundToInt(position.x / cellSize);
+        int y = Mathf.RoundToInt(position.z / cellSize);
+
+        if (x >= 0 && x < width && y >= 0 && y < height)
+            return grid[x, y];
+        return null;
+    }
 
 
     public bool IsPositionValid(Vector3 worldPosition)
@@ -157,6 +157,29 @@ public Node GetNodeFromWorldPosition(Vector3 position)
         }
         //Debug.Log(gridDebug);
     }
+    private void Update()
+    {
+        // Check if the 'G' key is pressed
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            ToggleGridVisualization();
+        }
+    }
+
+    private void ToggleGridVisualization()
+    {
+        // If grid visualization exists, toggle its active state
+        if (gridVisualization != null)
+        {
+            gridVisualization.SetActive(!gridVisualization.activeSelf);
+        }
+        // If it doesn't exist and we're trying to show it, create it first
+        else
+        {
+            CreateGridVisualization();
+        }
+    }
+
 }
 
 public class Node
