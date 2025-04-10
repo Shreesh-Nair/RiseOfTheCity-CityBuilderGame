@@ -4,18 +4,19 @@ public class CameraController : MonoBehaviour
 {
     // Movement speed
     public float moveSpeed = 10f;
-    
+
     // Mouse sensitivity
     public float mouseSensitivity = 2f;
-    
+
     // Movement boundaries
     public Vector2 xBounds = new Vector2(0f, 200f);
     public Vector2 yBounds = new Vector2(1f, 30f);
     public Vector2 zBounds = new Vector2(0f, 200f);
+
     // Rotation limits (in degrees)
     public float minXRotation = -80f;
     public float maxXRotation = 80f;
-    
+
     private float rotationX = 0f;
     private float rotationY = 0f;
 
@@ -23,7 +24,6 @@ public class CameraController : MonoBehaviour
     {
         // Lock and hide cursor
         Cursor.lockState = CursorLockMode.Locked;
-        
         // Store initial rotation
         rotationX = transform.eulerAngles.y;
         rotationY = transform.eulerAngles.x;
@@ -32,6 +32,7 @@ public class CameraController : MonoBehaviour
     void Update()
     {
         ResetPositionAndRotation();
+
         // Mouse look
         if (Input.GetMouseButton(1)) // Right mouse button held down
         {
@@ -42,24 +43,24 @@ public class CameraController : MonoBehaviour
             // Adjust rotation based on mouse movement
             rotationX += mouseX;
             rotationY -= mouseY; // Inverted for intuitive control
-            
+
             // Clamp vertical rotation
             rotationY = Mathf.Clamp(rotationY, minXRotation, maxXRotation);
-            
+
             // Apply rotation
             transform.rotation = Quaternion.Euler(rotationY, rotationX, 0);
         }
-        
+
         // Toggle cursor lock with Escape key
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ? 
-                               CursorLockMode.None : CursorLockMode.Locked;
+            Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ?
+                CursorLockMode.None : CursorLockMode.Locked;
         }
-        
+
         // Movement
         Vector3 moveDirection = Vector3.zero;
-        
+
         // Get input values
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
             moveDirection += transform.forward;
@@ -73,14 +74,14 @@ public class CameraController : MonoBehaviour
             moveDirection += Vector3.up;
         if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl))
             moveDirection += Vector3.down;
-            
+
         // Normalize and apply movement
         if (moveDirection.magnitude > 0)
         {
             moveDirection.Normalize();
             transform.position += moveDirection * moveSpeed * Time.deltaTime;
         }
-        
+
         // Enforce bounds
         Vector3 clampedPosition = transform.position;
         clampedPosition.x = Mathf.Clamp(clampedPosition.x, xBounds.x, xBounds.y);
@@ -91,10 +92,18 @@ public class CameraController : MonoBehaviour
 
     void ResetPositionAndRotation()
     {
-        if (Input.GetKeyDown(KeyCode.G))
+        if (Input.GetKeyDown(KeyCode.C))
         {
-            transform.position = new Vector3(100f, 20f, 100f);
+            // Keep current X and Z position, set Y to 20
+            Vector3 newPosition = new Vector3(transform.position.x, 20f, transform.position.z);
+            transform.position = newPosition;
+            
+            // Set rotation to look directly down (90 degrees on X axis)
             transform.rotation = Quaternion.Euler(90f, 0f, 0f);
+            
+            // Update the rotation variables to match the new rotation
+            rotationX = 0f;
+            rotationY = 90f;
         }
     }
 }
