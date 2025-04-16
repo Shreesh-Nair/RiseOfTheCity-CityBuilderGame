@@ -100,14 +100,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 250,
             maintenanceCost = 2,
             populationCapacity = 25,
-            moraleFactor = 0,
+            moraleFactor = 30,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 50,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 0,
-            pollutionFactor = 3,
+            pollutionFactor = 25,
             commercialProduction = 0,
-            safety = 0
+            safety = 4
         };
         residentialCommercialBuildings.Add(skyscraper1.assetName, skyscraper1);
 
@@ -123,14 +123,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 250,
             maintenanceCost = 2,
             populationCapacity = 25,
-            moraleFactor = 0,
+            moraleFactor = 30,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 50,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 0,
-            pollutionFactor = 3,
+            pollutionFactor = 25,
             commercialProduction = 0,
-            safety = 0
+            safety = 4
         };
         residentialCommercialBuildings.Add(skyscraper2.assetName, skyscraper2);
 
@@ -146,14 +146,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 250,
             maintenanceCost = 2,
             populationCapacity = 25,
-            moraleFactor = 0,
+            moraleFactor = 30,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 50,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 0,
-            pollutionFactor = 3,
+            pollutionFactor = 25,
             commercialProduction = 0,
-            safety = 0
+            safety = 4
         };
         residentialCommercialBuildings.Add(skyscraper3.assetName, skyscraper3);
 
@@ -169,14 +169,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 150,
             maintenanceCost = 1,
             populationCapacity = 15,
-            moraleFactor = 0,
+            moraleFactor = 20,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 27,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 0,
-            pollutionFactor = 2,
+            pollutionFactor = 15,
             commercialProduction = 0,
-            safety = 0
+            safety = 3
         };
         residentialCommercialBuildings.Add(skyscraperSmall1.assetName, skyscraperSmall1);
 
@@ -192,14 +192,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 150,
             maintenanceCost = 1,
             populationCapacity = 15,
-            moraleFactor = 0,
+            moraleFactor = 20,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 27,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 0,
-            pollutionFactor = 2,
+            pollutionFactor = 15,
             commercialProduction = 0,
-            safety = 0
+            safety = 3
         };
         residentialCommercialBuildings.Add(skyscraperSmall2.assetName, skyscraperSmall2);
 
@@ -215,14 +215,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 150,
             maintenanceCost = 1,
             populationCapacity = 15,
-            moraleFactor = 0,
+            moraleFactor = 20,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 27,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 0,
-            pollutionFactor = 2,
+            pollutionFactor = 15,
             commercialProduction = 0,
-            safety = 0
+            safety = 3
         };
         residentialCommercialBuildings.Add(skyscraperSmall3.assetName, skyscraperSmall3);
 
@@ -239,14 +239,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 70,
             maintenanceCost = 0,
             populationCapacity = 0,
-            moraleFactor = 10,
+            moraleFactor = 50,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 40,
-            pollutionFactor = 2,
+            pollutionFactor = 20,
             commercialProduction = 20,
-            safety = 0
+            safety = 5
         };
         residentialCommercialBuildings.Add(bakery.assetName, bakery);
 
@@ -262,14 +262,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 100,
             maintenanceCost = 0,
             populationCapacity = 0,
-            moraleFactor = 30,
+            moraleFactor = 70,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 30,
-            pollutionFactor = 2,
+            pollutionFactor = 30,
             commercialProduction = 50,
-            safety = 0
+            safety = 4
         };
         residentialCommercialBuildings.Add(bar.assetName, bar);
 
@@ -285,13 +285,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 60,
             maintenanceCost = 5,
             populationCapacity = 0,
-            moraleFactor = 20,
+            moraleFactor = 60,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 0,
-            pollutionFactor = 0,
-            commercialProduction = 10
+            pollutionFactor = 10,
+            commercialProduction = 10,
+            safety = 6
         };
         residentialCommercialBuildings.Add(bookshop.assetName, bookshop);
 
@@ -307,13 +308,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 70,
             maintenanceCost = 0,
             populationCapacity = 0,
-            moraleFactor = 25,
+            moraleFactor = 65,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 30,
-            pollutionFactor = 0,
-            commercialProduction = 25
+            pollutionFactor = 25,
+            commercialProduction = 25,
+            safety = 5
         };
         residentialCommercialBuildings.Add(chickenshop.assetName, chickenshop);
 
@@ -329,13 +331,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 65,
             maintenanceCost = 5,
             populationCapacity = 0,
-            moraleFactor = 23,
+            moraleFactor = 45,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 0,
-            pollutionFactor = 0,
-            commercialProduction = 20
+            pollutionFactor = 10,
+            commercialProduction = 20,
+            safety = 5
         };
         residentialCommercialBuildings.Add(clothshop.assetName, clothshop);
 
@@ -373,13 +376,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 55,
             maintenanceCost = 10,
             populationCapacity = 0,
-            moraleFactor = 20,
+            moraleFactor = 40,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 0,
-            pollutionFactor = 0,
-            commercialProduction = 20
+            pollutionFactor = 5,
+            commercialProduction = 20,
+            safety = 6
         };
         residentialCommercialBuildings.Add(drugstore.assetName, drugstore);
 
@@ -395,13 +399,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 70,
             maintenanceCost = 0,
             populationCapacity = 0,
-            moraleFactor = 25,
+            moraleFactor = 35,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 30,
-            pollutionFactor = 0,
-            commercialProduction = 25
+            pollutionFactor = 18,
+            commercialProduction = 25,
+            safety = 4
         };
         residentialCommercialBuildings.Add(fastfood.assetName, fastfood);
 
@@ -417,13 +422,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 75,
             maintenanceCost = 7,
             populationCapacity = 0,
-            moraleFactor = 23,
+            moraleFactor = 45,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 0,
-            pollutionFactor = 0,
-            commercialProduction = 25
+            pollutionFactor = 5,
+            commercialProduction = 25,
+            safety = 6
         };
         residentialCommercialBuildings.Add(fruitshop.assetName, fruitshop);
 
@@ -444,8 +450,9 @@ public class BuildingDatabase : MonoBehaviour
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 0,
-            pollutionFactor = 0,
-            commercialProduction = 40
+            pollutionFactor = 40,
+            commercialProduction = 40,
+            safety = 3
         };
         residentialCommercialBuildings.Add(gasstation.assetName, gasstation);
 
@@ -461,13 +468,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 50,
             maintenanceCost = 0,
             populationCapacity = 4,
-            moraleFactor = 0,
+            moraleFactor = 20,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 0,
-            pollutionFactor = 0,
-            commercialProduction = 0
+            pollutionFactor = 10,
+            commercialProduction = 0,
+            safety = 3
         };
         residentialCommercialBuildings.Add(smallhouse1.assetName, smallhouse1);
 
@@ -483,13 +491,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 50,
             maintenanceCost = 0,
             populationCapacity = 4,
-            moraleFactor = 0,
+            moraleFactor = 20,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 0,
-            pollutionFactor = 0,
-            commercialProduction = 0
+            pollutionFactor = 10,
+            commercialProduction = 0,
+            safety = 3
         };
         residentialCommercialBuildings.Add(smallhouse2.assetName, smallhouse2);
 
@@ -505,13 +514,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 50,
             maintenanceCost = 0,
             populationCapacity = 4,
-            moraleFactor = 0,
+            moraleFactor = 20,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 0,
-            pollutionFactor = 0,
-            commercialProduction = 0
+            pollutionFactor = 10,
+            commercialProduction = 0,
+            safety =3
         };
         residentialCommercialBuildings.Add(smallhouse3.assetName, smallhouse3);
 
@@ -527,13 +537,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 60,
             maintenanceCost = 0,
             populationCapacity = 6,
-            moraleFactor = 0,
+            moraleFactor = 25,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 0,
-            pollutionFactor = 0,
-            commercialProduction = 0
+            pollutionFactor = 15,
+            commercialProduction = 0,
+            safety = 3
         };
         residentialCommercialBuildings.Add(midhouse1.assetName, midhouse1);
 
@@ -549,13 +560,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 60,
             maintenanceCost = 0,
             populationCapacity = 6,
-            moraleFactor = 0,
+            moraleFactor = 25,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 0,
-            pollutionFactor = 0,
-            commercialProduction = 0
+            pollutionFactor = 15,
+            commercialProduction = 0,
+            safety = 3
         };
         residentialCommercialBuildings.Add(midhouse2.assetName, midhouse2);
 
@@ -571,13 +583,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 60,
             maintenanceCost = 0,
             populationCapacity = 6,
-            moraleFactor = 0,
+            moraleFactor = 25,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 0,
-            pollutionFactor = 0,
-            commercialProduction = 0
+            pollutionFactor = 15,
+            commercialProduction = 0,
+            safety = 3
         };
         residentialCommercialBuildings.Add(midhouse3.assetName, midhouse3);
 
@@ -593,13 +606,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 80,
             maintenanceCost = 0,
             populationCapacity = 10,
-            moraleFactor = 0,
+            moraleFactor = 40,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 0,
-            pollutionFactor = 0,
-            commercialProduction = 0
+            pollutionFactor = 20,
+            commercialProduction = 0,
+            safety = 5
         };
         residentialCommercialBuildings.Add(premhouse1.assetName, premhouse1);
 
@@ -615,13 +629,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 80,
             maintenanceCost = 0,
             populationCapacity = 10,
-            moraleFactor = 0,
+            moraleFactor = 40,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 0,
-            pollutionFactor = 0,
-            commercialProduction = 0
+            pollutionFactor = 20,
+            commercialProduction = 0,
+            safety = 5
         };
         residentialCommercialBuildings.Add(premhouse2.assetName, premhouse2);
 
@@ -637,13 +652,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 80,
             maintenanceCost = 0,
             populationCapacity = 10,
-            moraleFactor = 0,
+            moraleFactor = 40,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 0,
-            pollutionFactor = 0,
-            commercialProduction = 0
+            pollutionFactor = 20,
+            commercialProduction = 0,
+            safety = 5
         };
         residentialCommercialBuildings.Add(premhouse3.assetName, premhouse3);
 
@@ -659,13 +675,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 100,
             maintenanceCost = 0,
             populationCapacity = 12,
-            moraleFactor = 0,
+            moraleFactor = 45,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 0,
-            pollutionFactor = 0,
-            commercialProduction = 0
+            pollutionFactor = 12,
+            commercialProduction = 0,
+            safety = 5
         };
         residentialCommercialBuildings.Add(bungalow1.assetName, bungalow1);
 
@@ -681,13 +698,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 100,
             maintenanceCost = 0,
             populationCapacity = 12,
-            moraleFactor = 0,
+            moraleFactor = 45,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 0,
-            pollutionFactor = 0,
-            commercialProduction = 0
+            pollutionFactor = 12,
+            commercialProduction = 0,
+            safety = 5
         };
         residentialCommercialBuildings.Add(bungalow2.assetName, bungalow2);
 
@@ -703,13 +721,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 100,
             maintenanceCost = 0,
             populationCapacity = 12,
-            moraleFactor = 0,
+            moraleFactor = 45,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 0,
-            pollutionFactor = 0,
-            commercialProduction = 0
+            pollutionFactor = 12,
+            commercialProduction = 0,
+            safety = 5
         };
         residentialCommercialBuildings.Add(bungalow3.assetName, bungalow3);
 
@@ -725,13 +744,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 60,
             maintenanceCost = 5,
             populationCapacity = 0,
-            moraleFactor = 20,
+            moraleFactor = 50,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 0,
-            pollutionFactor = 0,
-            commercialProduction = 10
+            pollutionFactor = 5,
+            commercialProduction = 10,
+            safety = 6
         };
         residentialCommercialBuildings.Add(musicshop.assetName, musicshop);
 
@@ -747,13 +767,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 80,
             maintenanceCost = 0,
             populationCapacity = 0,
-            moraleFactor = 25,
+            moraleFactor = 40,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 30,
-            pollutionFactor = 0,
-            commercialProduction = 30
+            pollutionFactor = 15,
+            commercialProduction = 30,
+            safety = 5
         };
         residentialCommercialBuildings.Add(pizza.assetName, pizza);
 
@@ -769,13 +790,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 200,
             maintenanceCost = 1,
             populationCapacity = 20,
-            moraleFactor = 0,
+            moraleFactor = 18,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 35,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 0,
-            pollutionFactor = 2,
-            commercialProduction = 0
+            pollutionFactor = 10,
+            commercialProduction = 0,
+            safety = 4
         };
         residentialCommercialBuildings.Add(apartment1.assetName, apartment1);
 
@@ -791,13 +813,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 200,
             maintenanceCost = 1,
             populationCapacity = 20,
-            moraleFactor = 0,
+            moraleFactor = 18,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 35,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 0,
-            pollutionFactor = 2,
-            commercialProduction = 0
+            pollutionFactor = 10,
+            commercialProduction = 0,
+            safety = 4
         };
         residentialCommercialBuildings.Add(apartment2.assetName, apartment2);
 
@@ -813,13 +836,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 200,
             maintenanceCost = 1,
             populationCapacity = 20,
-            moraleFactor = 0,
+            moraleFactor = 18,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 35,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 0,
-            pollutionFactor = 2,
-            commercialProduction = 0
+            pollutionFactor = 10,
+            commercialProduction = 0,
+            safety = 4
         };
         residentialCommercialBuildings.Add(apartment3.assetName, apartment3);
 
@@ -835,13 +859,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 70,
             maintenanceCost = 0,
             populationCapacity = 0,
-            moraleFactor = 25,
+            moraleFactor = 45,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 30,
-            pollutionFactor = 0,
-            commercialProduction = 25
+            pollutionFactor = 15,
+            commercialProduction = 25,
+            safety = 5
         };
         residentialCommercialBuildings.Add(restraunt.assetName, restraunt);
 
@@ -857,13 +882,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 65,
             maintenanceCost = 5,
             populationCapacity = 0,
-            moraleFactor = 23,
+            moraleFactor = 45,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 0,
-            pollutionFactor = 0,
-            commercialProduction = 20
+            pollutionFactor = 10,
+            commercialProduction = 20,
+            safety=5
         };
         residentialCommercialBuildings.Add(shoeshop.assetName, shoeshop);
 
@@ -876,16 +902,17 @@ public class BuildingDatabase : MonoBehaviour
             buildingType = BuildingType.Recreation,
             regionType = RegionType.ResidentialCommercial,
             prefab = Resources.Load<GameObject>("Buildings/Building_Stadium_final"),
-            constructionCost = 200,
+            constructionCost = 500,
             maintenanceCost = 15,
             populationCapacity = 0,
-            moraleFactor = 50,
+            moraleFactor = 90,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 20,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 30,
-            pollutionFactor = 0,
-            commercialProduction = 100
+            pollutionFactor = 10,
+            commercialProduction = 100,
+            safety=6
         };
         residentialCommercialBuildings.Add(stadium.assetName, stadium);
 
@@ -901,13 +928,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 130,
             maintenanceCost = 10,
             populationCapacity = 0,
-            moraleFactor = 40,
+            moraleFactor = 75,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 15,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 20,
-            pollutionFactor = 0,
-            commercialProduction = 70
+            pollutionFactor = 5,
+            commercialProduction = 70,
+            safety=7
         };
         residentialCommercialBuildings.Add(cinema.assetName, cinema);
 
@@ -923,7 +951,7 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 100,
             maintenanceCost = 12,
             populationCapacity = 0,
-            moraleFactor = 35,
+            moraleFactor = 70,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 10,
             foodMatrialProduction = 0,
@@ -946,14 +974,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 100,
             maintenanceCost = 12,
             populationCapacity = 0,
-            moraleFactor = 35,
+            moraleFactor = 50,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 10,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 0,
             pollutionFactor = 0,
             commercialProduction = 0,
-            safety = 10
+            safety = 7
         };
         residentialCommercialBuildings.Add(bank.assetName, bank);
 
@@ -969,14 +997,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 100,
             maintenanceCost = 12,
             populationCapacity = 0,
-            moraleFactor = 35,
+            moraleFactor = 55,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 10,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 0,
             pollutionFactor = 0,
             commercialProduction = 0,
-            safety = 10
+            safety = 8
         };
         residentialCommercialBuildings.Add(cityhall.assetName, cityhall);
 
@@ -992,7 +1020,7 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 100,
             maintenanceCost = 12,
             populationCapacity = 0,
-            moraleFactor = 35,
+            moraleFactor = 80,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 10,
             foodMatrialProduction = 0,
@@ -1015,13 +1043,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 100,
             maintenanceCost = 5,
             populationCapacity = 20,
-            moraleFactor = 2,
+            moraleFactor = 60,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 1,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 2,
-            pollutionFactor = 1,
-            commercialProduction = 0
+            pollutionFactor = 5,
+            commercialProduction = 0,
+            safety=7
         };
         residentialCommercialBuildings.Add(school.assetName, school);
         
@@ -1037,13 +1066,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 65,
             maintenanceCost = 0,
             populationCapacity = 0,
-            moraleFactor = 27,
+            moraleFactor = 50,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 35,
-            pollutionFactor = 0,
-            commercialProduction = 20
+            pollutionFactor = 5,
+            commercialProduction = 20,
+            safety=6
         };
         residentialCommercialBuildings.Add(giftshop.assetName, giftshop);
 
@@ -1059,13 +1089,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 65,
             maintenanceCost = 0,
             populationCapacity = 0,
-            moraleFactor = 27,
+            moraleFactor = 65,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 35,
             pollutionFactor = 0,
-            commercialProduction = 20
+            commercialProduction = 20,
+            safety=5
         };
         residentialCommercialBuildings.Add(basketball.assetName, basketball);
 
@@ -1081,13 +1112,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 65,
             maintenanceCost = 0,
             populationCapacity = 0,
-            moraleFactor = 27,
+            moraleFactor = 85,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 35,
             pollutionFactor = 0,
-            commercialProduction = 20
+            commercialProduction = 20,
+            safety=7
         };
         residentialCommercialBuildings.Add(park.assetName, park);
 
@@ -1103,13 +1135,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 65,
             maintenanceCost = 0,
             populationCapacity = 0,
-            moraleFactor = 27,
+            moraleFactor = 80,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 35,
             pollutionFactor = 0,
-            commercialProduction = 20
+            commercialProduction = 20,
+            safety=7
         };
         residentialCommercialBuildings.Add(plaza.assetName, plaza);
 
@@ -1125,13 +1158,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 65,
             maintenanceCost = 0,
             populationCapacity = 0,
-            moraleFactor = 27,
+            moraleFactor = 60,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 35,
-            pollutionFactor = 0,
-            commercialProduction = 20
+            pollutionFactor = 10,
+            commercialProduction = 20,
+            safety=6
         };
         residentialCommercialBuildings.Add(market.assetName, market);
 
@@ -1147,7 +1181,7 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 100,
             maintenanceCost = 12,
             populationCapacity = 0,
-            moraleFactor = 35,
+            moraleFactor = 65,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 10,
             foodMatrialProduction = 0,
@@ -1170,13 +1204,14 @@ public class BuildingDatabase : MonoBehaviour
             constructionCost = 66,
             maintenanceCost = 2,
             populationCapacity = 0,
-            moraleFactor = 28,
+            moraleFactor = 55,
             rawMatrialProduction = 0,
             rawMaterialConsumption = 0,
             foodMatrialProduction = 0,
             foodMaterialConsumption = 36,
-            pollutionFactor = 0,
-            commercialProduction = 20
+            pollutionFactor = 10,
+            commercialProduction = 20,
+            safety=6
         };
         residentialCommercialBuildings.Add(supermarket.assetName, supermarket);
 

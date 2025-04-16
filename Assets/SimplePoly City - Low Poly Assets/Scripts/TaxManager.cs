@@ -71,10 +71,10 @@ public class TaxManager : MonoBehaviour
         // When time is up, collect taxes
         if (buildingManager.totalBuildings > 0 && population > 0)
         {
-            morale = (buildingManager.totalMorale / buildingManager.totalBuildings) * (buildingManager.totalSafety / population) * (1 - buildingManager.pollutionFactor/(buildingManager.totalBuildings * 100f));
+            morale = (buildingManager.totalMorale / buildingManager.totalBuildings) * (buildingManager.totalSafety*10 / population) * (1 - buildingManager.pollutionFactor/(buildingManager.totalBuildings * 100f));
             Prosperity = gdp * (buildingManager.totalSafety / population) * (buildingManager.totalMorale / buildingManager.totalBuildings) * (1 - buildingManager.pollutionFactor/(buildingManager.totalBuildings * 100f));
             immigrationRate = (gdp / (population + 1)) * (1 - buildingManager.pollutionFactor / (buildingManager.totalBuildings*100f)) * (1 - population / populationCap) * ((morale) - 30) / 20;
-            if (buildingManager.totalSafety > 0) crimeRate = (population * population / buildingManager.totalSafety) * (1 - gdp / (population * 1000));
+            if (buildingManager.totalSafety > 0) crimeRate = (population / buildingManager.totalSafety) * (1 - gdp / (population * 1000));
         }
         if (timer >= taxCollectionInterval)
         {
