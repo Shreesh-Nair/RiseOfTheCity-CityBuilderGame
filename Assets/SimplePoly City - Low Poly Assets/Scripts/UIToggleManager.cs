@@ -39,4 +39,19 @@ public class UIToggleManager : MonoBehaviour
         // Show the "+" button again
         showBuildingUIButton.gameObject.SetActive(true);
     }
+    void Update()
+{
+    // Toggle UI with Tab key or another key of your choice
+    if (Input.GetKeyDown(KeyCode.Tab))
+    {
+        if (buildingSelectionUI.activeSelf)
+        {
+            HideBuildingUI();
+        }
+        else
+        {
+            ShowBuildingUI();
+        }
+    }
+}
 }

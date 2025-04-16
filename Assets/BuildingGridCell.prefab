@@ -219,6 +219,7 @@ MonoBehaviour:
     buildingType: 0
     regionType: 0
     prefab: {fileID: 0}
+    icon: {fileID: 0}
     constructionCost: 0
     maintenanceCost: 0
     populationCapacity: 0
@@ -230,3 +231,4 @@ MonoBehaviour:
     pollutionFactor: 0
     commercialProduction: 0
     safety: 0
+  buildingImage: {fileID: 0}
