@@ -166,6 +166,9 @@ public class BuildingManager : MonoBehaviour
                                         populationValue.text = populationLimit.ToString();
                                         totalBuildings--;
                                         totalMoney += buildingData[i].constructionCost;
+                                        //Debug.Log("Cost" + buildingData[i].constructionCost);
+                                        //Debug.Log("Name" + buildingData[i].assetName);
+
                                         break;
                                     }
                                 }
@@ -399,13 +402,25 @@ public class BuildingManager : MonoBehaviour
         {
             if (buildingPrefabs[i].name == prefabName && totalMoney >= buildingData[i].constructionCost)
             {
-                populationLimit += buildingData[i].populationCapacity;
-                pollutionFactor += buildingData[i].pollutionFactor;
-                maintainanceFactor += buildingData[i].maintenanceCost;
-                totalCommercialProduction += buildingData[i].commercialProduction;
-                populationValue.text = populationLimit.ToString();
-                totalMoney -= buildingData[i].constructionCost;
-
+                if (buildingData[i].assetName == "supermarket")
+                {
+                    populationLimit += buildingData[i].populationCapacity;
+                    pollutionFactor += buildingData[i].pollutionFactor / 2;
+                    maintainanceFactor += buildingData[i].maintenanceCost / 2;
+                    totalCommercialProduction += buildingData[i].commercialProduction / 2;
+                    populationValue.text = populationLimit.ToString();
+                    totalMoney -= buildingData[i].constructionCost / 2;
+                    //Debug.Log("Cost : "+buildingData[i].constructionCost/2);
+                }
+                else
+                {
+                    populationLimit += buildingData[i].populationCapacity;
+                    pollutionFactor += buildingData[i].pollutionFactor;
+                    maintainanceFactor += buildingData[i].maintenanceCost;
+                    totalCommercialProduction += buildingData[i].commercialProduction;
+                    populationValue.text = populationLimit.ToString();
+                    totalMoney -= buildingData[i].constructionCost;
+                }
             }
 
         }
