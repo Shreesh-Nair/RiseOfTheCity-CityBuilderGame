@@ -38,6 +38,7 @@ public class BuildingDatabase : MonoBehaviour
         public BuildingType buildingType;
         public RegionType regionType;
         public GameObject prefab;
+        public Sprite icon;
         public int constructionCost;
         public int maintenanceCost;
         public int populationCapacity;
@@ -49,6 +50,8 @@ public class BuildingDatabase : MonoBehaviour
         public int pollutionFactor;
         public int commercialProduction;
         public int safety=0;    // for police stations, fire stations and other buildings for safety  
+        public string buildingName { get { return assetName; } }
+
     }
 
     // Dictionaries for each region
@@ -89,6 +92,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData skyscraper1 = new BuildingData
         {
             assetName = "Skyscraper1",
+            icon = Resources.Load<Sprite>("Images/Skyscraper1"),
             tileSize = 1,
             buildingType = BuildingType.Housing,
             regionType = RegionType.ResidentialCommercial,
@@ -111,6 +115,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData skyscraper2 = new BuildingData
         {
             assetName = "Skyscraper2",
+            icon = Resources.Load<Sprite>("Images/Skyscraper2"),
             tileSize = 1,
             buildingType = BuildingType.Housing,
             regionType = RegionType.ResidentialCommercial,
@@ -133,6 +138,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData skyscraper3 = new BuildingData
         {
             assetName = "Skyscraper3",
+            icon = Resources.Load<Sprite>("Images/Skyscraper3"),
             tileSize = 1,
             buildingType = BuildingType.Housing,
             regionType = RegionType.ResidentialCommercial,
@@ -155,6 +161,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData skyscraperSmall1 = new BuildingData
         {
             assetName = "SkyscraperSmall1",
+            icon = Resources.Load<Sprite>("Images/SkyscraperSmall1"),
             tileSize = 1,
             buildingType = BuildingType.Housing,
             regionType = RegionType.ResidentialCommercial,
@@ -177,6 +184,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData skyscraperSmall2 = new BuildingData
         {
             assetName = "SkyscraperSmall2",
+            icon = Resources.Load<Sprite>("Images/SkyscraperSmall2"),
             tileSize = 1,
             buildingType = BuildingType.Housing,
             regionType = RegionType.ResidentialCommercial,
@@ -199,6 +207,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData skyscraperSmall3 = new BuildingData
         {
             assetName = "SkyscraperSmall3",
+            icon = Resources.Load<Sprite>("Images/SkyscraperSmall3"),
             tileSize = 1,
             buildingType = BuildingType.Housing,
             regionType = RegionType.ResidentialCommercial,
@@ -222,6 +231,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData bakery = new BuildingData
         {
             assetName = "bakery",
+            icon = Resources.Load<Sprite>("Images/bakery"),
             tileSize = 1,
             buildingType = BuildingType.Commercial,
             regionType = RegionType.ResidentialCommercial,
@@ -244,6 +254,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData bar = new BuildingData
         {
             assetName = "bar",
+            icon = Resources.Load<Sprite>("Images/bar"),
             tileSize = 1,
             buildingType = BuildingType.Commercial,
             regionType = RegionType.ResidentialCommercial,
@@ -266,6 +277,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData bookshop = new BuildingData
         {
             assetName = "bookshop",
+            icon = Resources.Load<Sprite>("Images/bookshop"),
             tileSize = 1,
             buildingType = BuildingType.Commercial,
             regionType = RegionType.ResidentialCommercial,
@@ -287,6 +299,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData chickenshop = new BuildingData
         {
             assetName = "chickenshop",
+            icon = Resources.Load<Sprite>("Images/chickenshop"),
             tileSize = 1,
             buildingType = BuildingType.Commercial,
             regionType = RegionType.ResidentialCommercial,
@@ -308,10 +321,11 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData clothshop = new BuildingData
         {
             assetName = "clothshop",
+            icon = Resources.Load<Sprite>("Images/clothshop"),
             tileSize = 1,
             buildingType = BuildingType.Commercial,
             regionType = RegionType.ResidentialCommercial,
-            prefab = Resources.Load<GameObject>("Buildings/Building_Books Shop_final"),
+            prefab = Resources.Load<GameObject>("Buildings/Building_Clothing_final"),
             constructionCost = 65,
             maintenanceCost = 5,
             populationCapacity = 0,
@@ -329,6 +343,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData coffeeshop = new BuildingData
         {
             assetName = "coffeeshop",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 1,
             buildingType = BuildingType.Commercial,
             regionType = RegionType.ResidentialCommercial,
@@ -350,6 +365,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData drugstore = new BuildingData
         {
             assetName = "drugstore",
+            icon = Resources.Load<Sprite>("Images/drugstore"),
             tileSize = 1,
             buildingType = BuildingType.Commercial,
             regionType = RegionType.ResidentialCommercial,
@@ -371,6 +387,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData fastfood = new BuildingData
         {
             assetName = "fastfood",
+            icon = Resources.Load<Sprite>("Images/fastfood"),
             tileSize = 1,
             buildingType = BuildingType.Commercial,
             regionType = RegionType.ResidentialCommercial,
@@ -392,6 +409,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData fruitshop = new BuildingData
         {
             assetName = "fruitshop",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 1,
             buildingType = BuildingType.Commercial,
             regionType = RegionType.ResidentialCommercial,
@@ -413,6 +431,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData gasstation = new BuildingData
         {
             assetName = "gasstation",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 2,
             buildingType = BuildingType.Commercial,
             regionType = RegionType.ResidentialCommercial,
@@ -434,6 +453,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData smallhouse1 = new BuildingData
         {
             assetName = "smallhouse1",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 1,
             buildingType = BuildingType.Housing,
             regionType = RegionType.ResidentialCommercial,
@@ -455,6 +475,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData smallhouse2 = new BuildingData
         {
             assetName = "smallhouse2",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 1,
             buildingType = BuildingType.Housing,
             regionType = RegionType.ResidentialCommercial,
@@ -476,6 +497,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData smallhouse3 = new BuildingData
         {
             assetName = "smallhouse3",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 1,
             buildingType = BuildingType.Housing,
             regionType = RegionType.ResidentialCommercial,
@@ -497,6 +519,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData midhouse1 = new BuildingData
         {
             assetName = "midhouse1",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 1,
             buildingType = BuildingType.Housing,
             regionType = RegionType.ResidentialCommercial,
@@ -518,6 +541,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData midhouse2 = new BuildingData
         {
             assetName = "midhouse2",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 1,
             buildingType = BuildingType.Housing,
             regionType = RegionType.ResidentialCommercial,
@@ -539,6 +563,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData midhouse3 = new BuildingData
         {
             assetName = "midhouse3",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 1,
             buildingType = BuildingType.Housing,
             regionType = RegionType.ResidentialCommercial,
@@ -560,6 +585,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData premhouse1 = new BuildingData
         {
             assetName = "premhouse1",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 1,
             buildingType = BuildingType.Housing,
             regionType = RegionType.ResidentialCommercial,
@@ -581,6 +607,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData premhouse2 = new BuildingData
         {
             assetName = "premhouse2",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 1,
             buildingType = BuildingType.Housing,
             regionType = RegionType.ResidentialCommercial,
@@ -602,6 +629,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData premhouse3 = new BuildingData
         {
             assetName = "premhouse3",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 1,
             buildingType = BuildingType.Housing,
             regionType = RegionType.ResidentialCommercial,
@@ -623,6 +651,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData bungalow1 = new BuildingData
         {
             assetName = "bungalow1",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 2,
             buildingType = BuildingType.Housing,
             regionType = RegionType.ResidentialCommercial,
@@ -644,6 +673,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData bungalow2 = new BuildingData
         {
             assetName = "bungalow2",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 2,
             buildingType = BuildingType.Housing,
             regionType = RegionType.ResidentialCommercial,
@@ -665,6 +695,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData bungalow3 = new BuildingData
         {
             assetName = "bungalow3",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 2,
             buildingType = BuildingType.Housing,
             regionType = RegionType.ResidentialCommercial,
@@ -686,6 +717,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData musicshop = new BuildingData
         {
             assetName = "musicshop",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 1,
             buildingType = BuildingType.Housing,
             regionType = RegionType.ResidentialCommercial,
@@ -707,6 +739,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData pizza = new BuildingData
         {
             assetName = "pizza",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 1,
             buildingType = BuildingType.Commercial,
             regionType = RegionType.ResidentialCommercial,
@@ -728,6 +761,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData apartment1 = new BuildingData
         {
             assetName = "apartment1",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 1,
             buildingType = BuildingType.Housing,
             regionType = RegionType.ResidentialCommercial,
@@ -749,6 +783,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData apartment2 = new BuildingData
         {
             assetName = "apartment2",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 1,
             buildingType = BuildingType.Housing,
             regionType = RegionType.ResidentialCommercial,
@@ -770,6 +805,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData apartment3 = new BuildingData
         {
             assetName = "apartment3",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 1,
             buildingType = BuildingType.Housing,
             regionType = RegionType.ResidentialCommercial,
@@ -791,6 +827,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData restraunt = new BuildingData
         {
             assetName = "restraunt",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 1,
             buildingType = BuildingType.Commercial,
             regionType = RegionType.ResidentialCommercial,
@@ -812,6 +849,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData shoeshop = new BuildingData
         {
             assetName = "shoeshop",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 1,
             buildingType = BuildingType.Commercial,
             regionType = RegionType.ResidentialCommercial,
@@ -833,6 +871,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData stadium = new BuildingData
         {
             assetName = "stadium",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 5,
             buildingType = BuildingType.Recreation,
             regionType = RegionType.ResidentialCommercial,
@@ -854,6 +893,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData cinema = new BuildingData
         {
             assetName = "cinema",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 2,
             buildingType = BuildingType.Recreation,
             regionType = RegionType.ResidentialCommercial,
@@ -875,6 +915,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData firestation = new BuildingData
         {
             assetName = "firestation",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 2,
             buildingType = BuildingType.Government,
             regionType = RegionType.ResidentialCommercial,
@@ -897,6 +938,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData bank = new BuildingData
         {
             assetName = "bank",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 2,
             buildingType = BuildingType.Government,
             regionType = RegionType.ResidentialCommercial,
@@ -919,6 +961,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData cityhall = new BuildingData
         {
             assetName = "cityhall",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 2,
             buildingType = BuildingType.Government,
             regionType = RegionType.ResidentialCommercial,
@@ -941,6 +984,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData hospital = new BuildingData
         {
             assetName = "hospital",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 2,
             buildingType = BuildingType.Commercial,
             regionType = RegionType.ResidentialCommercial,
@@ -963,6 +1007,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData school = new BuildingData
         {
             assetName = "School",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 4,
             buildingType = BuildingType.Housing,
             regionType = RegionType.ResidentialCommercial,
@@ -984,6 +1029,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData giftshop = new BuildingData
         {
             assetName = "giftshop",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 1,
             buildingType = BuildingType.Housing,
             regionType = RegionType.ResidentialCommercial,
@@ -1005,6 +1051,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData basketball = new BuildingData
         {
             assetName = "basketball",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 2,
             buildingType = BuildingType.Recreation,
             regionType = RegionType.ResidentialCommercial,
@@ -1026,6 +1073,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData park = new BuildingData
         {
             assetName = "park",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 2,
             buildingType = BuildingType.Decoration,
             regionType = RegionType.ResidentialCommercial,
@@ -1047,6 +1095,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData plaza = new BuildingData
         {
             assetName = "plaza",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 2,
             buildingType = BuildingType.Decoration,
             regionType = RegionType.ResidentialCommercial,
@@ -1068,6 +1117,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData market = new BuildingData
         {
             assetName = "market",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 2,
             buildingType = BuildingType.Commercial,
             regionType = RegionType.ResidentialCommercial,
@@ -1089,6 +1139,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData policestation = new BuildingData
         {
             assetName = "policestation",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 2,
             buildingType = BuildingType.Government,
             regionType = RegionType.ResidentialCommercial,
@@ -1111,6 +1162,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData supermarket = new BuildingData
         {
             assetName = "supermarket",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 2,
             buildingType = BuildingType.Commercial,
             regionType = RegionType.ResidentialCommercial,
@@ -1140,6 +1192,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData factory = new BuildingData
         {
             assetName = "Factory1",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 3,
             buildingType = BuildingType.Factory,
             regionType = RegionType.Industrial,
@@ -1168,6 +1221,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData farm1 = new BuildingData
         {
             assetName = "Farm_1",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 4,
             buildingType = BuildingType.Agricultural,
             regionType = RegionType.Agricultural,
@@ -1187,6 +1241,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData farm2 = new BuildingData
         {
             assetName = "Farm_2",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 4,
             buildingType = BuildingType.Agricultural,
             regionType = RegionType.Agricultural,
@@ -1206,6 +1261,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData farm3 = new BuildingData
         {
             assetName = "Farm_3",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 4,
             buildingType = BuildingType.Agricultural,
             regionType = RegionType.Agricultural,
@@ -1225,6 +1281,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData farmHouse = new BuildingData
         {
             assetName = "Farm_House",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 4,
             buildingType = BuildingType.Agricultural,
             regionType = RegionType.Agricultural,
@@ -1253,6 +1310,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData straightRoad = new BuildingData
         {
             assetName = "Road_Straight",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 1,
             buildingType = BuildingType.Road,
             regionType = RegionType.Road,
@@ -1274,6 +1332,7 @@ public class BuildingDatabase : MonoBehaviour
         BuildingData intersection = new BuildingData
         {
             assetName = "Road_Intersection",
+            icon = Resources.Load<Sprite>("Images/coffeeshop"),
             tileSize = 1,
             buildingType = BuildingType.Road,
             regionType = RegionType.Road,

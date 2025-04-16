@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 1778274824027086598}
   - component: {fileID: 2330781854384221389}
   - component: {fileID: 3043269166229858496}
+  - component: {fileID: -3589026997695149793}
   m_Layer: 5
   m_Name: Keys
   m_TagString: Untagged
@@ -200,3 +201,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &-3589026997695149793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3349295259558007542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46e1935c453b9f24da50115b897c9feb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyIndex: 0
+  buildingNameText: {fileID: 0}
+  buildingIcon: {fileID: 0}

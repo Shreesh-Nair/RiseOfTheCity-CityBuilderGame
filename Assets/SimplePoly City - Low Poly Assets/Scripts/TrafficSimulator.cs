@@ -64,7 +64,7 @@ public class TrafficSimulator : MonoBehaviour
     void Start()
     {
         if (roadManager == null)
-            roadManager = FindObjectOfType<RoadManager>();
+            roadManager = FindFirstObjectByType<RoadManager>();
         StartSimulation();
     }
 

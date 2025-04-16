@@ -129,7 +129,7 @@ public class BuildingManager : MonoBehaviour
                 );
 
                 // Iterate through all game objects in the scene
-                GameObject[] allObjects = FindObjectsOfType<GameObject>();
+                GameObject[] allObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.InstanceID);
                 foreach (GameObject obj in allObjects)
                 {
                     // Check if the object's position matches the approximated hit point
@@ -247,7 +247,7 @@ public class BuildingManager : MonoBehaviour
 
         if (gridManager == null)
         {
-            gridManager = FindObjectOfType<GridManager>();
+            gridManager = FindFirstObjectByType<GridManager>();
             if (gridManager == null) return;
         }
 

@@ -30,7 +30,7 @@ public class RoadManager : MonoBehaviour
     void Start()
     {
         if (gridManager == null)
-            gridManager = FindObjectOfType<GridManager>();
+            gridManager = FindFirstObjectByType<GridManager>();
 
         if (validPlacementMaterial == null)
         {
