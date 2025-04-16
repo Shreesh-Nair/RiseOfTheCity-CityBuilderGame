@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1525962887088261608
+--- !u!1 &2892739221703481309
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,220 +8,97 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8654405123075766230}
-  - component: {fileID: 4641842396518956796}
-  - component: {fileID: 5122424957759169448}
+  - component: {fileID: 5836745048745090185}
   m_Layer: 0
-  m_Name: industrial-buildings-building-A_final
+  m_Name: Building_Gas_Station_final1
   m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8654405123075766230
+--- !u!4 &5836745048745090185
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1525962887088261608}
+  m_GameObject: {fileID: 2892739221703481309}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -798.1525, y: 0.01, z: -99.652916}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: 14.404736, y: 0.32977596, z: 21.294338}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6231569666854515685}
-  - {fileID: 7080040802795544429}
-  - {fileID: 3767224745204398302}
-  - {fileID: 6776556842575583498}
-  - {fileID: 7154302296730638445}
-  - {fileID: 2538406865409427814}
-  - {fileID: 9133827924947299013}
-  - {fileID: 4077152285869287281}
-  - {fileID: 1143864922935296752}
-  - {fileID: 6753257046318598131}
-  - {fileID: 3137146717302564552}
-  - {fileID: 8297589881242411866}
-  - {fileID: 3686497611643981018}
-  - {fileID: 8865794428255830429}
-  - {fileID: 4618282152488587960}
-  - {fileID: 1561082887564325574}
-  - {fileID: 8765493036818008317}
-  - {fileID: 8214414584460236843}
-  - {fileID: 2535864426750304419}
-  - {fileID: 4127269710243467254}
-  - {fileID: 129786895883089798}
-  - {fileID: 23517056116544634}
-  - {fileID: 2782276324456976475}
-  - {fileID: 7966980627516847005}
-  - {fileID: 4096815260828482708}
-  - {fileID: 8203937854908099108}
+  - {fileID: 7631868829071391734}
+  - {fileID: 4881782260939960788}
+  - {fileID: 6461503366329892673}
+  - {fileID: 9082354865492455999}
+  - {fileID: 4532305528311035437}
+  - {fileID: 4765564412149254654}
+  - {fileID: 7298775047015645308}
+  - {fileID: 4851786328391441346}
+  - {fileID: 219868586271218423}
+  - {fileID: 2216190572314683358}
+  - {fileID: 254829976485730109}
+  - {fileID: 7472452186097970825}
+  - {fileID: 6955672094491871138}
+  - {fileID: 3665210313927426610}
+  - {fileID: 6409829662077415596}
+  - {fileID: 3993058159615137898}
+  - {fileID: 652399894051946040}
+  - {fileID: 2807104118846070388}
+  - {fileID: 3235400457031195666}
+  - {fileID: 7186367219518198350}
+  - {fileID: 6883569113495738327}
+  - {fileID: 8003663398777037408}
+  - {fileID: 6687744560616849221}
+  - {fileID: 6826314828842692388}
+  - {fileID: 4859317523217840815}
+  - {fileID: 2814590796524009978}
+  - {fileID: 8875851317492837357}
+  - {fileID: 7420170159431364644}
+  - {fileID: 3187279715217056496}
+  - {fileID: 3633582487642873190}
+  - {fileID: 2968471674184991020}
+  - {fileID: 5443436493116239110}
+  - {fileID: 6454065940570986658}
+  - {fileID: 4394318453020472967}
+  - {fileID: 354090355571034656}
+  - {fileID: 297769974037489313}
+  - {fileID: 8950493136714541216}
+  - {fileID: 143102590607160998}
+  - {fileID: 1133703109674563485}
+  - {fileID: 6793884045451366456}
+  - {fileID: 7276278721667239285}
+  - {fileID: 3507450790488420494}
+  - {fileID: 1347152036014006463}
+  - {fileID: 8272411888965067717}
+  - {fileID: 6921602204142722802}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4641842396518956796
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1525962887088261608}
-  m_Mesh: {fileID: 7050844845821182315, guid: 517123dad6bd243ad81ae22a2d3b8928, type: 3}
---- !u!23 &5122424957759169448
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1525962887088261608}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 17a84ca30da24407285e5a9011e774ff, type: 2}
-  - {fileID: 2100000, guid: af513dbf48a70406986e7996e3987757, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!1001 &23517056116412154
+--- !u!1001 &143102590607289382
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 8654405123075766230}
+    m_TransformParent: {fileID: 5836745048745090185}
     m_Modifications:
     - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_Name
-      value: Road Sidewalk (20)
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
+      value: Road Sidewalk (31)
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.325317
+      value: 0.2752638
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.129181
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
---- !u!4 &23517056116544634 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-  m_PrefabInstance: {fileID: 23517056116412154}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &129786895882956038
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8654405123075766230}
-    m_Modifications:
-    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_Name
-      value: Road Sidewalk (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 11.94519
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -8.070831
+      value: -0.7943382
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -256,46 +133,34 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
---- !u!4 &129786895883089798 stripped
+--- !u!4 &143102590607160998 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-  m_PrefabInstance: {fileID: 129786895882956038}
+  m_PrefabInstance: {fileID: 143102590607289382}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1143864922934909040
+--- !u!1001 &219868586270818423
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 8654405123075766230}
+    m_TransformParent: {fileID: 5836745048745090185}
     m_Modifications:
     - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_Name
-      value: Road Sidewalk (12)
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
+      value: Road Sidewalk (34)
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.734619
+      value: 0.90526485
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.729187
+      value: 1.04
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -330,1452 +195,34 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
---- !u!4 &1143864922935296752 stripped
+--- !u!4 &219868586271218423 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-  m_PrefabInstance: {fileID: 1143864922934909040}
+  m_PrefabInstance: {fileID: 219868586270818423}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1561082887563929670
+--- !u!1001 &254829976485596605
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 8654405123075766230}
-    m_Modifications:
-    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_Name
-      value: Road Sidewalk (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 13.845215
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.2708282
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.000000021855694
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
---- !u!4 &1561082887564325574 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-  m_PrefabInstance: {fileID: 1561082887563929670}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &2535864426750704163
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8654405123075766230}
-    m_Modifications:
-    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_Name
-      value: Road Sidewalk (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -9.11499
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -8.070831
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.000000021855694
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
---- !u!4 &2535864426750304419 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-  m_PrefabInstance: {fileID: 2535864426750704163}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &2538406865409299430
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8654405123075766230}
-    m_Modifications:
-    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_Name
-      value: Road Sidewalk (21)
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -10.974731
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 14.129181
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
---- !u!4 &2538406865409427814 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-  m_PrefabInstance: {fileID: 2538406865409299430}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &2782276324456843995
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8654405123075766230}
-    m_Modifications:
-    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_Name
-      value: Road Sidewalk (25)
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 10.325317
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -14.520874
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
---- !u!4 &2782276324456976475 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-  m_PrefabInstance: {fileID: 2782276324456843995}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &3137146717302701128
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8654405123075766230}
-    m_Modifications:
-    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_Name
-      value: Road Sidewalk (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -9.11499
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.2708282
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.000000021855694
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
---- !u!4 &3137146717302564552 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-  m_PrefabInstance: {fileID: 3137146717302701128}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &3686497611643852378
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8654405123075766230}
-    m_Modifications:
-    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_Name
-      value: Road Sidewalk (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 11.94519
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.2708282
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.000000021855694
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
---- !u!4 &3686497611643981018 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-  m_PrefabInstance: {fileID: 3686497611643852378}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &3767224745204785758
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8654405123075766230}
-    m_Modifications:
-    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_Name
-      value: Road Sidewalk (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 11.94519
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 7.729187
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.000000021855694
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
---- !u!4 &3767224745204398302 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-  m_PrefabInstance: {fileID: 3767224745204785758}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &4077152285869686257
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8654405123075766230}
-    m_Modifications:
-    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_Name
-      value: Road Sidewalk (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 13.845215
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 7.729187
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.000000021855694
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
---- !u!4 &4077152285869287281 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-  m_PrefabInstance: {fileID: 4077152285869686257}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &4096815260828345876
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8654405123075766230}
-    m_Modifications:
-    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_Name
-      value: Road Sidewalk (14)
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -11.734619
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -8.070831
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.000000021855694
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
---- !u!4 &4096815260828482708 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-  m_PrefabInstance: {fileID: 4096815260828345876}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &4127269710243599734
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8654405123075766230}
-    m_Modifications:
-    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_Name
-      value: Road Sidewalk (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 9.055176
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -8.070831
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.000000021855694
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
---- !u!4 &4127269710243467254 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-  m_PrefabInstance: {fileID: 4127269710243599734}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &4618282152488716344
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8654405123075766230}
-    m_Modifications:
-    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_Name
-      value: Road Sidewalk (24)
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.6257324
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -14.520874
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
---- !u!4 &4618282152488587960 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-  m_PrefabInstance: {fileID: 4618282152488716344}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &6231569666854119781
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8654405123075766230}
-    m_Modifications:
-    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_Name
-      value: Road Sidewalk
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -9.11499
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 7.729187
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.000000021855694
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
---- !u!4 &6231569666854515685 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-  m_PrefabInstance: {fileID: 6231569666854119781}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &6753257046318996851
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8654405123075766230}
-    m_Modifications:
-    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_Name
-      value: Road Sidewalk (15)
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -14.474487
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 7.729187
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.000000021855694
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
---- !u!4 &6753257046318598131 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-  m_PrefabInstance: {fileID: 6753257046318996851}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &6776556842575446922
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8654405123075766230}
-    m_Modifications:
-    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_Name
-      value: Road Sidewalk (18)
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -7.2747803
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 14.129181
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
---- !u!4 &6776556842575583498 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-  m_PrefabInstance: {fileID: 6776556842575446922}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &7080040802795144685
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8654405123075766230}
-    m_Modifications:
-    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_Name
-      value: Road Sidewalk (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 9.055176
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 7.729187
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.000000021855694
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
---- !u!4 &7080040802795544429 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-  m_PrefabInstance: {fileID: 7080040802795144685}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &7154302296730501869
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8654405123075766230}
-    m_Modifications:
-    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_Name
-      value: Road Sidewalk (22)
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -7.074585
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -14.520874
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
---- !u!4 &7154302296730638445 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-  m_PrefabInstance: {fileID: 7154302296730501869}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &7966980627516451101
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8654405123075766230}
-    m_Modifications:
-    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_Name
-      value: Road Sidewalk (11)
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 13.845215
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -8.070831
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.000000021855694
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
---- !u!4 &7966980627516847005 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-  m_PrefabInstance: {fileID: 7966980627516451101}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &8203937854907969700
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8654405123075766230}
-    m_Modifications:
-    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_Name
-      value: Road Sidewalk (17)
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -14.474487
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -8.070831
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.000000021855694
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
---- !u!4 &8203937854908099108 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-  m_PrefabInstance: {fileID: 8203937854907969700}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &8214414584460362411
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8654405123075766230}
-    m_Modifications:
-    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_Name
-      value: Road Sidewalk (16)
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -14.474487
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.2708282
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.000000021855694
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
---- !u!4 &8214414584460236843 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-  m_PrefabInstance: {fileID: 8214414584460362411}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &8297589881242286554
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8654405123075766230}
+    m_TransformParent: {fileID: 5836745048745090185}
     m_Modifications:
     - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_Name
       value: Road Sidewalk (4)
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.055176
+      value: -1.3547354
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.2708282
+      value: 0.5456619
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1810,46 +257,158 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
---- !u!4 &8297589881242411866 stripped
+--- !u!4 &254829976485730109 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-  m_PrefabInstance: {fileID: 8297589881242286554}
+  m_PrefabInstance: {fileID: 254829976485596605}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &8765493036818141821
+--- !u!1001 &297769974037888033
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 8654405123075766230}
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.28473568
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.7943382
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &297769974037489313 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 297769974037888033}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &354090355570905248
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.3547354
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.7943382
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &354090355571034656 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 354090355570905248}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &652399894051546296
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
     m_Modifications:
     - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_Name
       value: Road Sidewalk (13)
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.734619
+      value: -0.5147362
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.2708282
+      value: 0.5456619
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1884,58 +443,46 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
---- !u!4 &8765493036818008317 stripped
+--- !u!4 &652399894051946040 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-  m_PrefabInstance: {fileID: 8765493036818141821}
+  m_PrefabInstance: {fileID: 652399894051546296}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &8865794428255968029
+--- !u!1001 &1133703109674954013
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 8654405123075766230}
+    m_TransformParent: {fileID: 5836745048745090185}
     m_Modifications:
     - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_Name
-      value: Road Sidewalk (19)
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
+      value: Road Sidewalk (9)
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.425537
+      value: -1.0747356
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.129181
+      value: -0.7943382
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.000000021855694
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1947,7 +494,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1958,58 +505,666 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
---- !u!4 &8865794428255830429 stripped
+--- !u!4 &1133703109674563485 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-  m_PrefabInstance: {fileID: 8865794428255968029}
+  m_PrefabInstance: {fileID: 1133703109674954013}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &9133827924946907205
+--- !u!1001 &1347152036013619775
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 8654405123075766230}
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.90526485
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.7943382
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &1347152036014006463 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 1347152036013619775}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2216190572314819934
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.7052641
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &2216190572314683358 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 2216190572314819934}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2807104118846194932
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5552635
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5456619
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &2807104118846070388 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 2807104118846194932}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2814590796523873146
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.0747356
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.024337769
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &2814590796524009978 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 2814590796523873146}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2968471674185128876
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.1952648
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.024337769
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &2968471674184991020 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 2968471674185128876}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3187279715217193072
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5552635
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.024337769
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &3187279715217056496 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 3187279715217193072}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3235400457031321234
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.9552641
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5456619
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &3235400457031195666 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 3235400457031321234}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3391439607649587013
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 5701179800565584311, guid: 4b7c6e68625241643b28abd56c1e01ac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.005264282
+      objectReference: {fileID: 0}
+    - target: {fileID: 5701179800565584311, guid: 4b7c6e68625241643b28abd56c1e01ac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5701179800565584311, guid: 4b7c6e68625241643b28abd56c1e01ac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.19433784
+      objectReference: {fileID: 0}
+    - target: {fileID: 5701179800565584311, guid: 4b7c6e68625241643b28abd56c1e01ac, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5701179800565584311, guid: 4b7c6e68625241643b28abd56c1e01ac, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 5701179800565584311, guid: 4b7c6e68625241643b28abd56c1e01ac, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5701179800565584311, guid: 4b7c6e68625241643b28abd56c1e01ac, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5701179800565584311, guid: 4b7c6e68625241643b28abd56c1e01ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5701179800565584311, guid: 4b7c6e68625241643b28abd56c1e01ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5701179800565584311, guid: 4b7c6e68625241643b28abd56c1e01ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8953203612088679400, guid: 4b7c6e68625241643b28abd56c1e01ac, type: 3}
+      propertyPath: m_Name
+      value: Building_Gas_Station_final
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4b7c6e68625241643b28abd56c1e01ac, type: 3}
+--- !u!4 &6921602204142722802 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5701179800565584311, guid: 4b7c6e68625241643b28abd56c1e01ac, type: 3}
+  m_PrefabInstance: {fileID: 3391439607649587013}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3507450790488812046
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5552635
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.7943382
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &3507450790488420494 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 3507450790488812046}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3633582487643260902
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.9552641
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.024337769
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &3633582487642873190 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 3633582487643260902}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3665210313927039154
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
     m_Modifications:
     - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_Name
       value: Road Sidewalk (23)
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.974731
+      value: 0.2752638
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.520874
+      value: 0.5456619
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.000000021855694
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalRotation.z
@@ -2021,7 +1176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -2032,8 +1187,1682 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
---- !u!4 &9133827924947299013 stripped
+--- !u!4 &3665210313927426610 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
-  m_PrefabInstance: {fileID: 9133827924946907205}
+  m_PrefabInstance: {fileID: 3665210313927039154}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3993058159615001322
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0047359467
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5456619
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &3993058159615137898 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 3993058159615001322}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4394318453020601351
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.1952648
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.7943382
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &4394318453020472967 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 4394318453020601351}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4532305528310901933
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.0747356
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &4532305528311035437 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 4532305528310901933}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4765564412148863870
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0047359467
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &4765564412149254654 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 4765564412148863870}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4851786328391041346
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5552635
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &4851786328391441346 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 4851786328391041346}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4859317523217965103
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.2752638
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.024337769
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &4859317523217840815 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 4859317523217965103}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4881782260940352340
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.28473568
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &4881782260939960788 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 4881782260940352340}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5443436493115848582
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.7052641
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.024337769
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &5443436493116239110 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 5443436493115848582}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6409829662077545004
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.0747356
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5456619
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &6409829662077415596 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 6409829662077545004}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6454065940570587682
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.1952648
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &6454065940570986658 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 6454065940570587682}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6461503366329755073
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.7947359
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &6461503366329892673 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 6461503366329755073}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6687744560616449477
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.28473568
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.024337769
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &6687744560616849221 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 6687744560616449477}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6793884045451496120
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0047359467
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.7943382
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &6793884045451366456 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 6793884045451496120}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6826314828842300836
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.7947359
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.024337769
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &6826314828842692388 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 6826314828842300836}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6883569113495866711
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.7052641
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5456619
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &6883569113495738327 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 6883569113495866711}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6955672094492269858
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.7947359
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5456619
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &6955672094491871138 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 6955672094492269858}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7186367219518064846
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.1952648
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5456619
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &7186367219518198350 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 7186367219518064846}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7276278721667110901
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.5147362
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.7943382
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &7276278721667239285 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 7276278721667110901}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7298775047015783164
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.5147362
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &7298775047015645308 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 7298775047015783164}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7420170159431232164
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.5147362
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.024337769
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &7420170159431364644 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 7420170159431232164}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7472452186097841161
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.28473568
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5456619
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &7472452186097970825 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 7472452186097841161}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7631868829071253878
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.3547354
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &7631868829071391734 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 7631868829071253878}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8003663398776649952
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.3547354
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.024337769
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &8003663398777037408 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 8003663398776649952}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8272411888965204293
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.7052641
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.7943382
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &8272411888965067717 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 8272411888965204293}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8875851317492445549
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0047359467
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.024337769
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &8875851317492837357 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 8875851317492445549}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8950493136714936864
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.7947359
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.7943382
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &8950493136714541216 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 8950493136714936864}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &9082354865492060351
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5836745048745090185}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_Name
+      value: Road Sidewalk (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.2752638
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+--- !u!4 &9082354865492455999 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 68d94daa87cd5ee469d28af3611840a6, type: 3}
+  m_PrefabInstance: {fileID: 9082354865492060351}
   m_PrefabAsset: {fileID: 0}

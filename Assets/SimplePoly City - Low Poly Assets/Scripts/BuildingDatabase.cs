@@ -416,7 +416,7 @@ public class BuildingDatabase : MonoBehaviour
             tileSize = 2,
             buildingType = BuildingType.Commercial,
             regionType = RegionType.ResidentialCommercial,
-            prefab = Resources.Load<GameObject>("Buildings/Building_Gas_Station_final"),
+            prefab = Resources.Load<GameObject>("Buildings/Building_Gas_Station_final1"),
             constructionCost = 100,
             maintenanceCost = 15,
             populationCapacity = 0,
