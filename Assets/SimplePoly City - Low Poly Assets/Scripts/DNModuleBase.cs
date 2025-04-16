@@ -9,6 +9,7 @@ public abstract class DNModuleBase : MonoBehaviour {
     private void OnEnable()
     {
         dayNightControl = this.GetComponent<DayNightCycle>();
+
         if (dayNightControl != null)
             dayNightControl.AddModule(this);
     }

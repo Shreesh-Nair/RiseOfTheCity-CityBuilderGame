@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DayNightCycle : MonoBehaviour
-{
+public class DayNightCycle : MonoBehaviour {
 
     [Header("Time")]
     [Tooltip("Day Length in Minutes")]
@@ -56,7 +55,7 @@ public class DayNightCycle : MonoBehaviour
     private float intensity;
 
     [SerializeField]
-    private float sunBaseIntensity = 1f;
+    private float sunBaseIntensity = 0.3f;
 
     [SerializeField]
     private float sunVariation = 1.5f;
@@ -72,6 +71,25 @@ public class DayNightCycle : MonoBehaviour
     [Range(-45f, 45f)]
     private float maxSeasonalTilt = 30f;
 
+    [Header("Moon Light")]
+    [SerializeField]
+    private Light moon;
+
+    [SerializeField]
+    private Transform moonDailyRotation;
+
+    [SerializeField]
+    private Transform moonSeasonalRotation;
+
+    [SerializeField]
+    private float moonBaseIntensity = 0.2f;
+
+    [SerializeField]
+    private float moonVariation = 0.3f;
+
+    [SerializeField]
+    private Gradient moonColor;
+
     [Header("Modules")]
     private List<DNModuleBase> moduleList = new List<DNModuleBase>();
 
@@ -79,31 +97,57 @@ public class DayNightCycle : MonoBehaviour
     {
         // Make sure all required components are assigned
         ValidateComponents();
-
+        
         // Set up the time curve normalization
         NormalTimeCurve();
-
+        
         // Initialize sun position based on time of day
         AdjustSunRotation();
+        AdjustMoonRotation();
         SunIntensity();
+        MoonIntensity();
         AdjustSunColor();
+        AdjustMoonColor();
     }
 
     private void ValidateComponents()
     {
         if (dailyRotation == null)
             Debug.LogError("Daily Rotation transform is not assigned!");
-
+            
         if (sunSeasonalRotation == null)
             Debug.LogError("Sun Seasonal Rotation transform is not assigned!");
-
+            
         if (sun == null)
             Debug.LogError("Sun light is not assigned!");
-
+            
+        if (moon == null)
+            Debug.LogWarning("Moon light is not assigned! Moon functionality will be disabled.");
+            
+        if (moonDailyRotation == null)
+            Debug.LogWarning("Moon Daily Rotation transform is not assigned! Moon rotation will not work properly.");
+            
+        if (moonSeasonalRotation == null)
+            Debug.LogWarning("Moon Seasonal Rotation transform is not assigned! Moon seasonal tilt will not work properly.");
+            
         if (timeCurve == null || timeCurve.keys.Length == 0)
         {
             timeCurve = new AnimationCurve(new Keyframe(0, 1), new Keyframe(1, 1));
             Debug.LogWarning("Time Curve was not set. Using default flat curve.");
+        }
+        
+        if (moonColor == null || moonColor.colorKeys.Length == 0)
+        {
+            // Create a default blue-ish gradient for the moon
+            moonColor = new Gradient();
+            GradientColorKey[] colorKeys = new GradientColorKey[2];
+            colorKeys[0] = new GradientColorKey(new Color(0.5f, 0.5f, 1f, 1f), 0f);
+            colorKeys[1] = new GradientColorKey(new Color(0.8f, 0.8f, 1f, 1f), 1f);
+            GradientAlphaKey[] alphaKeys = new GradientAlphaKey[2];
+            alphaKeys[0] = new GradientAlphaKey(1f, 0f);
+            alphaKeys[1] = new GradientAlphaKey(1f, 1f);
+            moonColor.SetKeys(colorKeys, alphaKeys);
+            Debug.LogWarning("Moon Color gradient was not set. Using default blue gradient.");
         }
     }
 
@@ -117,8 +161,11 @@ public class DayNightCycle : MonoBehaviour
         }
 
         AdjustSunRotation();
+        AdjustMoonRotation();
         SunIntensity();
+        MoonIntensity();
         AdjustSunColor();
+        AdjustMoonColor();
         UpdateModules();
     }
 
@@ -133,7 +180,7 @@ public class DayNightCycle : MonoBehaviour
 
         // Calculate time scale based on target day length
         _timeScale = 24f / (_targetDayLength / 60f);
-
+        
         // Apply time curve if we have a valid elapsed time to evaluate
         if (targetDayLength > 0)
         {
@@ -160,7 +207,7 @@ public class DayNightCycle : MonoBehaviour
         }
 
         timeCurveNormalization = curveTotal / numberSteps;
-
+        
         // Prevent division by zero
         if (timeCurveNormalization <= 0)
         {
@@ -173,7 +220,7 @@ public class DayNightCycle : MonoBehaviour
     {
         // Calculate time increment
         float timeIncrement = Time.deltaTime * _timeScale / 86400f;
-
+        
         // Update time of day and elapsed time
         _timeOfDay += timeIncrement;
         elapsedTime += Time.deltaTime;
@@ -198,12 +245,12 @@ public class DayNightCycle : MonoBehaviour
     {
         if (clockText == null)
             return;
-
+            
         // Calculate hours and minutes based on time of day (0-1)
         float hourFloat = _timeOfDay * 24f;
         int hour = Mathf.FloorToInt(hourFloat);
         int minute = Mathf.FloorToInt((hourFloat - hour) * 60f);
-
+        
         // Format time strings
         string hourString;
         string minuteString;
@@ -231,14 +278,17 @@ public class DayNightCycle : MonoBehaviour
 
     private void AdjustSunRotation()
     {
+        if (dailyRotation == null || sunSeasonalRotation == null)
+            return;
+            
         // Calculate daily sun rotation
         float sunAngle = _timeOfDay * 360f;
         Quaternion dailyRot = Quaternion.Euler(new Vector3(0f, 0f, sunAngle));
-
+        
         // Only apply if valid quaternion
         if (!float.IsNaN(dailyRot.x) && !float.IsNaN(dailyRot.y) && !float.IsNaN(dailyRot.z) && !float.IsNaN(dailyRot.w))
         {
-            dailyRotation.transform.localRotation = dailyRot;
+            dailyRotation.localRotation = dailyRot;
         }
 
         // Fix integer division bug in seasonal calculation
@@ -247,7 +297,7 @@ public class DayNightCycle : MonoBehaviour
             // Cast to float to avoid integer division
             float seasonalAngle = -maxSeasonalTilt * Mathf.Cos((float)_dayNumber / _yearLength * 2f * Mathf.PI);
             Quaternion seasonalRot = Quaternion.Euler(new Vector3(seasonalAngle, 0f, 0f));
-
+            
             // Only apply if valid quaternion
             if (!float.IsNaN(seasonalRot.x) && !float.IsNaN(seasonalRot.y) && !float.IsNaN(seasonalRot.z) && !float.IsNaN(seasonalRot.w))
             {
@@ -255,32 +305,79 @@ public class DayNightCycle : MonoBehaviour
             }
         }
     }
+    
+    private void AdjustMoonRotation()
+    {
+        if (moon == null || moonDailyRotation == null || moonSeasonalRotation == null)
+            return;
+            
+        // Calculate moon rotation (180 degrees opposite from sun)
+        float moonAngle = (_timeOfDay * 360f + 180f) % 360f;
+        Quaternion dailyRot = Quaternion.Euler(new Vector3(0f, 0f, moonAngle));
+        
+        // Only apply if valid quaternion
+        if (!float.IsNaN(dailyRot.x) && !float.IsNaN(dailyRot.y) && !float.IsNaN(dailyRot.z) && !float.IsNaN(dailyRot.w))
+        {
+            moonDailyRotation.localRotation = dailyRot;
+        }
 
+        // Apply same seasonal tilt as sun but in opposite direction
+        if (_yearLength > 0)
+        {
+            // Use opposite seasonal angle for the moon (inverse of sun's tilt)
+            float seasonalAngle = maxSeasonalTilt * Mathf.Cos((float)_dayNumber / _yearLength * 2f * Mathf.PI);
+            Quaternion seasonalRot = Quaternion.Euler(new Vector3(seasonalAngle, 0f, 0f));
+            
+            // Only apply if valid quaternion
+            if (!float.IsNaN(seasonalRot.x) && !float.IsNaN(seasonalRot.y) && !float.IsNaN(seasonalRot.z) && !float.IsNaN(seasonalRot.w))
+            {
+                moonSeasonalRotation.localRotation = seasonalRot;
+            }
+        }
+    }
 
     private void SunIntensity()
     {
         if (sun == null)
             return;
-
+            
         // Calculate sun intensity based on its orientation relative to "down"
         intensity = Vector3.Dot(sun.transform.forward, Vector3.down);
         intensity = Mathf.Clamp01(intensity);
-
-        // Debug to see if intensity is changing
-        //Debug.Log("Sun intensity: " + intensity);
-
+        
         // Apply intensity to light
         sun.intensity = intensity * sunVariation + sunBaseIntensity;
     }
-
+    
+    private void MoonIntensity()
+    {
+        if (moon == null)
+            return;
+            
+        // Moon is brightest when sun intensity is lowest
+        float moonIntensity = 1f - intensity;
+        moonIntensity = Mathf.Clamp01(moonIntensity);
+        
+        // Set moon intensity (inverse of sun intensity)
+        moon.intensity = moonIntensity * moonVariation + moonBaseIntensity;
+    }
 
     private void AdjustSunColor()
     {
         if (sun == null || sunColor == null)
             return;
-
+            
         // Set sun color based on intensity
         sun.color = sunColor.Evaluate(intensity);
+    }
+    
+    private void AdjustMoonColor()
+    {
+        if (moon == null || moonColor == null)
+            return;
+            
+        // Set moon color based on inverse of sun intensity
+        moon.color = moonColor.Evaluate(1f - intensity);
     }
 
     public void AddModule(DNModuleBase module)
@@ -309,13 +406,16 @@ public class DayNightCycle : MonoBehaviour
             }
         }
     }
-
+    
     // Utility method to manually set the time of day (0-1)
     public void SetTimeOfDay(float newTime)
     {
         _timeOfDay = Mathf.Clamp01(newTime);
         AdjustSunRotation();
+        AdjustMoonRotation();
         SunIntensity();
+        MoonIntensity();
         AdjustSunColor();
+        AdjustMoonColor();
     }
 }
