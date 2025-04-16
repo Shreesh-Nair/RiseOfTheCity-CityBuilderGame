@@ -41,6 +41,8 @@ public class TaxManager : MonoBehaviour
     {
         // Count down to next tax collection
         timer += Time.deltaTime;
+        budget = buildingManager.totalMoney;
+        moneyText.text = $"{budget}";
         gdp=buildingManager.totalCommercialProduction;
         // When time is up, collect taxes
         if (timer >= taxCollectionInterval)
@@ -73,10 +75,7 @@ public class TaxManager : MonoBehaviour
         {
             incomeText.text = $"{gdp}";
         }
-        if (moneyText != null)
-        {
-            moneyText.text = $"{budget}";
-        }
+        
     }
     
     

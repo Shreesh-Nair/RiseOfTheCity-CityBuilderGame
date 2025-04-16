@@ -1839,14 +1839,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 664829056}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1189719884}
   m_Father: {fileID: 1107051495}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
 --- !u!1001 &687202266
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3858,7 +3858,7 @@ MonoBehaviour:
   moon: {fileID: 1189719885}
   moonDailyRotation: {fileID: 664829057}
   moonSeasonalRotation: {fileID: 1107051495}
-  moonBaseIntensity: 0.2
+  moonBaseIntensity: 0.4
   moonVariation: 0.3
   moonColor:
     serializedVersion: 2
@@ -4206,7 +4206,7 @@ Light:
   serializedVersion: 11
   m_Type: 1
   m_Color: {r: 0.7058824, g: 0.78431374, b: 1, a: 1}
-  m_Intensity: 0.2
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -7535,6 +7535,7 @@ MonoBehaviour:
   pollutionFactor: 0
   buildingSelectionHandler: {fileID: 1605124205}
   totalBuildings: 0
+  totalCost: 0
 --- !u!4 &1749320829
 Transform:
   m_ObjectHideFlags: 0

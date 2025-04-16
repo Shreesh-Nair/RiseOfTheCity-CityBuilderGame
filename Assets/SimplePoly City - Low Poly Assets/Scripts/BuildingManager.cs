@@ -25,6 +25,7 @@ public class BuildingManager : MonoBehaviour
     public int pollutionFactor = 0;
     public HandleBuildingSelection buildingSelectionHandler;
     public int totalBuildings = 0;
+    public int totalMoney = 1000;
     void Start()
     {
         if (buildingSelectionHandler == null)
@@ -164,6 +165,7 @@ public class BuildingManager : MonoBehaviour
                                         totalCommercialProduction -= buildingData[i].commercialProduction;
                                         populationValue.text = populationLimit.ToString();
                                         totalBuildings--;
+                                        totalMoney += buildingData[i].constructionCost;
                                         break;
                                     }
                                 }
@@ -300,7 +302,7 @@ public class BuildingManager : MonoBehaviour
                 }
 
                 // Place building on mouse click
-                if (Input.GetMouseButtonDown(0) && canPlace)
+                if (Input.GetMouseButtonDown(0) && totalMoney >= currentAsset.constructionCost && canPlace)
                 {
                     PlaceBuilding(lastValidPosition);
                 }
@@ -395,23 +397,24 @@ public class BuildingManager : MonoBehaviour
         string prefabName = currentBuildingPrefab.name;
         for (int i = 0; i < buildingPrefabs.Length; i++)
         {
-            if (buildingPrefabs[i].name == prefabName)
+            if (buildingPrefabs[i].name == prefabName && totalMoney >= buildingData[i].constructionCost)
             {
                 populationLimit += buildingData[i].populationCapacity;
                 pollutionFactor += buildingData[i].pollutionFactor;
                 maintainanceFactor += buildingData[i].maintenanceCost;
                 totalCommercialProduction += buildingData[i].commercialProduction;
                 populationValue.text = populationLimit.ToString();
-            }
-        }
+                totalMoney -= buildingData[i].constructionCost;
 
-        // Restore original materials for the placed building
+            }
+
+        }
         Renderer[] buildingRenderers = placedBuilding.GetComponentsInChildren<Renderer>();
-        for (int i = 0; i < buildingRenderers.Length && i < currentBuildingPrefab.GetComponentsInChildren<Renderer>().Length; i++)
+        for (int j = 0; j < buildingRenderers.Length && j < currentBuildingPrefab.GetComponentsInChildren<Renderer>().Length; j++)
         {
             // Try to get the original material from the prefab
-            Renderer prefabRenderer = currentBuildingPrefab.GetComponentsInChildren<Renderer>()[i];
-            buildingRenderers[i].material = prefabRenderer.sharedMaterial;
+            Renderer prefabRenderer = currentBuildingPrefab.GetComponentsInChildren<Renderer>()[j];
+            buildingRenderers[j].material = prefabRenderer.sharedMaterial;
         }
 
         // Mark all tiles as occupied based on the building's size
@@ -420,6 +423,8 @@ public class BuildingManager : MonoBehaviour
         // Debug grid occupancy
         gridManager.DebugPrintGridOccupancy();
         totalBuildings++;
+        // Restore original materials for the placed building
+
     }
 
 
