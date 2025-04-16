@@ -21,12 +21,12 @@ public class TaxManager : MonoBehaviour
     public int gst = 10;
     public int incomeTax = 10;
     // Tax variables
-    public int budget = 1000;
+    public float budget = 10000f;
     public float taxCollectionInterval = 30f;
     public int gdp;
     public int income;
     public int populationCap;
-    public int totalMaintainanceCost = 0;
+    public float totalMaintainanceCost = 0f;
     public float morale;
     public int population = 0;
     private float timer = 0f;
@@ -46,12 +46,9 @@ public class TaxManager : MonoBehaviour
             }
         }
         // Replace line 47-50 in TaxManager.cs with:
-        float safePop = Mathf.Max(population, 1);
-        float normMorale = buildingManager.totalMorale / (buildingManager.totalBuildings * 50f);
-        float normSafety = buildingManager.totalSafety / 10f;
-        float normPollution = buildingManager.pollutionFactor / 10f;
+        
 
-        morale = normMorale * normSafety * (1 - normPollution);
+        
 
 
         // Initialize UI
@@ -74,9 +71,9 @@ public class TaxManager : MonoBehaviour
         // When time is up, collect taxes
         if (buildingManager.totalBuildings > 0 && population > 0)
         {
-            morale = (buildingManager.totalMorale / buildingManager.totalBuildings) * (buildingManager.totalSafety / population) * (1 - buildingManager.pollutionFactor);
-            Prosperity = gdp * (buildingManager.totalSafety / population) * (buildingManager.totalMorale / buildingManager.totalBuildings) * (1 - buildingManager.pollutionFactor);
-            immigrationRate = (gdp / (population + 1)) * (1 - buildingManager.pollutionFactor / buildingManager.totalBuildings) * (1 - population / populationCap) * ((morale * 50) - 30) / 20;
+            morale = (buildingManager.totalMorale / buildingManager.totalBuildings) * (buildingManager.totalSafety / population) * (1 - buildingManager.pollutionFactor/(buildingManager.totalBuildings * 100f));
+            Prosperity = gdp * (buildingManager.totalSafety / population) * (buildingManager.totalMorale / buildingManager.totalBuildings) * (1 - buildingManager.pollutionFactor/(buildingManager.totalBuildings * 100f));
+            immigrationRate = (gdp / (population + 1)) * (1 - buildingManager.pollutionFactor / (buildingManager.totalBuildings*100f)) * (1 - population / populationCap) * ((morale) - 30) / 20;
             if (buildingManager.totalSafety > 0) crimeRate = (population * population / buildingManager.totalSafety) * (1 - gdp / (population * 1000));
         }
         if (timer >= taxCollectionInterval)
@@ -92,12 +89,20 @@ public class TaxManager : MonoBehaviour
 
     void UpdateMaintainanceCost()
     {
-        totalMaintainanceCost = buildingManager.maintainanceFactor;
+        totalMaintainanceCost = buildingManager.maintainanceFactor/7;
+        buildingManager.totalMoney -= totalMaintainanceCost;
+        Debug.Log("Updated budget: "+budget);
+        
+        if (budget < 0)
+        {
+            budget = 0;
+        }
     }
 
     void CollectTaxes()
     {
         population += (int)immigrationRate;
+        Debug.Log("Immigrated: "+population);
         if (population > populationCap)
         {
             population = populationCap;

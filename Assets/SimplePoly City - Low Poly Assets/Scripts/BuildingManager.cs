@@ -25,7 +25,7 @@ public class BuildingManager : MonoBehaviour
     public int pollutionFactor = 0;
     public HandleBuildingSelection buildingSelectionHandler;
     public int totalBuildings = 0;
-    public int totalMoney = 1000;
+    public float totalMoney = 10000f;
     public int totalSafety = 0;
     public int totalMorale = 0;
 

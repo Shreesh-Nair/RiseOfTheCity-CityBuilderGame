@@ -4066,11 +4066,26 @@ MonoBehaviour:
   buildingManager: {fileID: 1749320828}
   moneyText: {fileID: 802503045}
   incomeText: {fileID: 1383067494}
-  budget: 1000
+  populationText: {fileID: 0}
+  Morale: {fileID: 0}
+  Safety: {fileID: 0}
+  ProsperityText: {fileID: 0}
+  ImmigrationRate: {fileID: 0}
+  CrimeRate: {fileID: 0}
+  gst: 10
+  incomeTax: 10
+  budget: 10000
   taxCollectionInterval: 30
   gdp: 0
-  population: 0
+  income: 0
+  populationCap: 0
   totalMaintainanceCost: 0
+  morale: 0
+  population: 0
+  Prosperity: 0
+  moraleThreshold: 30
+  immigrationRate: 0
+  crimeRate: 0
 --- !u!4 &1174226801
 Transform:
   m_ObjectHideFlags: 0
@@ -7521,9 +7536,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   gridManager: {fileID: 906283211}
   gridLayer:
     serializedVersion: 2
@@ -7538,7 +7550,9 @@ MonoBehaviour:
   pollutionFactor: 0
   buildingSelectionHandler: {fileID: 1605124205}
   totalBuildings: 0
-  totalMoney: 1000
+  totalMoney: 10000
+  totalSafety: 0
+  totalMorale: 0
 --- !u!4 &1749320829
 Transform:
   m_ObjectHideFlags: 0
