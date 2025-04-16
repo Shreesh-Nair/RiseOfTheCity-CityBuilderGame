@@ -27,6 +27,8 @@ public class BuildingManager : MonoBehaviour
     public int totalBuildings = 0;
     public int totalMoney = 1000;
     public int totalSafety = 0;
+    public int totalMorale = 0;
+
     void Start()
     {
         if (buildingSelectionHandler == null)
@@ -170,6 +172,7 @@ public class BuildingManager : MonoBehaviour
                                         //Debug.Log("Cost" + buildingData[i].constructionCost);
                                         //Debug.Log("Name" + buildingData[i].assetName);
                                         totalSafety-=buildingData[i].safety;
+                                        totalMorale-=buildingData[i].moraleFactor;
 
                                         break;
                                     }
@@ -412,6 +415,7 @@ public class BuildingManager : MonoBehaviour
                     totalCommercialProduction += buildingData[i].commercialProduction / 2;
                     populationValue.text = populationLimit.ToString();
                     totalMoney -= buildingData[i].constructionCost / 2;
+                    totalMorale += buildingData[i].moraleFactor/2;
                     //Debug.Log("Cost : "+buildingData[i].constructionCost/2);
                 }
                 else
@@ -423,6 +427,7 @@ public class BuildingManager : MonoBehaviour
                     populationValue.text = populationLimit.ToString();
                     totalMoney -= buildingData[i].constructionCost;
                     totalSafety += buildingData[i].safety;
+                    totalMorale += buildingData[i].moraleFactor;
                 }
             }
 
