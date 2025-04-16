@@ -3,94 +3,108 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DayNightCycle : MonoBehaviour {
-    
+public class DayNightCycle : MonoBehaviour
+{
+
     [Header("Time")]
     [Tooltip("Day Length in Minutes")]
     [SerializeField]
     private float _targetDayLength = 0.5f; //length of day in minutes
-    public float targetDayLength
-    {
-        get
-        {
-            return _targetDayLength;
-        }
-    }
+    public float targetDayLength { get { return _targetDayLength; } }
+
     [SerializeField]
     private float elapsedTime;
+
     [SerializeField]
     private bool use24Clock = true;
+
     [SerializeField]
     private Text clockText;
+
     [SerializeField]
     [Range(0f, 1f)]
-    private float _timeOfDay;
-    public float timeOfDay
-    {
-        get
-        {
-            return _timeOfDay;
-        }
-    }
+    private float _timeOfDay = 0.3f; // Default to morning
+    public float timeOfDay { get { return _timeOfDay; } }
+
     [SerializeField]
     private int _dayNumber = 0; //tracks the days passed
-    public int dayNumber
-    {
-        get
-        {
-            return _dayNumber;
-        }
-    }
+    public int dayNumber { get { return _dayNumber; } }
+
     [SerializeField]
     private int _yearNumber = 0;
-    public int yearNumber
-    {
-        get
-        {
-            return _yearNumber;
-        }
-    }
+    public int yearNumber { get { return _yearNumber; } }
+
     private float _timeScale = 100f;
+
     [SerializeField]
     private int _yearLength = 100;
-    public float yearLength
-    {
-        get
-        {
-            return _yearLength;
-        }
-    }
+    public float yearLength { get { return _yearLength; } }
+
     public bool pause = false;
+
     [SerializeField]
     private AnimationCurve timeCurve;
-    private float timeCurveNormalization;
+
+    private float timeCurveNormalization = 1f;
 
     [Header("Sun Light")]
     [SerializeField]
     private Transform dailyRotation;
+
     [SerializeField]
     private Light sun;
     private float intensity;
+
     [SerializeField]
     private float sunBaseIntensity = 1f;
+
     [SerializeField]
     private float sunVariation = 1.5f;
+
     [SerializeField]
     private Gradient sunColor;
 
     [Header("Seasonal Variables")]
     [SerializeField]
     private Transform sunSeasonalRotation;
+
     [SerializeField]
     [Range(-45f, 45f)]
-    private float maxSeasonalTilt;
+    private float maxSeasonalTilt = 30f;
 
     [Header("Modules")]
     private List<DNModuleBase> moduleList = new List<DNModuleBase>();
 
     private void Start()
     {
-        NormalTimeCurve(); 
+        // Make sure all required components are assigned
+        ValidateComponents();
+
+        // Set up the time curve normalization
+        NormalTimeCurve();
+
+        // Initialize sun position based on time of day
+        AdjustSunRotation();
+        SunIntensity();
+        AdjustSunColor();
+    }
+
+    private void ValidateComponents()
+    {
+        if (dailyRotation == null)
+            Debug.LogError("Daily Rotation transform is not assigned!");
+
+        if (sunSeasonalRotation == null)
+            Debug.LogError("Sun Seasonal Rotation transform is not assigned!");
+
+        if (sun == null)
+            Debug.LogError("Sun light is not assigned!");
+
+        if (timeCurve == null || timeCurve.keys.Length == 0)
+        {
+            timeCurve = new AnimationCurve(new Keyframe(0, 1), new Keyframe(1, 1));
+            Debug.LogWarning("Time Curve was not set. Using default flat curve.");
+        }
     }
 
     private void Update()
@@ -105,14 +119,33 @@ public class DayNightCycle : MonoBehaviour {
         AdjustSunRotation();
         SunIntensity();
         AdjustSunColor();
-        UpdateModules(); //will update modules each frame
+        UpdateModules();
     }
 
     private void UpdateTimeScale()
     {
-        _timeScale = 24 / (_targetDayLength / 60);
-        _timeScale *= timeCurve.Evaluate(elapsedTime / (targetDayLength * 60)); //changes timescale based on time curve
-        _timeScale /= timeCurveNormalization; //keeps day length at target value
+        // Prevent division by zero
+        if (_targetDayLength <= 0)
+        {
+            _targetDayLength = 0.5f;
+            Debug.LogWarning("Target day length was <= 0, reset to 0.5");
+        }
+
+        // Calculate time scale based on target day length
+        _timeScale = 24f / (_targetDayLength / 60f);
+
+        // Apply time curve if we have a valid elapsed time to evaluate
+        if (targetDayLength > 0)
+        {
+            float normalizedTime = Mathf.Clamp01(elapsedTime / (targetDayLength * 60f));
+            _timeScale *= timeCurve.Evaluate(normalizedTime);
+        }
+
+        // Apply normalization
+        if (timeCurveNormalization > 0)
+        {
+            _timeScale /= timeCurveNormalization;
+        }
     }
 
     private void NormalTimeCurve()
@@ -126,20 +159,34 @@ public class DayNightCycle : MonoBehaviour {
             curveTotal += timeCurve.Evaluate(i * stepSize);
         }
 
-        timeCurveNormalization = curveTotal / numberSteps; //keeps day length at target value
+        timeCurveNormalization = curveTotal / numberSteps;
+
+        // Prevent division by zero
+        if (timeCurveNormalization <= 0)
+        {
+            timeCurveNormalization = 1f;
+            Debug.LogWarning("Time curve normalization was <= 0, reset to 1.0");
+        }
     }
 
     private void UpdateTime()
     {
-        _timeOfDay += Time.deltaTime * _timeScale / 86400; // seconds in a day
+        // Calculate time increment
+        float timeIncrement = Time.deltaTime * _timeScale / 86400f;
+
+        // Update time of day and elapsed time
+        _timeOfDay += timeIncrement;
         elapsedTime += Time.deltaTime;
-        if(_timeOfDay > 1) //new day!!
+
+        // Handle day rollover
+        if (_timeOfDay >= 1f)
         {
             elapsedTime = 0;
             _dayNumber++;
-            _timeOfDay -= 1;
+            _timeOfDay -= Mathf.Floor(_timeOfDay); // Only subtract the whole number part
 
-            if(_dayNumber > _yearLength) //new year!
+            // Handle year rollover
+            if (_dayNumber >= _yearLength && _yearLength > 0)
             {
                 _yearNumber++;
                 _dayNumber = 0;
@@ -149,76 +196,126 @@ public class DayNightCycle : MonoBehaviour {
 
     private void UpdateClock()
     {
-        float time = elapsedTime / (targetDayLength * 60);
-        float hour = Mathf.FloorToInt(time * 24);
-        float minute = Mathf.FloorToInt(((time * 24) - hour) * 60);
+        if (clockText == null)
+            return;
 
+        // Calculate hours and minutes based on time of day (0-1)
+        float hourFloat = _timeOfDay * 24f;
+        int hour = Mathf.FloorToInt(hourFloat);
+        int minute = Mathf.FloorToInt((hourFloat - hour) * 60f);
+
+        // Format time strings
         string hourString;
         string minuteString;
 
-        if (!use24Clock && hour > 12)
-            hour -= 12;
+        // Convert to 12-hour format if needed
+        int displayHour = hour;
+        if (!use24Clock)
+        {
+            if (hour == 0)
+                displayHour = 12;
+            else if (hour > 12)
+                displayHour = hour - 12;
+        }
 
-        if (hour < 10)
-            hourString = "0" + hour.ToString();
+        // Add leading zeros if needed
+        hourString = displayHour < 10 ? "0" + displayHour : displayHour.ToString();
+        minuteString = minute < 10 ? "0" + minute : minute.ToString();
+
+        // Set the clock text
+        if (use24Clock)
+            clockText.text = hourString + ":" + minuteString;
         else
-            hourString = hour.ToString();
-
-        if (minute < 10)
-            minuteString = "0" + minute.ToString();
-        else
-            minuteString = minute.ToString();
-        
-        if(use24Clock)
-            clockText.text = hourString + " : " + minuteString;
-        else if (time > 0.5f)
-            clockText.text = hourString + " : " + minuteString + " pm";
-        else
-            clockText.text = hourString + " : " + minuteString + " am";
-
-
+            clockText.text = hourString + ":" + minuteString + (hour < 12 ? " AM" : " PM");
     }
 
-    //rotates the sun daily (and seasonally soon too);
     private void AdjustSunRotation()
     {
-        float sunAngle = timeOfDay * 360f;
-        dailyRotation.transform.localRotation = Quaternion.Euler(new Vector3(0f, 0f, sunAngle));
+        // Calculate daily sun rotation
+        float sunAngle = _timeOfDay * 360f;
+        Quaternion dailyRot = Quaternion.Euler(new Vector3(0f, 0f, sunAngle));
 
-        float seasonalAngle = -maxSeasonalTilt * Mathf.Cos(dayNumber / yearLength * 2f * Mathf.PI);
-        sunSeasonalRotation.localRotation = Quaternion.Euler(new Vector3(seasonalAngle, 0f, 0f));
+        // Only apply if valid quaternion
+        if (!float.IsNaN(dailyRot.x) && !float.IsNaN(dailyRot.y) && !float.IsNaN(dailyRot.z) && !float.IsNaN(dailyRot.w))
+        {
+            dailyRotation.transform.localRotation = dailyRot;
+        }
+
+        // Fix integer division bug in seasonal calculation
+        if (_yearLength > 0)
+        {
+            // Cast to float to avoid integer division
+            float seasonalAngle = -maxSeasonalTilt * Mathf.Cos((float)_dayNumber / _yearLength * 2f * Mathf.PI);
+            Quaternion seasonalRot = Quaternion.Euler(new Vector3(seasonalAngle, 0f, 0f));
+
+            // Only apply if valid quaternion
+            if (!float.IsNaN(seasonalRot.x) && !float.IsNaN(seasonalRot.y) && !float.IsNaN(seasonalRot.z) && !float.IsNaN(seasonalRot.w))
+            {
+                sunSeasonalRotation.localRotation = seasonalRot;
+            }
+        }
     }
+
 
     private void SunIntensity()
     {
+        if (sun == null)
+            return;
+
+        // Calculate sun intensity based on its orientation relative to "down"
         intensity = Vector3.Dot(sun.transform.forward, Vector3.down);
         intensity = Mathf.Clamp01(intensity);
 
+        // Debug to see if intensity is changing
+        //Debug.Log("Sun intensity: " + intensity);
+
+        // Apply intensity to light
         sun.intensity = intensity * sunVariation + sunBaseIntensity;
     }
 
+
     private void AdjustSunColor()
     {
+        if (sun == null || sunColor == null)
+            return;
+
+        // Set sun color based on intensity
         sun.color = sunColor.Evaluate(intensity);
     }
 
     public void AddModule(DNModuleBase module)
     {
-        moduleList.Add(module);
+        if (module != null && !moduleList.Contains(module))
+        {
+            moduleList.Add(module);
+        }
     }
 
     public void RemoveModule(DNModuleBase module)
     {
-        moduleList.Remove(module);
+        if (module != null)
+        {
+            moduleList.Remove(module);
+        }
     }
 
-    //update each module based on current sun intensity
     private void UpdateModules()
     {
         foreach (DNModuleBase module in moduleList)
         {
-            module.UpdateModule(intensity);
+            if (module != null)
+            {
+                module.UpdateModule(intensity);
+            }
         }
     }
 
+    // Utility method to manually set the time of day (0-1)
+    public void SetTimeOfDay(float newTime)
+    {
+        _timeOfDay = Mathf.Clamp01(newTime);
+        AdjustSunRotation();
+        SunIntensity();
+        AdjustSunColor();
+    }
 }
