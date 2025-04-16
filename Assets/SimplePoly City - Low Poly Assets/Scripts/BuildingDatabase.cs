@@ -1092,7 +1092,7 @@ public class BuildingDatabase : MonoBehaviour
             tileSize = 2,
             buildingType = BuildingType.Government,
             regionType = RegionType.ResidentialCommercial,
-            prefab = Resources.Load<GameObject>("Buildings/Police_Station_final"),
+            prefab = Resources.Load<GameObject>("Buildings/Police_Station_final1"),
             constructionCost = 100,
             maintenanceCost = 12,
             populationCapacity = 0,
