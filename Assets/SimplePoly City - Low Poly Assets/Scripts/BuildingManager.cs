@@ -46,6 +46,9 @@ public class BuildingManager : MonoBehaviour
         buildingPrefabs[4] = buildingData[4].prefab;
         buildingPrefabs[5] = buildingData[5].prefab;
         buildingPrefabs[6] = buildingData[6].prefab;
+        buildingPrefabs[7] = buildingData[7].prefab;
+        buildingPrefabs[8] = buildingData[8].prefab;
+        buildingPrefabs[9] = buildingData[9].prefab;
         // Initialize GridManager reference if not set in inspector
         if (gridManager == null)
             gridManager = FindFirstObjectByType<GridManager>();
@@ -66,6 +69,16 @@ public class BuildingManager : MonoBehaviour
 
     void Update()
     {
+        buildingPrefabs[0] = buildingData[0].prefab;
+        buildingPrefabs[1] = buildingData[1].prefab;
+        buildingPrefabs[2] = buildingData[2].prefab;
+        buildingPrefabs[3] = buildingData[3].prefab;
+        buildingPrefabs[4] = buildingData[4].prefab;
+        buildingPrefabs[5] = buildingData[5].prefab;
+        buildingPrefabs[6] = buildingData[6].prefab;
+        buildingPrefabs[7] = buildingData[7].prefab;
+        buildingPrefabs[8] = buildingData[8].prefab;
+        buildingPrefabs[9] = buildingData[9].prefab;
         HandleBuildingSelection();
         HandleRotation(); // Add rotation handling
         HandleBuildingPlacement();
@@ -83,6 +96,8 @@ public class BuildingManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha6) && buildingPrefabs.Length > 5) SelectBuilding(5);
         if (Input.GetKeyDown(KeyCode.Alpha7) && buildingPrefabs.Length > 6) SelectBuilding(6);
         if (Input.GetKeyDown(KeyCode.Alpha8) && buildingPrefabs.Length > 7) SelectBuilding(7);
+        if (Input.GetKeyDown(KeyCode.Alpha9) && buildingPrefabs.Length > 8) SelectBuilding(8);
+        if (Input.GetKeyDown(KeyCode.Alpha0) && buildingPrefabs.Length > 9) SelectBuilding(9);
         // Cancel building mode
         if (Input.GetKeyDown(KeyCode.Escape))
         {
