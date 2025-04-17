@@ -76,6 +76,7 @@ public class TaxManager : MonoBehaviour
             immigrationRate = (gdp / (population + 1)) * (1 - buildingManager.pollutionFactor / (buildingManager.totalBuildings*100f)) * (1 - population / populationCap) * ((morale) - 30) / 20;
             if (buildingManager.totalSafety > 0) crimeRate = (population / buildingManager.totalSafety) * (1 - gdp / (population * 1000));
         }
+        populationText.text = $"{population} / {populationCap}";
         if (timer >= taxCollectionInterval)
         {
             CollectTaxes();
@@ -123,7 +124,7 @@ public class TaxManager : MonoBehaviour
         {
             incomeText.text = $"{income}";
         }
-
+        
     }
 
 
