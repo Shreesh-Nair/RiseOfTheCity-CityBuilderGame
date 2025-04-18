@@ -34,6 +34,8 @@ public class TaxManager : MonoBehaviour
     public float moraleThreshold = 30f;
     public float immigrationRate = 0f;
     public float crimeRate = 0f;
+    public int currentMaxPop = 0;
+    public Text cityStatus;
     void Start()
     {
         // Find the building manager if not assigned
@@ -77,6 +79,18 @@ public class TaxManager : MonoBehaviour
             if (buildingManager.totalSafety > 0) crimeRate = (population / buildingManager.totalSafety) * (1 - gdp / (population * 1000));
         }
         populationText.text = $"{population} / {populationCap}";
+        if (population > currentMaxPop){
+            currentMaxPop = population;
+        }
+        if (currentMaxPop > 100){
+            cityStatus.text = "Growing City";
+        } else if (currentMaxPop > 50){
+            cityStatus.text = "Small Town";
+        } else if (currentMaxPop > 10){
+            cityStatus.text = "Village";
+        } else if (currentMaxPop >= 1){
+            cityStatus.text = "Starting Out";
+        } 
         if (timer >= taxCollectionInterval)
         {
             CollectTaxes();
