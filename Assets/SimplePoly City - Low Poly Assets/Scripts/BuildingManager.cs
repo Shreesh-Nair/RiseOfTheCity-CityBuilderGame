@@ -9,7 +9,7 @@ public class BuildingManager : MonoBehaviour
     public LayerMask gridLayer; // Set this to "Grid" layer in the inspector
     public Material validPlacementMaterial; // Material when placement is valid (green)
     public Material invalidPlacementMaterial; // Material when placement is invalid (red)
-    public int populationLimit = 0;
+    public int populationLimit = 1;
     public Text populationValue;
     private GameObject currentBuildingPrefab;
     private BuildingDatabase.BuildingData currentAsset; // Currently selected building

@@ -5954,7 +5954,7 @@ MonoBehaviour:
   CrimeRate: {fileID: 0}
   gst: 10
   incomeTax: 10
-  budget: 10000
+  budget: 100000
   taxCollectionInterval: 30
   gdp: 0
   income: 0
@@ -10894,7 +10894,7 @@ MonoBehaviour:
     m_Bits: 8
   validPlacementMaterial: {fileID: 2100000, guid: c09fa2a155124634fa8d1d23a75aad7f, type: 2}
   invalidPlacementMaterial: {fileID: 2100000, guid: 61ce5791cbc1ceb4e9452f50bbaaaa0a, type: 2}
-  populationLimit: 0
+  populationLimit: 1
   populationValue: {fileID: 1586869224}
   totalCommercialProduction: 0
   buildingData: []
@@ -10902,7 +10902,7 @@ MonoBehaviour:
   pollutionFactor: 0
   buildingSelectionHandler: {fileID: 1605124205}
   totalBuildings: 0
-  totalMoney: 10000
+  totalMoney: 100000
   totalSafety: 0
   totalMorale: 0
 --- !u!4 &1749320829
