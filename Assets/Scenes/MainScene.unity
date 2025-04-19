@@ -5613,7 +5613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb57ba1aa5b8e9b428417076558f6ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetDayLength: 0.5
+  _targetDayLength: 0.05
   elapsedTime: 0
   use24Clock: 1
   clockText: {fileID: 1411788238}
@@ -5681,7 +5681,17 @@ MonoBehaviour:
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
   sunSeasonalRotation: {fileID: 1173946685}
-  maxSeasonalTilt: 30
+  seasons:
+  - Summer
+  - Monsoon
+  - Autumn
+  - Winter
+  seasonTilts:
+  - 30
+  - 15
+  - -15
+  - -30
+  currentSeason: Summer
   moon: {fileID: 1189719885}
   moonDailyRotation: {fileID: 664829057}
   moonSeasonalRotation: {fileID: 1107051495}
