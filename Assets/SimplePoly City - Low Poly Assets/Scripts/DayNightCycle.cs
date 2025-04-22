@@ -28,7 +28,7 @@ public class DayNightCycle : MonoBehaviour
 
     [Header("Sun Light")]
     [SerializeField] private Transform dailyRotation;
-    [SerializeField] private Light sun;
+    [SerializeField] public Light sun;
     private float intensity;
     [SerializeField] private float sunBaseIntensity = 0.3f;
     [SerializeField] private float sunVariation = 1.5f;

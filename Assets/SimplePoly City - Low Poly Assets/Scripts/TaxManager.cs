@@ -16,7 +16,7 @@ public class TaxManager : MonoBehaviour
     public Text ProsperityText;
     public Text ImmigrationRate;
     public Text CrimeRate;
-
+    public Text EconStatus;
 
     public int gst = 10;
     public int incomeTax = 10;
@@ -36,8 +36,11 @@ public class TaxManager : MonoBehaviour
     public float crimeRate = 0f;
     public int currentMaxPop = 0;
     public Text cityStatus;
+    public int[] achievements = new int[10]; // Array to track achievements
+
     void Start()
     {
+        Debug.Log(""+achievements.Length);
         // Find the building manager if not assigned
         if (buildingManager == null)
         {
@@ -82,15 +85,47 @@ public class TaxManager : MonoBehaviour
         if (population > currentMaxPop){
             currentMaxPop = population;
         }
-        if (currentMaxPop > 100){
+        if (currentMaxPop > 5000 && achievements[3]!=1){
             cityStatus.text = "Growing City";
-        } else if (currentMaxPop > 50){
+            achievements[3] = 1;
+            buildingManager.totalMoney = buildingManager.totalMoney + 100000f;
+        } else if (currentMaxPop > 1000 && achievements[2]!=1){
             cityStatus.text = "Small Town";
-        } else if (currentMaxPop > 10){
+            achievements[2] = 1;
+            buildingManager.totalMoney = buildingManager.totalMoney + 10000f;
+        } else if (currentMaxPop > 100 && achievements[1]!=1){
             cityStatus.text = "Village";
-        } else if (currentMaxPop >= 1){
+            achievements[1] = 1;
+            buildingManager.totalMoney = buildingManager.totalMoney + 1000f;
+        } else if (currentMaxPop >= 1 && achievements[0]!=1){
             cityStatus.text = "Starting Out";
+            achievements[0] = 1;
         } 
+        if (gdp > 1000 && achievements.Length > 4 && achievements[4]!=1){
+            achievements[4] = 1;
+            buildingManager.totalMoney = buildingManager.totalMoney + 200f;
+            EconStatus.text = "Emerging Settlement";
+        }
+        else if (gdp > 2500 && achievements.Length > 5 && achievements[5]!=1){
+            achievements[5] = 1;
+            buildingManager.totalMoney = buildingManager.totalMoney + 500f;
+            EconStatus.text = "Growing Township";
+        }
+        else if (gdp > 5000 && achievements.Length > 6 && achievements[6]!=1){
+            achievements[6] = 1;
+            buildingManager.totalMoney = buildingManager.totalMoney + 1000f;
+            EconStatus.text = "Prosperous Municipality";
+        }
+        else if (gdp > 8000 && achievements.Length > 7 && achievements[7]!=1){
+            achievements[7] = 1;
+            buildingManager.totalMoney = buildingManager.totalMoney + 1500f;
+            EconStatus.text = "Thriving Metropolis";
+        }
+        else if (gdp > 10000 && achievements.Length > 8 && achievements[8]!=1){
+            achievements[8] = 1;
+            buildingManager.totalMoney = buildingManager.totalMoney + 2500f;
+            EconStatus.text = "Thriving Metropolis";
+        }
         if (timer >= taxCollectionInterval)
         {
             CollectTaxes();
@@ -116,6 +151,11 @@ public class TaxManager : MonoBehaviour
 
     void CollectTaxes()
     {
+        Morale.text = morale.ToString();
+        Safety.text = buildingManager.totalSafety.ToString();
+        ProsperityText.text = Prosperity.ToString();
+        ImmigrationRate.text = immigrationRate.ToString();
+        CrimeRate.text = crimeRate.ToString();
         population += (int)immigrationRate;
         Debug.Log("Immigrated: "+population);
         if (population > populationCap)

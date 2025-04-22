@@ -7,13 +7,14 @@ public class UIToggleManager : MonoBehaviour
     public GameObject buildingSelectionUI; // Your existing building selection UI (ManagePanel)
     public GameObject textboxCanvas;       // Canvas containing your 4 textboxes
     public Button showBuildingUIButton;    // The "+" button
-    public Button doneButton;              // The "Done" button
+    public Button doneButton;         
     
     void Start()
     {
         // Set up button click events
         showBuildingUIButton.onClick.AddListener(ShowBuildingUI);
         doneButton.onClick.AddListener(HideBuildingUI);
+        
         
         // Initially hide the building selection UI
         buildingSelectionUI.SetActive(false);
