@@ -57,6 +57,8 @@ public class DayNightCycle : MonoBehaviour
     private List<DNModuleBase> moduleList = new List<DNModuleBase>();
     public Text seasonText;
     public Text dateText;
+    public AudioSource rainsounds;
+    private bool isRainSoundPlaying = false;
     private void Start()
     {
         ValidateComponents();
@@ -105,6 +107,21 @@ public class DayNightCycle : MonoBehaviour
 
     private void Update()
     {
+        if (rainsounds != null)
+        {
+            if (currentSeason == "Monsoon" && !isRainSoundPlaying)
+            {
+                Debug.Log("Playing sound");
+                rainsounds.Play();
+                isRainSoundPlaying = true;
+            }
+            else if (currentSeason != "Monsoon" && isRainSoundPlaying)
+            {
+                Debug.Log("Not Playing sound");
+                rainsounds.Stop();
+                isRainSoundPlaying = false;
+            }
+        }
         if (!pause)
         {
             UpdateTimeScale();

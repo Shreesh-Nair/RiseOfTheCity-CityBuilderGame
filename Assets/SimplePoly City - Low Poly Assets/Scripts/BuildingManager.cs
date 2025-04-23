@@ -30,6 +30,9 @@ public class BuildingManager : MonoBehaviour
     public int totalMorale = 0;
     public AudioClip placeBuildingClip;
     private AudioSource audioSource;
+    public AudioSource cityAmbientSource;
+    public int ambientPopulationThreshold = 100;
+    private bool isAmbientPlaying = false;
 
     void Start()
     {
@@ -72,6 +75,19 @@ public class BuildingManager : MonoBehaviour
 
     void Update()
     {
+        if (cityAmbientSource != null)
+        {
+            if (populationLimit > ambientPopulationThreshold && !isAmbientPlaying)
+            {
+                cityAmbientSource.Play();
+                isAmbientPlaying = true;
+            }
+            else if (populationLimit <= ambientPopulationThreshold && isAmbientPlaying)
+            {
+                cityAmbientSource.Stop();
+                isAmbientPlaying = false;
+            }
+        }
         buildingPrefabs[0] = buildingData[0].prefab;
         buildingPrefabs[1] = buildingData[1].prefab;
         buildingPrefabs[2] = buildingData[2].prefab;
