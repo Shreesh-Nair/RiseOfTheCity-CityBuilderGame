@@ -218,6 +218,8 @@ public class BuildingManager : MonoBehaviour
 
                                 // Remove the building
                                 Destroy(obj);
+                                if (placeBuildingClip != null && audioSource != null)
+                                    audioSource.PlayOneShot(placeBuildingClip);
                                 Debug.Log("Building removed at approximated coordinates: " + approximatedHitPoint);
 
                                 // Debug grid occupancy
