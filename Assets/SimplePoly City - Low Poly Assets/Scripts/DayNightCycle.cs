@@ -55,7 +55,8 @@ public class DayNightCycle : MonoBehaviour
 
     [Header("Modules")]
     private List<DNModuleBase> moduleList = new List<DNModuleBase>();
-
+    public Text seasonText;
+    public Text dateText;
     private void Start()
     {
         ValidateComponents();
@@ -110,6 +111,8 @@ public class DayNightCycle : MonoBehaviour
             UpdateTime();
             UpdateClock();
         }
+        seasonText.text = currentSeason;
+        dateText.text = "Day: " + _dayNumber + " Year: " + _yearNumber;
         AdjustSunRotation();
         AdjustMoonRotation();
         SunIntensity();

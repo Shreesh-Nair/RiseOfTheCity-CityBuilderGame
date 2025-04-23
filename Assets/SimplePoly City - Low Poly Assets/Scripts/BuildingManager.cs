@@ -28,9 +28,12 @@ public class BuildingManager : MonoBehaviour
     public float totalMoney = 10000f;
     public int totalSafety = 0;
     public int totalMorale = 0;
+    public AudioClip placeBuildingClip;
+    private AudioSource audioSource;
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         if (buildingSelectionHandler == null)
         {
             buildingSelectionHandler = FindFirstObjectByType<HandleBuildingSelection>();
@@ -186,8 +189,8 @@ public class BuildingManager : MonoBehaviour
                                         totalMoney += buildingData[i].constructionCost;
                                         //Debug.Log("Cost" + buildingData[i].constructionCost);
                                         //Debug.Log("Name" + buildingData[i].assetName);
-                                        totalSafety-=buildingData[i].safety;
-                                        totalMorale-=buildingData[i].moraleFactor;
+                                        totalSafety -= buildingData[i].safety;
+                                        totalMorale -= buildingData[i].moraleFactor;
 
                                         break;
                                     }
@@ -412,6 +415,9 @@ public class BuildingManager : MonoBehaviour
     // Extracted building placement logic to avoid duplicated code
     private void PlaceBuilding(Vector3 position)
     {
+        if (placeBuildingClip != null && audioSource != null)
+            audioSource.PlayOneShot(placeBuildingClip);
+
         int tileSize = currentAsset.tileSize;
 
         // Create the actual building
@@ -430,7 +436,7 @@ public class BuildingManager : MonoBehaviour
                     totalCommercialProduction += buildingData[i].commercialProduction / 2;
                     populationValue.text = populationLimit.ToString();
                     totalMoney -= buildingData[i].constructionCost / 2;
-                    totalMorale += buildingData[i].moraleFactor/2;
+                    totalMorale += buildingData[i].moraleFactor / 2;
                     //Debug.Log("Cost : "+buildingData[i].constructionCost/2);
                 }
                 else
