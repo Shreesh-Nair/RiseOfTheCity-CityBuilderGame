@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d64e4b6a59de52449b1477a01fb3c930
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 319508
+  packageName: Dynamic Day/Night Cycle
+  packageVersion: 1.0
+  assetPath: Assets/itsMakingThings/DynamicDayNightCycle/Shaders/Water.shader
+  uploadId: 754839

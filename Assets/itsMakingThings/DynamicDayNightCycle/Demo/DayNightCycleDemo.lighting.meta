@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ca2d682fbf0b2b84ab9a432314694e14
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 4890085278179872738
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 319508
+  packageName: Dynamic Day/Night Cycle
+  packageVersion: 1.0
+  assetPath: Assets/itsMakingThings/DynamicDayNightCycle/Demo/DayNightCycleDemo.lighting
+  uploadId: 754839

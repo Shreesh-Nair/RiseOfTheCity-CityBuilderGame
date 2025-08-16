@@ -446,6 +446,7 @@ public class BuildingManager : MonoBehaviour
         {
             if (buildingPrefabs[i].name == prefabName && totalMoney >= buildingData[i].constructionCost)
             {
+                // Found bug : Supermarket values are doubling for some reason so implementing a hardcoded fix (temporary) planning to find a better solution
                 if (buildingData[i].assetName == "supermarket")
                 {
                     populationLimit += buildingData[i].populationCapacity;
@@ -455,8 +456,8 @@ public class BuildingManager : MonoBehaviour
                     populationValue.text = populationLimit.ToString();
                     totalMoney -= buildingData[i].constructionCost / 2;
                     totalMorale += buildingData[i].moraleFactor / 2;
-                    //Debug.Log("Cost : "+buildingData[i].constructionCost/2);
                 }
+                // normal values updation
                 else
                 {
                     populationLimit += buildingData[i].populationCapacity;
@@ -480,11 +481,12 @@ public class BuildingManager : MonoBehaviour
         }
 
         // Mark all tiles as occupied based on the building's size
-        gridManager.SetNodeOccupied(position, true, tileSize);
+        gridManager.SetNodeOccupied(position, true, tileSize); // Mark the nodes as occupied
 
         // Debug grid occupancy
         gridManager.DebugPrintGridOccupancy();
         totalBuildings++;
+        
         // Restore original materials for the placed building
 
     }

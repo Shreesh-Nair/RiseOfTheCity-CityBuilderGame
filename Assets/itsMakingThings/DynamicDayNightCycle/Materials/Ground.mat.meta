@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 87cfe9cc5858be741b8ba0aa92af9400
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 319508
+  packageName: Dynamic Day/Night Cycle
+  packageVersion: 1.0
+  assetPath: Assets/itsMakingThings/DynamicDayNightCycle/Materials/Ground.mat
+  uploadId: 754839

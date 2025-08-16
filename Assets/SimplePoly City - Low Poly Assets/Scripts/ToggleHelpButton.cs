@@ -7,17 +7,18 @@ public class ToggleHelpButton : MonoBehaviour
     public Text buttonText;
     
     private bool isHelpVisible = false;
-    
+
     void Start()
     {
         // Set initial button text
         buttonText.text = "Help";
-        
+
         // Initially hide the help panel
         helpPanel.SetActive(false);
-        
+
         // Add click listener
-        GetComponent<Button>().onClick.AddListener(ToggleHelp);
+        GetComponent<Button>().onClick.AddListener(ToggleHelp); // add a button listener
+        
     }
     
     public void ToggleHelp()
@@ -25,10 +26,11 @@ public class ToggleHelpButton : MonoBehaviour
         isHelpVisible = !isHelpVisible;
         
         // Update button text
-        buttonText.text = isHelpVisible ? "OK" : "Help";
+        buttonText.text = isHelpVisible ? "OK" : "Help"; // toggle between "Help" and "OK" in the button text
+        // Optionally, you can also change the button color or style here
         
         // Show/hide help panel
-        helpPanel.SetActive(isHelpVisible);
+        helpPanel.SetActive(isHelpVisible); // visible if true, hidden if false
     }
     
     // Optional: Add keyboard shortcut for help
@@ -36,7 +38,7 @@ public class ToggleHelpButton : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F1) || Input.GetKeyDown(KeyCode.H))
         {
-            ToggleHelp();
+            ToggleHelp(); // gets input from the keyboard and calls the ToggleHelp method
         }
     }
 }

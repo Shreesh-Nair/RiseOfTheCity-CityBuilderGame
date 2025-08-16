@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: aeb96feeebe2cef49b46f572e7e902ae
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 319508
+  packageName: Dynamic Day/Night Cycle
+  packageVersion: 1.0
+  assetPath: Assets/itsMakingThings/DynamicDayNightCycle/Editor/DayNightCycleEditor.cs
+  uploadId: 754839

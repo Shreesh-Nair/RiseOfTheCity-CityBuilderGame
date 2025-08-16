@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 795e553f42e429e47bd3ba5863bea588
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 319508
+  packageName: Dynamic Day/Night Cycle
+  packageVersion: 1.0
+  assetPath: Assets/itsMakingThings/DynamicDayNightCycle/Presets/DayNightCycle_01.preset
+  uploadId: 754839

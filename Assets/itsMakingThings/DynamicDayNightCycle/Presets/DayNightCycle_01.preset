@@ -1,0 +1,448 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DayNightCycle_01
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: 5b403ce75521eb8448c23153d20fe1d2, type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: startTimeOfDay
+    value: 12
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: cycleSpeed
+    value: 0.1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: resetSpeed
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: forwardsOnly
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: sunLight
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: rotationPivot
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: rotationOffsetY
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: sceneCamera
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: timeText
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: enableFogControl
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: waterRenderer
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: waterColorProperty
+    value: _WaterColor
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: daybreak.ambientColor.r
+    value: 0.4156863
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: daybreak.ambientColor.g
+    value: 0.67058825
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: daybreak.ambientColor.b
+    value: 0.73333335
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: daybreak.ambientColor.a
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: daybreak.sunColor.r
+    value: 0.9725491
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: daybreak.sunColor.g
+    value: 0.6392157
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: daybreak.sunColor.b
+    value: 0.38431376
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: daybreak.sunColor.a
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: daybreak.backgroundColor.r
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: daybreak.backgroundColor.g
+    value: 0.9960785
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: daybreak.backgroundColor.b
+    value: 0.9803922
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: daybreak.backgroundColor.a
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: daybreak.sunIntensity
+    value: 1.6
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: daybreak.shadowStrength
+    value: 0.7
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: daybreak.fogColor.r
+    value: 0.427451
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: daybreak.fogColor.g
+    value: 0.5294118
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: daybreak.fogColor.b
+    value: 0.5647059
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: daybreak.fogColor.a
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: daybreak.fogDensity
+    value: 0.02
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: daybreak.waterColor.r
+    value: 0.19607845
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: daybreak.waterColor.g
+    value: 0.5137255
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: daybreak.waterColor.b
+    value: 0.5803922
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: daybreak.waterColor.a
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: midday.ambientColor.r
+    value: 0.9176471
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: midday.ambientColor.g
+    value: 0.909804
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: midday.ambientColor.b
+    value: 0.8352942
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: midday.ambientColor.a
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: midday.sunColor.r
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: midday.sunColor.g
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: midday.sunColor.b
+    value: 0.882353
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: midday.sunColor.a
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: midday.backgroundColor.r
+    value: 0.67058825
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: midday.backgroundColor.g
+    value: 0.8705883
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: midday.backgroundColor.b
+    value: 0.9333334
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: midday.backgroundColor.a
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: midday.sunIntensity
+    value: 1.3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: midday.shadowStrength
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: midday.fogColor.r
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: midday.fogColor.g
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: midday.fogColor.b
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: midday.fogColor.a
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: midday.fogDensity
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: midday.waterColor.r
+    value: 0.3254902
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: midday.waterColor.g
+    value: 0.8588236
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: midday.waterColor.b
+    value: 0.9725491
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: midday.waterColor.a
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: sunset.ambientColor.r
+    value: 0.9607844
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: sunset.ambientColor.g
+    value: 0.5254902
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: sunset.ambientColor.b
+    value: 0.35686275
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: sunset.ambientColor.a
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: sunset.sunColor.r
+    value: 0.7686275
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: sunset.sunColor.g
+    value: 0.7058824
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: sunset.sunColor.b
+    value: 0.5882353
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: sunset.sunColor.a
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: sunset.backgroundColor.r
+    value: 0.7490196
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: sunset.backgroundColor.g
+    value: 0.3803922
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: sunset.backgroundColor.b
+    value: 0.3254902
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: sunset.backgroundColor.a
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: sunset.sunIntensity
+    value: 1.6
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: sunset.shadowStrength
+    value: 0.7
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: sunset.fogColor.r
+    value: 0.30980393
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: sunset.fogColor.g
+    value: 0.23137257
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: sunset.fogColor.b
+    value: 0.19215688
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: sunset.fogColor.a
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: sunset.fogDensity
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: sunset.waterColor.r
+    value: 0.427451
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: sunset.waterColor.g
+    value: 0.34509805
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: sunset.waterColor.b
+    value: 0.35686275
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: sunset.waterColor.a
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: night.ambientColor.r
+    value: 0.4039216
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: night.ambientColor.g
+    value: 0.47450984
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: night.ambientColor.b
+    value: 0.53333336
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: night.ambientColor.a
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: night.sunColor.r
+    value: 0.10196079
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: night.sunColor.g
+    value: 0.10588236
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: night.sunColor.b
+    value: 0.18823531
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: night.sunColor.a
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: night.backgroundColor.r
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: night.backgroundColor.g
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: night.backgroundColor.b
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: night.backgroundColor.a
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: night.sunIntensity
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: night.shadowStrength
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: night.fogColor.r
+    value: 0.32156864
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: night.fogColor.g
+    value: 0.32941177
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: night.fogColor.b
+    value: 0.46274513
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: night.fogColor.a
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: night.fogDensity
+    value: 0.001
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: night.waterColor.r
+    value: 0.15294118
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: night.waterColor.g
+    value: 0.20000002
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: night.waterColor.b
+    value: 0.30588236
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: night.waterColor.a
+    value: 0
+    objectReference: {fileID: 0}
+  m_ExcludedProperties: []
+  m_CoupledType:
+    m_NativeTypeID: 0
+    m_ManagedTypePPtr: {fileID: 0}
+    m_ManagedTypeFallback: 
+  m_CoupledProperties: []

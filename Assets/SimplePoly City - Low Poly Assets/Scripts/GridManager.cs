@@ -13,9 +13,37 @@ public class GridManager : MonoBehaviour
 
     private void Start()
     {
+        saveLoadManager = FindFirstObjectByType<SaveLoadManager>();
+        LoadGridState();
         GenerateGrid();
         CreateGridVisualization();
         CreateGridCollider();
+    }
+
+    void LoadGridState()
+    {
+        if (saveLoadManager != null)
+        {
+            var saveData = saveLoadManager.LoadGridDimensions();
+            if (saveData.HasValue)
+            {
+                width = saveData.Value.width;
+                height = saveData.Value.height;
+                
+                // After grid is generated, we'll restore occupancy
+                grid = new Node[width, height];
+                for (int x = 0; x < width; x++)
+                {
+                    for (int y = 0; y < height; y++)
+                    {
+                        Vector3 worldPos = new Vector3(x * cellSize, 0, y * cellSize);
+                        bool isEmpty = saveData.Value.occupancy[x + y * width];
+                        grid[x, y] = new Node(worldPos, isEmpty);
+                    }
+                }
+                Debug.Log($"Loaded grid dimensions and occupancy: {width}x{height}");
+            }
+        }
     }
 
     void GenerateGrid()
@@ -39,7 +67,7 @@ public class GridManager : MonoBehaviour
         if (gridVisualization != null)
             Destroy(gridVisualization);
 
-        gridVisualization = new GameObject("Grid Visualization");
+        gridVisualization = new GameObject("Grid Visualization"); // visualize the grid
         gridVisualization.transform.parent = this.transform;
 
         // Create line renderer to show the grid
@@ -86,7 +114,7 @@ public class GridManager : MonoBehaviour
 
         // Add a box collider sized to cover the entire grid
         BoxCollider collider = gridCollider.AddComponent<BoxCollider>();
-        collider.size = new Vector3(width * cellSize, 0.1f, height * cellSize);
+        collider.size = new Vector3(width * cellSize, 0.1f, height * cellSize); // set size to cover the grid
 
         // Set layer to Grid (create this layer in Unity)
         gridCollider.layer = LayerMask.NameToLayer("Grid");
@@ -95,7 +123,7 @@ public class GridManager : MonoBehaviour
     // Update GetNodeFromWorldPosition to use RoundToInt for more consistent results
     public Node GetNodeFromWorldPosition(Vector3 position)
     {
-        int x = Mathf.RoundToInt(position.x / cellSize);
+        int x = Mathf.RoundToInt(position.x / cellSize); // rounding the position to snap to grid
         int y = Mathf.RoundToInt(position.z / cellSize);
 
         if (x >= 0 && x < width && y >= 0 && y < height)
@@ -128,6 +156,7 @@ public class GridManager : MonoBehaviour
                 }
             }
         }
+        
     }
 
 
@@ -157,12 +186,27 @@ public class GridManager : MonoBehaviour
         }
         //Debug.Log(gridDebug);
     }
+    private SaveLoadManager saveLoadManager;
+
     private void Update()
     {
         // Check if the 'G' key is pressed
         if (Input.GetKeyDown(KeyCode.G))
         {
             ToggleGridVisualization();
+        }
+
+        // Save when K is pressed
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            if (saveLoadManager == null)
+            {
+                saveLoadManager = FindFirstObjectByType<SaveLoadManager>();
+            }
+            if (saveLoadManager != null)
+            {
+                saveLoadManager.SaveGridDimensions();
+            }
         }
     }
 
