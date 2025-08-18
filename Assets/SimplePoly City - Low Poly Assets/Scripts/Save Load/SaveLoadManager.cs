@@ -1,6 +1,17 @@
 using UnityEngine;
 using System.IO;
 using System;
+using System.Collections.Generic;
+
+[Serializable]
+public class BuildingInfo
+{
+    public string assetName;
+    public float xPos;
+    public float yPos;
+    public float zPos;
+    public float rotation;
+}
 
 [Serializable]
 public class SaveData
@@ -8,6 +19,7 @@ public class SaveData
     public int gridWidth;
     public int gridHeight;
     public bool[] gridOccupancy; // Flattened 2D array of grid occupancy
+    public List<BuildingInfo> placedBuildings = new List<BuildingInfo>();
 }
 
 public class SaveLoadManager : MonoBehaviour
@@ -43,12 +55,19 @@ public class SaveLoadManager : MonoBehaviour
         }
     }
 
+    private BuildingManager buildingManager;
+
     public void SaveGridDimensions()
     {
         if (gridManager == null)
         {
             Debug.LogError("GridManager not found!");
             return;
+        }
+
+        if (buildingManager == null)
+        {
+            buildingManager = FindFirstObjectByType<BuildingManager>();
         }
 
         try
@@ -63,16 +82,48 @@ public class SaveLoadManager : MonoBehaviour
                 }
             }
 
+            // Find all buildings in the scene
+            GameObject[] buildings = GameObject.FindGameObjectsWithTag("Building");
+            List<BuildingInfo> buildingInfos = new List<BuildingInfo>();
+
+            foreach (GameObject building in buildings)
+            {
+                // Get the name of the prefab this building was instantiated from
+                string prefabName = "";
+                for (int i = 0; i < buildingManager.buildingData.Length; i++)
+                {
+                    if (buildingManager.buildingData[i].prefab.name == building.name.Replace("(Clone)", "").Trim())
+                    {
+                        prefabName = buildingManager.buildingData[i].assetName;
+                        break;
+                    }
+                }
+
+                if (!string.IsNullOrEmpty(prefabName))
+                {
+                    BuildingInfo info = new BuildingInfo
+                    {
+                        assetName = prefabName,
+                        xPos = building.transform.position.x,
+                        yPos = building.transform.position.y,
+                        zPos = building.transform.position.z,
+                        rotation = building.transform.eulerAngles.y
+                    };
+                    buildingInfos.Add(info);
+                }
+            }
+
             SaveData data = new SaveData
             {
                 gridWidth = gridManager.width,
                 gridHeight = gridManager.height,
-                gridOccupancy = occupancyData
+                gridOccupancy = occupancyData,
+                placedBuildings = buildingInfos
             };
 
             string jsonData = JsonUtility.ToJson(data, true);
             File.WriteAllText(savePath, jsonData);
-            Debug.Log("Grid state and occupancy saved successfully");
+            Debug.Log($"Grid state and {buildingInfos.Count} buildings saved successfully");
         }
         catch (Exception e)
         {
