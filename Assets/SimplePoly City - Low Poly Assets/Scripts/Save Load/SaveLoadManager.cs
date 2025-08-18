@@ -27,25 +27,14 @@ public class SaveLoadManager : MonoBehaviour
             gridManager = FindFirstObjectByType<GridManager>();
             
             string saveDirectory = Path.GetDirectoryName(savePath);
-            Debug.Log($"Save directory: {saveDirectory}");
-            
             if (!Directory.Exists(saveDirectory))
             {
                 Directory.CreateDirectory(saveDirectory);
-                Debug.Log($"Created save directory at: {saveDirectory}");
             }
 
-            Debug.Log($"Full save file path: {savePath}");
             if (File.Exists(savePath))
             {
-                Debug.Log("Save file already exists!");
-            }
-
-            // Try to load existing save file
-            var loadedData = LoadGridDimensions();
-            if (loadedData.HasValue)
-            {
-                Debug.Log("Successfully found existing save file!");
+                Debug.Log("Save file found, will load grid state from save.");
             }
         }
         catch (Exception e)
@@ -83,8 +72,7 @@ public class SaveLoadManager : MonoBehaviour
 
             string jsonData = JsonUtility.ToJson(data, true);
             File.WriteAllText(savePath, jsonData);
-            Debug.Log($"Successfully saved game to: {savePath}");
-            Debug.Log($"Saved data: {jsonData}");
+            Debug.Log("Grid state and occupancy saved successfully");
         }
         catch (Exception e)
         {
@@ -96,45 +84,20 @@ public class SaveLoadManager : MonoBehaviour
     {
         try
         {
-            // Ensure path is properly formatted
-            string fullPath = Path.GetFullPath(savePath);
-            Debug.Log($"Attempting to load save file from: {fullPath}");
-            
-            // List all files in directory to help debug
-            string directory = Path.GetDirectoryName(fullPath);
-            if (Directory.Exists(directory))
+            if (!File.Exists(savePath))
             {
-                Debug.Log("Files in save directory:");
-                foreach (string file in Directory.GetFiles(directory))
-                {
-                    Debug.Log($"Found file: {file}");
-                }
-            }
-
-            if (!File.Exists(fullPath))
-            {
-                Debug.Log($"No save file found at: {fullPath}");
                 return null;
             }
 
-            string jsonData = File.ReadAllText(fullPath);
-            Debug.Log($"Read save file content: {jsonData}");
-            
+            string jsonData = File.ReadAllText(savePath);
             SaveData data = JsonUtility.FromJson<SaveData>(jsonData);
             
-            if (data == null)
+            if (data == null || data.gridOccupancy == null || data.gridOccupancy.Length == 0)
             {
-                Debug.LogError("Failed to parse save data from JSON");
                 return null;
             }
             
-            if (data.gridOccupancy == null || data.gridOccupancy.Length == 0)
-            {
-                Debug.LogError("Save file contains no occupancy data");
-                return null;
-            }
-            
-            Debug.Log($"Successfully loaded grid dimensions: {data.gridWidth}x{data.gridHeight} with {data.gridOccupancy.Length} occupancy values");
+            Debug.Log("Grid occupancy loaded from save file");
             return (data.gridWidth, data.gridHeight, data.gridOccupancy);
         }
         catch (Exception e)

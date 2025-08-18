@@ -14,36 +14,42 @@ public class GridManager : MonoBehaviour
     private void Start()
     {
         saveLoadManager = FindFirstObjectByType<SaveLoadManager>();
-        LoadGridState();
-        GenerateGrid();
+        
+        // Only generate a new grid if we don't have saved data
+        if (!LoadGridState())
+        {
+            GenerateGrid();
+        }
+        
         CreateGridVisualization();
         CreateGridCollider();
     }
 
-    void LoadGridState()
+    bool LoadGridState()
     {
-        if (saveLoadManager != null)
-        {
-            var saveData = saveLoadManager.LoadGridDimensions();
-            if (saveData.HasValue)
-            {
-                width = saveData.Value.width;
-                height = saveData.Value.height;
+        if (saveLoadManager == null)
+            return false;
+
+        var saveData = saveLoadManager.LoadGridDimensions();
+        if (!saveData.HasValue)
+            return false;
+
+        width = saveData.Value.width;
+        height = saveData.Value.height;
+        grid = new Node[width, height];
                 
-                // After grid is generated, we'll restore occupancy
-                grid = new Node[width, height];
-                for (int x = 0; x < width; x++)
-                {
-                    for (int y = 0; y < height; y++)
-                    {
-                        Vector3 worldPos = new Vector3(x * cellSize, 0, y * cellSize);
-                        bool isEmpty = saveData.Value.occupancy[x + y * width];
-                        grid[x, y] = new Node(worldPos, isEmpty);
-                    }
-                }
-                Debug.Log($"Loaded grid dimensions and occupancy: {width}x{height}");
+        // Initialize grid with saved occupancy data
+        for (int x = 0; x < width; x++)
+        {
+            for (int y = 0; y < height; y++)
+            {
+                Vector3 worldPos = new Vector3(x * cellSize, 0, y * cellSize);
+                bool isEmpty = saveData.Value.occupancy[x + y * width];
+                grid[x, y] = new Node(worldPos, isEmpty);
             }
         }
+        Debug.Log("Grid restored from save file with occupancy data");
+        return true;
     }
 
     void GenerateGrid()
