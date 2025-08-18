@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.IO;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 
 [Serializable]
@@ -18,7 +19,7 @@ public class SaveData
 {
     public int gridWidth;
     public int gridHeight;
-    public bool[] gridOccupancy; // Flattened 2D array of grid occupancy
+    public bool[] gridOccupancy;
     public List<BuildingInfo> placedBuildings = new List<BuildingInfo>();
 }
 
@@ -26,6 +27,8 @@ public class SaveLoadManager : MonoBehaviour
 {
     private string savePath;
     private GridManager gridManager;
+    private BuildingManager buildingManager;
+    private bool isInitialized = false;
     
     void Awake()
     {
@@ -34,28 +37,62 @@ public class SaveLoadManager : MonoBehaviour
     
     void Start()
     {
+        StartCoroutine(InitializeAndLoad());
+    }
+
+    private IEnumerator InitializeAndLoad()
+    {
+        // Create save directory if it doesn't exist
         try
         {
-            gridManager = FindFirstObjectByType<GridManager>();
-            
             string saveDirectory = Path.GetDirectoryName(savePath);
             if (!Directory.Exists(saveDirectory))
             {
                 Directory.CreateDirectory(saveDirectory);
             }
-
-            if (File.Exists(savePath))
-            {
-                Debug.Log("Save file found, will load grid state from save.");
-            }
         }
         catch (Exception e)
         {
-            Debug.LogError($"Error in Start: {e.Message}\nStack trace: {e.StackTrace}");
+            Debug.LogError($"Error creating save directory: {e.Message}\nStack trace: {e.StackTrace}");
+            yield break;
+        }
+
+        // Wait for required components
+        while (!isInitialized)
+        {
+            if (gridManager == null)
+                gridManager = FindFirstObjectByType<GridManager>();
+            
+            if (buildingManager == null)
+                buildingManager = FindFirstObjectByType<BuildingManager>();
+
+            if (BuildingDatabase.Instance != null && gridManager != null && buildingManager != null)
+            {
+                isInitialized = true;
+                Debug.Log("SaveLoadManager components initialized successfully");
+
+                try
+                {
+                    // Load saved data if it exists
+                    if (File.Exists(savePath))
+                    {
+                        var saveData = LoadGridDimensions();
+                        if (saveData.HasValue)
+                        {
+                            LoadAndPlaceBuildings(saveData.Value.buildings);
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError($"Error loading save data: {e.Message}\nStack trace: {e.StackTrace}");
+                }
+                yield break;
+            }
+            
+            yield return new WaitForSeconds(0.1f);
         }
     }
-
-    private BuildingManager buildingManager;
 
     public void SaveGridDimensions()
     {
@@ -101,15 +138,24 @@ public class SaveLoadManager : MonoBehaviour
 
                 if (!string.IsNullOrEmpty(prefabName))
                 {
+                    // Get snapped coordinates like in BuildingManager
+                    Vector3 snappedPos = new Vector3(
+                        Mathf.Round(building.transform.position.x / gridManager.cellSize) * gridManager.cellSize,
+                        0f,
+                        Mathf.Round(building.transform.position.z / gridManager.cellSize) * gridManager.cellSize
+                    );
+
                     BuildingInfo info = new BuildingInfo
                     {
                         assetName = prefabName,
-                        xPos = building.transform.position.x,
-                        yPos = building.transform.position.y,
-                        zPos = building.transform.position.z,
+                        xPos = snappedPos.x,
+                        yPos = snappedPos.y,
+                        zPos = snappedPos.z,
                         rotation = building.transform.eulerAngles.y
                     };
                     buildingInfos.Add(info);
+                    
+                    Debug.Log($"Saved building {prefabName} at position {snappedPos}");
                 }
             }
 
@@ -131,7 +177,7 @@ public class SaveLoadManager : MonoBehaviour
         }
     }
 
-    public (int width, int height, bool[] occupancy)? LoadGridDimensions()
+    public (int width, int height, bool[] occupancy, List<BuildingInfo> buildings)? LoadGridDimensions()
     {
         try
         {
@@ -148,13 +194,138 @@ public class SaveLoadManager : MonoBehaviour
                 return null;
             }
             
-            Debug.Log("Grid occupancy loaded from save file");
-            return (data.gridWidth, data.gridHeight, data.gridOccupancy);
+            Debug.Log($"Grid occupancy and {data.placedBuildings?.Count ?? 0} buildings loaded from save file");
+            return (data.gridWidth, data.gridHeight, data.gridOccupancy, data.placedBuildings);
         }
         catch (Exception e)
         {
             Debug.LogError($"Error loading save file: {e.Message}\nStack trace: {e.StackTrace}");
             return null;
+        }
+    }
+
+    // Helper method to load and place buildings
+    public void LoadAndPlaceBuildings(List<BuildingInfo> buildings)
+    {
+        if (buildings == null || buildings.Count == 0)
+        {
+            Debug.Log("No buildings to load");
+            return;
+        }
+
+        // Make sure required components are available
+        while (buildingManager == null)
+        {
+            buildingManager = FindFirstObjectByType<BuildingManager>();
+            if (buildingManager == null)
+            {
+                Debug.LogWarning("Waiting for BuildingManager to be available...");
+                return;
+            }
+        }
+
+        while (gridManager == null)
+        {
+            gridManager = FindFirstObjectByType<GridManager>();
+            if (gridManager == null)
+            {
+                Debug.LogWarning("Waiting for GridManager to be available...");
+                return;
+            }
+        }
+
+        while (BuildingDatabase.Instance == null)
+        {
+            Debug.LogWarning("Waiting for BuildingDatabase to be available...");
+            return;
+        }
+
+        foreach (var buildingInfo in buildings)
+        {
+            if (buildingInfo == null)
+            {
+                Debug.LogWarning("Null building info encountered, skipping...");
+                continue;
+            }
+
+            // First try to get the building data from BuildingDatabase
+            BuildingDatabase.BuildingData buildingData = null;
+            
+            try
+            {
+                // Try residential/commercial buildings first
+                buildingData = BuildingDatabase.Instance.GetResidentialCommercialBuilding(buildingInfo.assetName);
+                
+                // If not found, try industrial buildings
+                if (buildingData == null)
+                    buildingData = BuildingDatabase.Instance.GetIndustrialBuilding(buildingInfo.assetName);
+                
+                // If still not found, try agricultural buildings
+                if (buildingData == null)
+                    buildingData = BuildingDatabase.Instance.GetAgriculturalBuilding(buildingInfo.assetName);
+            }
+            catch (System.Exception e)
+            {
+                Debug.LogError($"Error getting building data: {e.Message}");
+                continue;
+            }
+
+            if (buildingData != null)
+            {
+                // Calculate the snapped position using the same logic as BuildingManager
+                float snappedX = Mathf.Round(buildingInfo.xPos / gridManager.cellSize) * gridManager.cellSize;
+                float snappedZ = Mathf.Round(buildingInfo.zPos / gridManager.cellSize) * gridManager.cellSize;
+                Vector3 position = new Vector3(snappedX, 0f, snappedZ);
+
+                // Verify grid position is valid
+                Node node = gridManager.GetNodeFromWorldPosition(position);
+                if (node != null)
+                {
+                    // Create the building
+                    GameObject building = Instantiate(buildingData.prefab, position, Quaternion.Euler(0f, buildingInfo.rotation, 0f));
+                    if (building != null)
+                    {
+                        building.tag = "Building";
+
+                        // Mark grid cells as occupied
+                        gridManager.SetNodeOccupied(position, true, buildingData.tileSize);
+
+                        // Update the game stats safely
+                        if (buildingManager != null)
+                        {
+                            buildingManager.populationLimit += buildingData.populationCapacity;
+                            buildingManager.pollutionFactor += buildingData.pollutionFactor;
+                            buildingManager.maintainanceFactor += buildingData.maintenanceCost;
+                            buildingManager.totalCommercialProduction += buildingData.commercialProduction;
+                            if (buildingManager.populationValue != null)
+                                buildingManager.populationValue.text = buildingManager.populationLimit.ToString();
+                            buildingManager.totalMorale += buildingData.moraleFactor;
+                            buildingManager.totalSafety += buildingData.safety;
+                            buildingManager.totalBuildings++;
+
+                            Debug.Log($"Successfully placed building {buildingInfo.assetName} at position {position}");
+                        }
+                        else
+                        {
+                            Debug.LogError("BuildingManager is null when trying to update stats");
+                        }
+                    }
+                    else
+                    {
+                        Debug.LogError($"Failed to instantiate building {buildingInfo.assetName}");
+                    }
+                }
+                else
+                {
+                    Debug.LogError($"Invalid grid position for building {buildingInfo.assetName} at {position}");
+                }
+
+                Debug.Log($"Loaded and placed building {buildingInfo.assetName} at position {position}");
+            }
+            else
+            {
+                Debug.LogWarning($"Could not find building data for asset: {buildingInfo.assetName}");
+            }
         }
     }
 }
