@@ -90,19 +90,10 @@ public class GridManager : MonoBehaviour
                 }
             }
             
-            if (saveData.Value.buildings != null && saveData.Value.buildings.Count > 0)
+            // Note: building placement is handled by SaveLoadManager to avoid double-placement.
+            if (saveData.Value.buildings != null)
             {
-                try
-                {
-                    // Load and place buildings
-                    saveLoadManager.LoadAndPlaceBuildings(saveData.Value.buildings);
-                    Debug.Log($"Successfully loaded {saveData.Value.buildings.Count} buildings from save file");
-                }
-                catch (System.Exception e)
-                {
-                    Debug.LogError($"Error loading buildings: {e.Message}");
-                    // Continue even if building loading fails
-                }
+                Debug.Log($"Save file contains {saveData.Value.buildings.Count} buildings; placement will be handled by SaveLoadManager.");
             }
             
             Debug.Log($"Grid restored from save file: {width}x{height}");
