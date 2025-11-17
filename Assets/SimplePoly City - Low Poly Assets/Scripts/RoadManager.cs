@@ -55,10 +55,10 @@ public class RoadManager : MonoBehaviour
 
     void HandleRoadSelection()
     {
-        if (Input.GetKeyDown(KeyCode.N)) SelectRoad(straightRoadPrefab);
-        if (Input.GetKeyDown(KeyCode.L)) SelectRoad(lTurnRoadPrefab);
-        if (Input.GetKeyDown(KeyCode.T)) SelectRoad(tJunctionRoadPrefab);
-        if (Input.GetKeyDown(KeyCode.X)) SelectRoad(intersectionRoadPrefab);
+        if (Input.GetKeyDown(KeyCode.N)) { var bm = FindFirstObjectByType<BuildingManager>(); if (bm != null) bm.CancelBuildingMode(); SelectRoad(straightRoadPrefab); }
+        if (Input.GetKeyDown(KeyCode.L)) { var bm = FindFirstObjectByType<BuildingManager>(); if (bm != null) bm.CancelBuildingMode(); SelectRoad(lTurnRoadPrefab); }
+        if (Input.GetKeyDown(KeyCode.T)) { var bm = FindFirstObjectByType<BuildingManager>(); if (bm != null) bm.CancelBuildingMode(); SelectRoad(tJunctionRoadPrefab); }
+        if (Input.GetKeyDown(KeyCode.X)) { var bm = FindFirstObjectByType<BuildingManager>(); if (bm != null) bm.CancelBuildingMode(); SelectRoad(intersectionRoadPrefab); }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             ClearPreview();
@@ -101,13 +101,20 @@ public class RoadManager : MonoBehaviour
         }
     }
 
-    void ClearPreview()
+    public void ClearPreview()
     {
         if (previewObject != null)
         {
             Destroy(previewObject);
             previewObject = null;
         }
+    }
+
+    // Called by other managers to cancel road selection and preview
+    public void CancelRoadMode()
+    {
+        currentRoadPrefab = null;
+        ClearPreview();
     }
 
     void HandleRoadPlacement()

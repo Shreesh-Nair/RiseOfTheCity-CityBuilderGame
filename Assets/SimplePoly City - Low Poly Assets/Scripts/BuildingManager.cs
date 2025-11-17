@@ -107,16 +107,16 @@ public class BuildingManager : MonoBehaviour
     void HandleBuildingSelection()
     {
         // Select a building with number keys (1, 2, 3...)
-        if (Input.GetKeyDown(KeyCode.Alpha1) && buildingPrefabs.Length > 0) SelectBuilding(0);
-        if (Input.GetKeyDown(KeyCode.Alpha2) && buildingPrefabs.Length > 1) SelectBuilding(1);
-        if (Input.GetKeyDown(KeyCode.Alpha3) && buildingPrefabs.Length > 2) SelectBuilding(2);
-        if (Input.GetKeyDown(KeyCode.Alpha4) && buildingPrefabs.Length > 3) SelectBuilding(3);
-        if (Input.GetKeyDown(KeyCode.Alpha5) && buildingPrefabs.Length > 4) SelectBuilding(4);
-        if (Input.GetKeyDown(KeyCode.Alpha6) && buildingPrefabs.Length > 5) SelectBuilding(5);
-        if (Input.GetKeyDown(KeyCode.Alpha7) && buildingPrefabs.Length > 6) SelectBuilding(6);
-        if (Input.GetKeyDown(KeyCode.Alpha8) && buildingPrefabs.Length > 7) SelectBuilding(7);
-        if (Input.GetKeyDown(KeyCode.Alpha9) && buildingPrefabs.Length > 8) SelectBuilding(8);
-        if (Input.GetKeyDown(KeyCode.Alpha0) && buildingPrefabs.Length > 9) SelectBuilding(9);
+        if (Input.GetKeyDown(KeyCode.Alpha1) && buildingPrefabs.Length > 0) { var rm = FindFirstObjectByType<RoadManager>(); if (rm!=null) rm.CancelRoadMode(); SelectBuilding(0); }
+        if (Input.GetKeyDown(KeyCode.Alpha2) && buildingPrefabs.Length > 1) { var rm = FindFirstObjectByType<RoadManager>(); if (rm!=null) rm.CancelRoadMode(); SelectBuilding(1); }
+        if (Input.GetKeyDown(KeyCode.Alpha3) && buildingPrefabs.Length > 2) { var rm = FindFirstObjectByType<RoadManager>(); if (rm!=null) rm.CancelRoadMode(); SelectBuilding(2); }
+        if (Input.GetKeyDown(KeyCode.Alpha4) && buildingPrefabs.Length > 3) { var rm = FindFirstObjectByType<RoadManager>(); if (rm!=null) rm.CancelRoadMode(); SelectBuilding(3); }
+        if (Input.GetKeyDown(KeyCode.Alpha5) && buildingPrefabs.Length > 4) { var rm = FindFirstObjectByType<RoadManager>(); if (rm!=null) rm.CancelRoadMode(); SelectBuilding(4); }
+        if (Input.GetKeyDown(KeyCode.Alpha6) && buildingPrefabs.Length > 5) { var rm = FindFirstObjectByType<RoadManager>(); if (rm!=null) rm.CancelRoadMode(); SelectBuilding(5); }
+        if (Input.GetKeyDown(KeyCode.Alpha7) && buildingPrefabs.Length > 6) { var rm = FindFirstObjectByType<RoadManager>(); if (rm!=null) rm.CancelRoadMode(); SelectBuilding(6); }
+        if (Input.GetKeyDown(KeyCode.Alpha8) && buildingPrefabs.Length > 7) { var rm = FindFirstObjectByType<RoadManager>(); if (rm!=null) rm.CancelRoadMode(); SelectBuilding(7); }
+        if (Input.GetKeyDown(KeyCode.Alpha9) && buildingPrefabs.Length > 8) { var rm = FindFirstObjectByType<RoadManager>(); if (rm!=null) rm.CancelRoadMode(); SelectBuilding(8); }
+        if (Input.GetKeyDown(KeyCode.Alpha0) && buildingPrefabs.Length > 9) { var rm = FindFirstObjectByType<RoadManager>(); if (rm!=null) rm.CancelRoadMode(); SelectBuilding(9); }
         // Cancel building mode
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -267,13 +267,21 @@ public class BuildingManager : MonoBehaviour
         }
     }
 
-    void ClearPreview()
+    public void ClearPreview()
     {
         if (previewObject != null)
         {
             Destroy(previewObject);
             previewObject = null;
         }
+    }
+
+    // Called by other managers to cancel building selection and preview
+    public void CancelBuildingMode()
+    {
+        selectedBuildingIndex = -1;
+        currentBuildingPrefab = null;
+        ClearPreview();
     }
 
 
