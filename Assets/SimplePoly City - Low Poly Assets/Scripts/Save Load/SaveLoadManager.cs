@@ -15,12 +15,23 @@ public class BuildingInfo
 }
 
 [Serializable]
+public class RoadInfo
+{
+    public string prefabType;  // straight, lTurn, tJunction, intersection
+    public float xPos;
+    public float yPos;
+    public float zPos;
+    public float rotation;
+}
+
+[Serializable]
 public class SaveData
 {
     public int gridWidth;
     public int gridHeight;
     public bool[] gridOccupancy;
     public List<BuildingInfo> placedBuildings = new List<BuildingInfo>();
+    public List<RoadInfo> placedRoads = new List<RoadInfo>();
 }
 
 public class SaveLoadManager : MonoBehaviour
@@ -28,6 +39,7 @@ public class SaveLoadManager : MonoBehaviour
     private string savePath;
     private GridManager gridManager;
     private BuildingManager buildingManager;
+    private RoadManager roadManager;
     private bool isInitialized = false;
     
     void Awake()
@@ -65,8 +77,11 @@ public class SaveLoadManager : MonoBehaviour
             
             if (buildingManager == null)
                 buildingManager = FindFirstObjectByType<BuildingManager>();
+                
+            if (roadManager == null)
+                roadManager = FindFirstObjectByType<RoadManager>();
 
-            if (BuildingDatabase.Instance != null && gridManager != null && buildingManager != null)
+            if (BuildingDatabase.Instance != null && gridManager != null && buildingManager != null && roadManager != null)
             {
                 isInitialized = true;
                 Debug.Log("SaveLoadManager components initialized successfully");
@@ -80,6 +95,7 @@ public class SaveLoadManager : MonoBehaviour
                         if (saveData.HasValue)
                         {
                             LoadAndPlaceBuildings(saveData.Value.buildings);
+                            LoadAndPlaceRoads(saveData.Value.roads);
                         }
                     }
                 }
@@ -94,6 +110,18 @@ public class SaveLoadManager : MonoBehaviour
         }
     }
 
+    private string DeterminePrefabType(GameObject road)
+    {
+        if (road == null) return "";
+        
+        string roadName = road.name.Replace("(Clone)", "").Trim();
+        if (roadName == roadManager.straightRoadPrefab.name) return "straight";
+        if (roadName == roadManager.lTurnRoadPrefab.name) return "lTurn";
+        if (roadName == roadManager.tJunctionRoadPrefab.name) return "tJunction";
+        if (roadName == roadManager.intersectionRoadPrefab.name) return "intersection";
+        return "";
+    }
+
     public void SaveGridDimensions()
     {
         if (gridManager == null)
@@ -105,6 +133,11 @@ public class SaveLoadManager : MonoBehaviour
         if (buildingManager == null)
         {
             buildingManager = FindFirstObjectByType<BuildingManager>();
+        }
+
+        if (roadManager == null)
+        {
+            roadManager = FindFirstObjectByType<RoadManager>();
         }
 
         try
@@ -159,12 +192,40 @@ public class SaveLoadManager : MonoBehaviour
                 }
             }
 
+            // Save road data
+            List<RoadInfo> roadInfos = new List<RoadInfo>();
+            if (roadManager != null && roadManager.placedRoads != null)
+            {
+                foreach (GameObject road in roadManager.placedRoads)
+                {
+                    if (road != null)
+                    {
+                        string prefabType = DeterminePrefabType(road);
+                        if (!string.IsNullOrEmpty(prefabType))
+                        {
+                            Vector3 snappedPos = road.transform.position;
+                            RoadInfo info = new RoadInfo
+                            {
+                                prefabType = prefabType,
+                                xPos = snappedPos.x,
+                                yPos = snappedPos.y,
+                                zPos = snappedPos.z,
+                                rotation = road.transform.rotation.eulerAngles.y
+                            };
+                            roadInfos.Add(info);
+                            Debug.Log($"Saved road {prefabType} at position {snappedPos}");
+                        }
+                    }
+                }
+            }
+
             SaveData data = new SaveData
             {
                 gridWidth = gridManager.width,
                 gridHeight = gridManager.height,
                 gridOccupancy = occupancyData,
-                placedBuildings = buildingInfos
+                placedBuildings = buildingInfos,
+                placedRoads = roadInfos
             };
 
             string jsonData = JsonUtility.ToJson(data, true);
@@ -177,7 +238,7 @@ public class SaveLoadManager : MonoBehaviour
         }
     }
 
-    public (int width, int height, bool[] occupancy, List<BuildingInfo> buildings)? LoadGridDimensions()
+    public (int width, int height, bool[] occupancy, List<BuildingInfo> buildings, List<RoadInfo> roads)? LoadGridDimensions()
     {
         try
         {
@@ -194,8 +255,8 @@ public class SaveLoadManager : MonoBehaviour
                 return null;
             }
             
-            Debug.Log($"Grid occupancy and {data.placedBuildings?.Count ?? 0} buildings loaded from save file");
-            return (data.gridWidth, data.gridHeight, data.gridOccupancy, data.placedBuildings);
+            Debug.Log($"Grid occupancy, {data.placedBuildings?.Count ?? 0} buildings, and {data.placedRoads?.Count ?? 0} roads loaded from save file");
+            return (data.gridWidth, data.gridHeight, data.gridOccupancy, data.placedBuildings, data.placedRoads);
         }
         catch (Exception e)
         {
@@ -205,6 +266,84 @@ public class SaveLoadManager : MonoBehaviour
     }
 
     // Helper method to load and place buildings
+    public void LoadAndPlaceRoads(List<RoadInfo> roads)
+    {
+        if (roads == null || roads.Count == 0)
+        {
+            Debug.Log("No roads to load");
+            return;
+        }
+
+        // Make sure required components are available
+        while (roadManager == null)
+        {
+            roadManager = FindFirstObjectByType<RoadManager>();
+            if (roadManager == null)
+            {
+                Debug.LogWarning("Waiting for RoadManager to be available...");
+                return;
+            }
+        }
+
+        foreach (var roadInfo in roads)
+        {
+            if (roadInfo == null)
+            {
+                Debug.LogWarning("Null road info encountered, skipping...");
+                continue;
+            }
+
+            GameObject prefab = null;
+            switch (roadInfo.prefabType)
+            {
+                case "straight":
+                    prefab = roadManager.straightRoadPrefab;
+                    break;
+                case "lTurn":
+                    prefab = roadManager.lTurnRoadPrefab;
+                    break;
+                case "tJunction":
+                    prefab = roadManager.tJunctionRoadPrefab;
+                    break;
+                case "intersection":
+                    prefab = roadManager.intersectionRoadPrefab;
+                    break;
+            }
+
+            if (prefab != null)
+            {
+                Vector3 position = new Vector3(roadInfo.xPos, roadInfo.yPos, roadInfo.zPos);
+                GameObject road = Instantiate(prefab, position, Quaternion.Euler(0f, roadInfo.rotation, 0f));
+                
+                if (road != null)
+                {
+                    roadManager.placedRoads.Add(road);
+                    // Update grid occupancy
+                    if (gridManager != null)
+                    {
+                        gridManager.SetNodeOccupied(position, true);
+                    }
+                    // Update roadGrid dictionary for road removal functionality
+                    Vector2Int gridPos = new Vector2Int(
+                        Mathf.RoundToInt(position.x / gridManager.cellSize),
+                        Mathf.RoundToInt(position.z / gridManager.cellSize)
+                    );
+                    roadManager.roadGrid[gridPos] = road;
+                    roadManager.roadNodes.Add(position);
+                    Debug.Log($"Successfully placed road {roadInfo.prefabType} at position {position}");
+                }
+                else
+                {
+                    Debug.LogError($"Failed to instantiate road {roadInfo.prefabType}");
+                }
+            }
+            else
+            {
+                Debug.LogWarning($"Could not find road prefab for type: {roadInfo.prefabType}");
+            }
+        }
+    }
+
     public void LoadAndPlaceBuildings(List<BuildingInfo> buildings)
     {
         if (buildings == null || buildings.Count == 0)

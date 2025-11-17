@@ -17,9 +17,9 @@ public class RoadManager : MonoBehaviour
     public Material validPlacementMaterial;
     public Material invalidPlacementMaterial;
 
-    private List<GameObject> placedRoads = new List<GameObject>();
-    private Dictionary<Vector2Int, GameObject> roadGrid = new Dictionary<Vector2Int, GameObject>();
-    private List<Vector3> roadNodes = new List<Vector3>();
+    public List<GameObject> placedRoads = new List<GameObject>();
+    public Dictionary<Vector2Int, GameObject> roadGrid = new Dictionary<Vector2Int, GameObject>();
+    public List<Vector3> roadNodes = new List<Vector3>();
 
     private GameObject currentRoadPrefab;
     private GameObject previewObject;

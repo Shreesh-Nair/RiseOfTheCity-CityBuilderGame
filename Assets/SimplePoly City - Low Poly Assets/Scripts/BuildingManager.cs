@@ -387,19 +387,19 @@ public class BuildingManager : MonoBehaviour
                 int centerY = Mathf.RoundToInt(snappedPosition.z / gridManager.cellSize);
 
                 // Check all grid cells that would be occupied by this building
-                for (int x1 = centerX - (tileSize - 1); x <= centerX + (tileSize - 1); x++)
+                for (int x1 = centerX - (tileSize - 1); x1 <= centerX + (tileSize - 1); x1++)
                 {
-                    for (int y = centerY - (tileSize - 1); y <= centerY + (tileSize - 1); y++)
+                    for (int y1 = centerY - (tileSize - 1); y1 <= centerY + (tileSize - 1); y1++)
                     {
                         // Check if coordinates are within grid bounds
-                        if (x1 < 0 || x1 >= gridManager.width || y < 0 || y >= gridManager.height)
+                        if (x1 < 0 || x1 >= gridManager.width || y1 < 0 || y1 >= gridManager.height)
                         {
                             canPlace = false;
                             break;
                         }
 
                         // Check if the node is empty
-                        if (!gridManager.grid[x1, y].isEmpty)
+                        if (!gridManager.grid[x1, y1].isEmpty)
                         {
                             canPlace = false;
                             break;
