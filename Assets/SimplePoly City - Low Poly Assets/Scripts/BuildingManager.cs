@@ -19,6 +19,7 @@ public class BuildingManager : MonoBehaviour
     private int selectedBuildingIndex = -1; // Currently selected building index
     private float currentRotation = 0f; // Current rotation of the building (in y-axis)
     public int totalCommercialProduction = 0;
+    private RoadManager roadManager;
 
     public BuildingDatabase.BuildingData[] buildingData;
     public int maintainanceFactor = 0;
@@ -58,6 +59,10 @@ public class BuildingManager : MonoBehaviour
         // Initialize GridManager reference if not set in inspector
         if (gridManager == null)
             gridManager = FindFirstObjectByType<GridManager>();
+
+        // Try initialize RoadManager reference
+        if (roadManager == null)
+            roadManager = FindFirstObjectByType<RoadManager>();
 
         // Initialize materials if not set
         if (validPlacementMaterial == null)
@@ -284,6 +289,48 @@ public class BuildingManager : MonoBehaviour
         ClearPreview();
     }
 
+    // Returns true if any tile adjacent (N/S/E/W) to the building footprint has a road
+    private bool HasAdjacentRoad(int centerX, int centerY, int tileSize)
+    {
+        if (gridManager == null) return false;
+
+        if (roadManager == null)
+            roadManager = FindFirstObjectByType<RoadManager>();
+
+        if (roadManager == null) return false; // no roads available
+
+        int minX = centerX - (tileSize - 1);
+        int maxX = centerX + (tileSize - 1);
+        int minY = centerY - (tileSize - 1);
+        int maxY = centerY + (tileSize - 1);
+
+        for (int x = minX; x <= maxX; x++)
+        {
+            for (int y = minY; y <= maxY; y++)
+            {
+                // check four neighbors around this tile
+                Vector2Int[] neighbors = new Vector2Int[] {
+                    new Vector2Int(x + 1, y),
+                    new Vector2Int(x - 1, y),
+                    new Vector2Int(x, y + 1),
+                    new Vector2Int(x, y - 1)
+                };
+
+                foreach (var n in neighbors)
+                {
+                    if (n.x < 0 || n.x >= gridManager.width || n.y < 0 || n.y >= gridManager.height)
+                        continue;
+
+                    Vector3 worldPos = new Vector3(n.x * gridManager.cellSize, 0.01f, n.y * gridManager.cellSize);
+                    if (roadManager.IsRoadAt(worldPos))
+                        return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
 
     void HandleBuildingPlacement()
     {
@@ -340,6 +387,15 @@ public class BuildingManager : MonoBehaviour
                         }
                     }
                     if (!canPlace) break;
+                }
+
+                // Enforce adjacency to road: require at least one road tile adjacent to the building footprint
+                if (canPlace)
+                {
+                    if (!HasAdjacentRoad(centerX, centerY, tileSize))
+                    {
+                        canPlace = false;
+                    }
                 }
 
                 // Update preview position
@@ -414,6 +470,15 @@ public class BuildingManager : MonoBehaviour
                         }
                     }
                     if (!canPlace) break;
+                }
+
+                // Enforce adjacency to road for ground-plane branch as well
+                if (canPlace)
+                {
+                    if (!HasAdjacentRoad(centerX, centerY, tileSize))
+                    {
+                        canPlace = false;
+                    }
                 }
 
                 // Update preview
