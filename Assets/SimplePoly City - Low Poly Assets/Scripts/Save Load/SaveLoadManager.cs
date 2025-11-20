@@ -158,15 +158,32 @@ public class SaveLoadManager : MonoBehaviour
 
             foreach (GameObject building in buildings)
             {
-                // Get the name of the prefab this building was instantiated from
+                // Try to determine the assetName for this building instance by matching its prefab name
+                string prefabInstanceName = building.name.Replace("(Clone)", "").Trim();
                 string prefabName = "";
-                for (int i = 0; i < buildingManager.buildingData.Length; i++)
+
+                try
                 {
-                    if (buildingManager.buildingData[i].prefab.name == building.name.Replace("(Clone)", "").Trim())
+                    // Search across all building types in BuildingDatabase to find a matching prefab
+                    foreach (BuildingDatabase.BuildingType type in Enum.GetValues(typeof(BuildingDatabase.BuildingType)))
                     {
-                        prefabName = buildingManager.buildingData[i].assetName;
-                        break;
+                        var list = BuildingDatabase.Instance.GetBuildingsByType(type);
+                        if (list == null) continue;
+                        foreach (var bd in list)
+                        {
+                            if (bd == null || bd.prefab == null) continue;
+                            if (bd.prefab.name == prefabInstanceName)
+                            {
+                                prefabName = bd.assetName;
+                                break;
+                            }
+                        }
+                        if (!string.IsNullOrEmpty(prefabName)) break;
                     }
+                }
+                catch (Exception e)
+                {
+                    Debug.LogWarning($"Error while matching building prefab name: {e.Message}");
                 }
 
                 if (!string.IsNullOrEmpty(prefabName))
@@ -187,8 +204,12 @@ public class SaveLoadManager : MonoBehaviour
                         rotation = building.transform.eulerAngles.y
                     };
                     buildingInfos.Add(info);
-                    
+
                     Debug.Log($"Saved building {prefabName} at position {snappedPos}");
+                }
+                else
+                {
+                    Debug.LogWarning($"Could not identify prefab for building instance '{building.name}'; it will not be saved.");
                 }
             }
 
